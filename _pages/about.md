@@ -1,15 +1,27 @@
 ---
 title: "About"
 permalink: /about/
-date: 2021-12-24T03:02:20+00:00
+date: 2021-12-22T21:20:00-08:00
 ---
 
-This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
+Hi There!
 
-> Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi'a coladas. (And gettin' caught in the rain.)
+I am Matt Goodrich/DEFCON/G$ (G-Money).
 
-...or something like this:
+## Professional Life
+Currently I am the Director of DevSecOps at Alteryx. During my time at Alteryx I have also served as:
+* Director of Security Architecture
+* Principal Security Architect
+* AppSec Staff Engineer
 
-> The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.
+![image-right](/assets/images/matt-alteryx.jpg){: .align-right}
 
-You should probably delete this page and create new pages for your content. Have fun!
+I have spent most of my career in either security or software, and have bounced back and forth between industry and consulting. I tend to find I am happiest when I can combine my love of building something (products, software, infrastructure) and security; Application Security/Product Security, DevSecOps are my jam.
+
+Aspirationally, I am curently focused on the path to becoming a Chief Product Security Office (CPSO).
+
+For a full history - just check out my LinkedIn: [https://www.linkedin.com/in/matthewg00drich/](https://www.linkedin.com/in/matthewg00drich/)
+
+## Personal Life
+In my personal life, I am married to a wonderful and supportive wife, have two amazing kids, and will talk about airplanes/flying to anybody willing to listen.
+![image-right](/assets/images/matt-wedding-union-station.jpg){: .align-right}

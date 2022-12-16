@@ -1,13 +1,12 @@
 ---
 title:  "UrlRewriter.Net"
 categories: 
-  - .NET
-  - SEO
+  - DotNet
 tags:
-  - Intelligencia
-  - SEO
-  - URL rewriting
-  - IIS7
+  - seo
+  - url-rewriting
+  - iis7
+  - dotnet
 ---
 
 This is my first tutorial. I will be going over how to use the extensionless Url Rewriter with ASP.NET. There is a lot you can do with this component, and I will only be scratching the surface here.

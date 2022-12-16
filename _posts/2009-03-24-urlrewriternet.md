@@ -30,28 +30,28 @@ First thing we need to add is a new section to the `configSections` area of your
 
 Add the following line:
 
-```
+```xml
 <section name="rewriter" requirePermission="false" type= "Intelligencia.UrlRewriter.Configuration.RewriterConfigurationSectionHandler, Intelligencia.UrlRewriter" />
 ```
 
 The next thing we need to do is add a module to the `httpModules` section.
 
 We will add the following line:
-```
+```xml
 <add name="UrlRewriter" type="Intelligencia.UrlRewriter.RewriterHttpModule, Intelligencia.UrlRewriter" />
 ```
 
 Now we need to add a module to the modules section in the system.webServer section. NOTE: This section is specific to IIS7, so if you do not have IIS7 or an IIS7 Web.Config, you will need to make changes before this will work.
 
 The module we are adding is:
-```
+```xml
 <add name="UrlRewriter" type="Intelligencia.UrlRewriter.RewriterHttpModule" />
 ```
 
 Now we can finally start to configure the rewrites. This can be either done in the Web.Config (how we will do it here), or it can be done in a seperate file.
 
 Back in the `configuration` section we will need to have a pair of rewriter tags. In those tags is where we will do our rewrites. You can map each page specifically or you can use regular expressions. This is a very basic example, and with a little creativity you may be able to minimize the number of lines in this section.
-```
+```xml
 <rewriter>
 	<rewrite url="^/Home$" to="~/Default.aspx"></rewrite>
 	<rewrite url="^/About$" to="~/about.aspx"></rewrite>

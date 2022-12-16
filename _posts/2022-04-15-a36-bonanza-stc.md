@@ -2,7 +2,6 @@
 title:  "A36 Bonanza STCs"
 categories: 
   - Aviation
-  - Hobbies
 tags:
   - bonanza
   - stc

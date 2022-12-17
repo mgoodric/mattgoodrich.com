@@ -9,8 +9,10 @@ Hi There!
 I am Matt Goodrich/DEFCON/G$ (G-Money).
 
 ## Professional Life
-Currently I am the Director of DevSecOps at Alteryx. During my time at Alteryx I have also served as:
-* Director of Security Architecture
+Currently I am the Director of Product Security at Alteryx. During my time at Alteryx I have also served as:
+* Director of Security Strategy (Product Management)
+* Director of DevSecOps (Engineering)
+* Director of Security Architecture (Information Security)
 * Principal Security Architect
 * AppSec Staff Engineer
 

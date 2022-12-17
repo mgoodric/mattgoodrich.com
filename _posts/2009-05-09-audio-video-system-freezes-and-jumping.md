@@ -14,7 +14,6 @@ I have had a problem with my laptop a few times now where when I watch a video o
 The first thing to do is to Open up the device manager.  This can be done by right clicking "My Computer" then going to "Properties".  In Windows Vista there will be a link in the left column that says "Device Manager".  In XP you will click the "Hardware" tab, then "Device Manager". 
 
 ![image-center](/assets/images/avjump1.jpg){: .align-center}
-<img alt="" class="postphoto" src="/files/postfiles/avjump1.jpg" />
 
 After you have the Device Manager open expand the "IDE ATA/ATAPI controllers" section.
 

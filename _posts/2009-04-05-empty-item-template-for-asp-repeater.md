@@ -1,7 +1,7 @@
 ---
 title:  "Empty Item Template for asp:Repeater"
 categories: 
-  - .NET
+  - DotNet
 tags:
   - repeater
   - empty-template
@@ -86,4 +86,3 @@ After compiling this into a bin it can be implemented in the following way:
     </MC:CustomRepeater>
 </form>
 ```
-<a href="/files/postfiles/MyControls.rar" class="download">MyControls.rar</a>

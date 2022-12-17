@@ -18,9 +18,10 @@ On my flight home tonight from a few days at our Broomfield, CO office I was abl
 - Escaping the Build Trap: How Effective Product Management Creates Real Value by Melissa Perri
 
 ![image-left](/assets/images/plg.jpg){: .align-left}
-![image-right](/assets/images/build-trap.jpg){: .align-right}
 
 Product-Led Growth really spoke to me as someone who would much rather navigate my own way through a sales process for any tool I want to trial whether in a professional or personal setting. It also somewhat indirectly implied that a deep understanding of what the customer is doing can be instrumental in cutting out the noise and providing real value during the sales cycle in the hopes of having a customer convert from their trial.
+
+![image-right](/assets/images/build-trap.jpg){: .align-right}
 
 Having been diving into the world of DPIA’s (Data Privacy Impact Assessment) lately and developing and understanding of exactly what data we collect, where we send or store it and what legitimate business use we are collecting it for, it had me thinking a lot about the intersection of PLG and the security and privacy space.
 

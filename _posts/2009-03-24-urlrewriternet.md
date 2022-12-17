@@ -19,7 +19,7 @@ Alright, lets get started. Please note that IIS7 is required for this to work.
 
 **Note:** I have not been able to get this working in a medium-trust environment (GoDaddy).
 
-The first thing to do is to download the binary. You can also download the source, as this is an open source component. You can download from <a href="http://urlrewriter.net/index.php/download">here</a>.
+The first thing to do is to download the binary. You can also download the source, as this is an open source component. You can download from [here](http://urlrewriter.net/index.php/download).
 
 Next you will need to drop the file named Intelligencia.UrlRewriter.dll into the bin folder in your web application. Alternatively in Microsoft Visual Web Developer or Visual Studio you could go to Website - Add Reference - then click the Browse Tab and locate the DLL file.
 

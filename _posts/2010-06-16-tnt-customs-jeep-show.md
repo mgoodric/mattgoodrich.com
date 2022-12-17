@@ -1,7 +1,7 @@
 ---
 title:  "T&T Customs Jeep Show"
 categories: 
-  - Jeep
+  - Automotive
 tags:
   - jeep
   - show

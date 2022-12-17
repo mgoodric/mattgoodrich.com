@@ -1,14 +1,14 @@
 ---
 title:  "Metal Cloak Arched Tube Fender and Rear Corner Install"
 categories: 
-  - Jeep
+  - Automotive
 tags:
   - jeep
   - metal-cloak
 ---
 
 
-This year with my tax return I decided I wanted to buy some tube fenders and rear corner protection for my Jeep. The day that I got my return, I immediately called <a href="http://www.metalcloak.com/">Metal Cloak</a>. I was able to get a pretty good deal on the front arched tube fenders with the 6" flare, the rear corners with the 6" flare and the turn signal LEDs.
+This year with my tax return I decided I wanted to buy some tube fenders and rear corner protection for my Jeep. The day that I got my return, I immediately called [Metal Cloak](http://www.metalcloak.com/). I was able to get a pretty good deal on the front arched tube fenders with the 6" flare, the rear corners with the 6" flare and the turn signal LEDs.
 
 I decided to go with Metal Cloak because it was the only tube fender provider that I found that let me retain my stock air box, and had matching rear corners. This way the only thing I needed to buy was some spray paint and primer, and a drill bit.
 

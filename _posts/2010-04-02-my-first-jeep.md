@@ -1,7 +1,7 @@
 ---
 title:  "My First Jeep"
 categories: 
-  - Jeep
+  - Automotive
 tags:
   - jeep
 ---
@@ -12,4 +12,4 @@ Little did I know when I bought my 2003 Jeep Wrangler Sahara Edition on November
 
 I was trading in my 1999 Audi A4 1.8T, which admittedly was in pretty bad shape, and at one point it seemed as though the dealership didn't even want to trade.
 
-Within a few days of buying the Jeep I joined <a href="http://www.jeepforum.com">JeepForum.com</a>.  There is so much information in that forum, I could probably surf it all day, every day and not really ever get bored.  I have since become a supporting member of <a href="http://www.jeepforum.com">JeepForum.com</a>, and have done a few mods to my jeep as well.
+Within a few days of buying the Jeep I joined [JeepForum.com](http://www.jeepforum.com).  There is so much information in that forum, I could probably surf it all day, every day and not really ever get bored.  I have since become a supporting member of [JeepForum.com](http://www.jeepforum.com), and have done a few mods to my jeep as well.

@@ -1,7 +1,7 @@
 ---
 title:  "Moody Hill and Crystal Mountain Run"
 categories: 
-  - Jeep
+  - Automotive
 tags:
   - jeep
   - offroading

@@ -1,7 +1,7 @@
 ---
 title:  "Sevenmile Trail"
 categories: 
-  - Jeep
+  - Automotive
 tags:
   - jeep
   - offroading

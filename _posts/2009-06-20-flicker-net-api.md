@@ -7,7 +7,7 @@ tags:
   - asp.net
 ---
 
-There is a great project on CodePlex called Flickr.Net. It gives a great API that interfaces with Flickr and is accessible from C#.NET.  You can find their page at <a href="http://www.codeplex.com/FlickrNet">http://www.codeplex.com/FlickrNet</a>.
+There is a great project on CodePlex called Flickr.Net. It gives a great API that interfaces with Flickr and is accessible from C#.NET.  You can find their page at [http://www.codeplex.com/FlickrNet](http://www.codeplex.com/FlickrNet).
 
 First thing is you will need to download the latest release, which at the time of writing this is 2.2.0.
 

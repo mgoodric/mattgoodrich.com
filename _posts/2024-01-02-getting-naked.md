@@ -1,17 +1,11 @@
 ---
 title:  "Getting Naked"
 categories: 
-  - Security
+  - Consulting
 tags:
-  - iso27001
   - book-review
-  - soc2
-  - product-security
-  - devsecops
-  - appsec
-  - application-security
-  - audit
-  - automation
+  - vulnerability
+  - consulting
 ---
 
 Being vulnerable is hard.

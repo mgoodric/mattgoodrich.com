@@ -63,7 +63,7 @@ Encrypted String:
 Decrypted String: 
 This is the secret data to be encrypted
 ```
-
+#### Code
 ```csharp
 using System;
 using System.Linq;
@@ -134,7 +134,7 @@ NLaMxjVNIjavBHQuDPqykcKoYxmLZMr/lzmMc0ncFM3APaziKkJ0U6OlzYRJ5YTe6zVcVOdTqTGhQIb/
 Decrypted String: 
 This is the secret data to be encrypted
 ```
-
+#### Code
 ```javascript
 const crypto = require('crypto');
 
@@ -191,7 +191,7 @@ Encrypted String:
 Decrypted String: 
 This is the secret data to be encrypted
 ```
-
+#### Code
 ```powershell
 function Create-AesManagedObject($key, $IV) {
     $aesManaged = New-Object "System.Security.Cryptography.AesManaged"

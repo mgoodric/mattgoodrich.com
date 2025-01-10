@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <article>
+    {{ with .Content -}}<div class="post-content">{{- . -}}</div>{{- end }}
+    <ul class="posts-list">
+      {{ range where .Paginator.Pages "Type" "!=" "page" }}
+        <li class="posts-list-item">
+          <a class="posts-list-item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+          <span class="posts-list-item-description">
+            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+            <span class="posts-list-item-separator">-</span>
+            {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
+            {{ .ReadingTime }} min read
+          </span>
+          <p>{{ .Summary }}</p>
+          {{- with .Params.tags }}
+          <div class="post-list-item-tags">
+            {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+            {{- range . -}}
+              {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+              {{- end }}
+            {{- end }}
+          </div>
+          {{- end }}
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" $ }}
+  </article>
+{{ end }}

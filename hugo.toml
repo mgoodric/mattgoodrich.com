@@ -1,0 +1,46 @@
+baseURL = 'https://mattgoodrich.com/'
+languageCode = 'en-us'
+title = 'Matt Goodrich'
+theme = "hugo-theme-m10c"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "genres"
+    name = "Categories"
+    url = "/genres/"
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[taxonomies]
+  genre = 'genres'
+  tag = 'tags'
+
+[params]
+    author = "Matt Goodrich"
+    description = "Private pilot. Security practitioner. Husband. Father."
+    avatar = "images/bio-photo.jpg"
+    favicon = ""
+
+    [[params.social]]
+    icon = "brand-linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/matthewg00drich/"
+    
+    [[params.social]]
+    icon = "brand-github"
+    name = "My Github"
+    url = "https://github.com/mgoodric"

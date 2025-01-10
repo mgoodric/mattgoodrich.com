@@ -1,0 +1,18 @@
+.posts-list-item-title { font-size: 1.4em; }
+
+td { padding:10px 5px; }
+
+tr:nth-child(even) {
+    background-color: #354243;
+}
+
+.post-list-item-tags {
+    .icon {
+        width: 1.1em;
+        height: 1.1em;
+        margin-bottom:-5px;
+    }
+    .tag {
+        font-size: 0.8em;
+    }
+}

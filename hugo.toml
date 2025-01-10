@@ -19,11 +19,6 @@ theme = "hugo-theme-m10c"
     name = "Tags"
     url = "/tags/"
     weight = 3
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 4
 
 [taxonomies]
   genre = 'genres'

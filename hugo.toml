@@ -44,3 +44,7 @@ theme = "hugo-theme-m10c"
     icon = "brand-github"
     name = "My Github"
     url = "https://github.com/mgoodric"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-RHWWVR0716'

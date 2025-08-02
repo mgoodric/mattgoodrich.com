@@ -1,6 +1,6 @@
 /public/
 /resources/_gen/
-
+/.idea/
 hugo.exe
 hugo.linux
 hugo.darwin

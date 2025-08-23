@@ -26,7 +26,7 @@ theme = "hugo-theme-m10c"
 
 [params]
     author = "Matt Goodrich"
-    description = "Private pilot. Security practitioner. Husband. Father."
+    description = "Private pilot. Security leader. Husband. Father."
     avatar = "images/bio-photo.jpg"
     favicon = ""
 

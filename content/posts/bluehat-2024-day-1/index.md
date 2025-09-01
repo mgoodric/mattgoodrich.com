@@ -1,7 +1,7 @@
 +++
 date = '2024-10-29T21:00:00-07:00'
 draft = false
-title = 'My First Time at BlueHat: A Security Conference That Stood Out'
+title = 'BlueHat 2024: Security Challenges Are Universal (Just Ask Microsoft)'
 aliases = ['/security/blue-hat-2024-day-1/']
 summary = "After attending multiple security conferences this year, BlueHat 2024 stood out for all the right reasons: no vendors, no sales pitches, just pure technical content. The dual perspectives from security researchers and Microsoft's Security Response Center revealed that every security team faces the same fundamental challenges, just at different scales."
 genres = ['Security', 'Conferences and Events' ]

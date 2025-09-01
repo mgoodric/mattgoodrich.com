@@ -1,7 +1,7 @@
 +++
 date = '2022-04-15T12:00:00-07:00'
 draft = false
-title = 'The Excitement of Building an Aircraft Modification List: Certified vs Experimental Aircraft'
+title = 'Why Aircraft Modifications Aren't Like Car Mods (And My A36 Bonanza Wishlist)'
 aliases = ['/aviation/a36-bonanza-stc/']
 summary = "At 13, I built elaborate Excel spreadsheets of car modifications I couldn't afford. Now I'm doing it again with aircraft - researching every possible STC for a 1977 A36 Bonanza. Unlike cars, certified aircraft modifications require FAA approval, but that just makes the research more interesting."
 genres = ['Aviation', 'Aircraft Maintenance', 'Plane Modifications']
@@ -16,7 +16,7 @@ At 13, I was obsessed with cars - an obsession that *The Fast and the Furious* (
 
 ![1964 Ford Mustang](Mustang.jpg)
 
-**Flash forward to today, and I'm doing it again.** Same boyish excitement, same Excel spreadsheet obsession, but this time it's aircraft modifications. **The difference? I'm actually under contract on a 1977 A36 Bonanza** - a factory-standard bird just begging for upgrades. 
+**Flash forward to today, and I'm doing it again.** Same boyish excitement, same Excel spreadsheet obsession, but this time it's aircraft modifications. **The difference? I'm actually under contract on a 1977 A36 Bonanza** - a factory-standard bird just begging for upgrades.
 
 ![1964 Ford Mustang](Bonanza.jpeg)
 
@@ -27,7 +27,7 @@ At 13, I was obsessed with cars - an obsession that *The Fast and the Furious* (
 **The FAA controls aircraft through three levels of certification:**
 
 * **Type Certification** - Design approval for the aircraft and every component (engines, props, avionics, etc.). **Think of it as the blueprint getting government approval.**
-* **Production Certification** - Permission to manufacture aircraft based on that approved design. **Quality control meets bureaucracy.**  
+* **Production Certification** - Permission to manufacture aircraft based on that approved design. **Quality control meets bureaucracy.**
 * **Airworthiness Certification** - Individual aircraft approval proving it matches the type design and is safe to fly. **Your specific plane's birth certificate.**
 
 These three types of certification are covered in the [Code of Federal Regulations (CFR), Title 14, Part 21](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-21)
@@ -35,7 +35,7 @@ These three types of certification are covered in the [Code of Federal Regulatio
 ### **Certified Aircraft: The Corporate Path**
 **Beechcraft/Textron followed the full process:** design approval, production approval, individual aircraft certification. **Every Bonanza that rolled off the line has government blessing at every level.**
 
-### **Experimental Aircraft: The Builder's Path**  
+### **Experimental Aircraft: The Builder's Path**
 **Multiple routes to experimental certification:**
 - **Scratch-built from your own design** (no type cert needed)
 - **Kit aircraft** like [Van's Aircraft](https://www.vansaircraft.com/) builds (kit manufacturer has production cert, but no type cert)

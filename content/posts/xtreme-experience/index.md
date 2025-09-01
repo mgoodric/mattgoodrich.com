@@ -3,60 +3,52 @@ date = '2022-09-18T12:00:00-07:00'
 draft = false
 title = 'My Xtreme Experience: A Day of Driving Ferraris, Porsches, Lamborghinis, and Mustangs'
 aliases = ['/automotive/xtreme-experience/']
-summary = "I recently experienced a day of driving some of the world's most iconic cars at Pacific Raceways in Washington, including the Ferrari 488 GTB, Porsche GT3 RS, Lamborghini Huracan, and Shelby Mustang GT500. While I enjoyed all the cars, my absolute favorite was the Shelby Mustang GT500, which felt incredibly powerful and fast."
+summary = "Father's Day gift turned into supercar comparison test: Ferrari 488 GTB, Porsche GT3 RS, Lamborghini Huracan, and Shelby GT500 at Pacific Raceways. Spoiler alert: the American muscle car with 760hp destroyed the Italian exotics for pure driving excitement."
 genres = ['Automotive']
 tags = ['ferrari', 'porsche', 'lamborghini', 'mustang', 'extreme driving experience']
 [params]
   author = 'Matt Goodrich'
 +++
 
-My fathers day gift this year was an experience. In fact it was an [Xtreme Experience](https://www.thextremexperience.com/). The family an I headed to Pacific Raceways in Kent Washington for a morning of fun.
+**My Father's Day gift was speed.** Four supercars, one track, zero speed limits. The family and I headed to Pacific Raceways in Kent, Washington for an [Xtreme Experience](https://www.thextremexperience.com/) morning I won't forget.
 
-## Ferrari 488 GTB
-First up was the Ferrari 488 GTB. First time I ever sat in a Ferrari, let alone drive one. It had good get up and go, and was a lot of fun to drive. Would definitely drive this car again, but it ranked as my 3rd favorite for the day.
+## **Ferrari 488 GTB: The Italian Legend**
+**First time in a Ferrari. Ever.** The 488 GTB delivered exactly what you'd expect - smooth power delivery, refined handling, undeniable prestige. **Fun to drive? Absolutely. But it landed at #3 for the day.**
 
-### Specs
-**Horsepower:** 680
-
-**Top Speed:** 205 MPH
-
-**0-60 MPG:** 3.0 seconds
+**The numbers:** 680hp, 205mph top speed, 0-60 in 3.0 seconds
 
 {{< youtube 7gfEUHwSqlQ >}}
 
-## Porsche GT3 RS
-Second up for the day was the Porsche GT3 RS. I was admittedly a little hyped about this one after seeing Richard Hammond talk about it over the years. The GT3 RS was incredible. The one word I would use to describe the car was "tight". The steering was tight, transmission was tight, it got right up and went. Would drive this car again, and would consider owning one. My 2nd favorite for the day.
+## **Porsche GT3 RS: German Engineering Perfection**
+**I went in with high expectations** thanks to Richard Hammond's years of GT3 RS praise. **It exceeded every one of them.**
 
-### Specs
-**Horsepower:** 520
+**One word describes this car: "tight."** Tight steering, tight transmission, tight connection between driver and road. Everything responds instantly, everything feels precise. **This is what a sports car should be. #2 for the day, and yes, I'd seriously consider owning one.**
 
-**Top Speed:** 199 MPH
-
-**0-60 MPG:** 3.3 seconds
+**The numbers:** 520hp, 199mph top speed, 0-60 in 3.3 seconds
 
 {{< youtube S6NcCBkAYmE >}}
 
 
-## Lamborghini Huracan
-Third up for the day was the Lamborghini Huracan. It was my first time sitting in, and driving a Lamborghini. My expectations I am afraid were too high. I would be perfectly fine never sitting in, driving, or owning a Lamborghini ever again. I was not impressed. Felt slower than any of the rest of the cars, the quality felt the cheapest, and everything felt as if it was for show instead of function. Definitely bottom of my favorites list - in fact I would rather drive my Tesla Model 3 or Acura MDX that we drove to the track.
+## **Lamborghini Huracan: The Disappointment**
+**First time in a Lamborghini. Hopefully the last.**
 
-### Specs
-**Horsepower:** 602
+**My expectations were too high, and the Huracan failed to meet even moderate ones.** Despite impressive specs on paper, it felt slower than everything else on track. The interior quality felt cheap, the driving experience felt artificial, and everything seemed designed for Instagram photos instead of actual performance.
 
-**Top Speed:** 202 MPH
+**Brutal honesty? I'd rather drive my Tesla Model 3 or our Acura MDX.** Last place by a wide margin.
 
-**0-60 MPG:** 3.2 seconds
+**The numbers:** 602hp, 202mph top speed, 0-60 in 3.2 seconds
 
 {{< youtube 8i4LbJ3YNyo >}}
 
-## Shelby Mustang GT500
-The last car for the day was the Shelby Mustang GT500. During the driver orientation first thing in the morning, this was the only car that called out extra caution about. "If you are driving the GT500, be careful if you put your foot down at any point while you're on the track. It has so much power, it can be unpredictable if you're not prepared." The GT500 was my absolute favorite of all the cars I drove on this day. So much so in fact, the first thing I told my wife when we were leaving was we needed to buy one - and I would even let her drive it. It's top speed, and 0-60 time are lower than the rest of the vehicles, but boy did that car have some power. It felt the fastest (and was the one I was able to go the fastest in), and the roar from the engine and exhaust was louder than anything else on the track that day.
+## **Shelby GT500: The American Beast**
+**The instructor's warning during orientation said everything:** "If you're driving the GT500, be careful when you put your foot down. It has so much power, it can be unpredictable if you're not prepared."
 
-### Specs
-**Horsepower:** 760
+**This was the only car that got a safety warning. That should have been my first clue.**
 
-**Top Speed:** 180 MPH
+**The GT500 was my absolute favorite.** Not even close. Walking back to the car after the session, I told my wife we needed to buy one - and I'd even let her drive it. **Lower top speed than the others? Doesn't matter. This car had more usable power, felt faster on track, and sounded like a NASCAR engine had escaped captivity.**
 
-**0-60 MPG:** 3.5 seconds
+**The roar from that supercharged V8 drowned out every other car on the track.** Pure, unfiltered American muscle that made the European exotics feel civilized and boring.
+
+**The numbers:** 760hp, 180mph top speed, 0-60 in 3.5 seconds
 
 {{< youtube 2CB3DbR9mS4 >}}

@@ -3,25 +3,28 @@ date = '2022-09-15T12:00:00-07:00'
 draft = false
 title = 'Book Review: Product-Led Growth and Escaping the Build Trap'
 aliases = ['/security/product-led-growth/']
-summary = "As I finished reading Product-Led Growth and Escaping the Build Trap , I realized that these books have helped me understand the importance of customer insights in cutting through noise and providing real value during sales cycles. This realization has sparked an interesting intersection with my work in DPIA's, security, and audit logs."
+summary = "Two product management books sparked an unexpected realization about the intersection between customer behavior analytics, security telemetry, and audit logging. Sometimes the most valuable insights come from applying frameworks outside their intended domain."
 genres = ['Product Management', 'Security']
 tags = ['product-led growth', 'escaping the build trap', 'data privacy impact assessment', 'security', 'audit logs']
 [params]
   author = 'Matt Goodrich'
 +++
 
-On my flight home tonight from a few days at our Broomfield, CO office I was able to finish two books I started earlier this year…
+**Flying home from our Broomfield office, I finished two books that completely shifted how I think about data collection:**
+
 - *Product-Led Growth: How to Build a Product That Sells Itself* by Wes Bush 
 - *Escaping the Build Trap: How Effective Product Management Creates Real Value* by Melissa Perri
 
 ![Product Led Growth Book Cover](plg.jpg)
 
-Product-Led Growth really spoke to me as someone who would much rather navigate my own way through a sales process for any tool I want to trial whether in a professional or personal setting. It also somewhat indirectly implied that a deep understanding of what the customer is doing can be instrumental in cutting out the noise and providing real value during the sales cycle in the hopes of having a customer convert from their trial.
+**Product-Led Growth resonated immediately.** As someone who prefers to navigate trials and evaluations independently (both professionally and personally), Bush's framework made perfect sense. **The core insight that stuck: deep understanding of customer behavior can cut through sales noise and provide real value during conversion cycles.**
 
 ![Escaping the Build Trap Book Cover](build-trap.jpg)
 
-Having been diving into the world of DPIA’s (Data Privacy Impact Assessment) lately and developing and understanding of exactly what data we collect, where we send or store it and what legitimate business use we are collecting it for, it had me thinking a lot about the intersection of PLG and the security and privacy space.
+**Here's where it gets interesting for security folks.** While diving deep into Data Privacy Impact Assessments (DPIAs) recently - mapping exactly what data we collect, where we store it, where we send it, and what legitimate business purposes drive that collection - I realized something.
 
-Building on that, I had a realization that a lot of telemetry that is collected has an interesting overlap between many of the events that would be in a typical audit log - and I’m noodling on whether this overlap can be exploited to make both worlds better.
+**There's significant overlap between product telemetry and security audit logs.** Many of the events that product teams track for user behavior analytics are the same events that security teams need for audit trails and compliance. **Could this overlap be leveraged to make both domains better?**
 
-Would definitely recommend both books, even if your role isn’t a “typical” product role.
+**What if we designed data collection that serves both customer insights and security requirements?** Instead of separate systems collecting overlapping data, we could build unified telemetry that provides product teams with conversion insights while giving security teams the audit trails they need.
+
+**Both books are worth reading even if you're not in a traditional product role.** The frameworks apply surprisingly well to security and infrastructure teams trying to understand their internal customers.

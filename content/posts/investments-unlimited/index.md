@@ -3,19 +3,27 @@ date = '2022-11-07T12:00:00-07:00'
 draft = false
 title = 'Lessons from Investments Unlimited: The Importance of Automation and Transparency in Security'
 aliases = ['/security/investments-unlimited/']
-summary = "Investments Unlimited offers valuable insights into the importance of automation and transparency in security. This book thoroughly enforces that security shouldn't be a blocker to going fast, and that things are not always what they seem at the surface."
+summary = "Investments Unlimited hit close to home - a financial firm forced to fix their security posture discovers the same issues I face daily: outdated asset inventories, useless CABs, inconsistent pipelines. The message is clear: automate everything, don't block velocity, and dig beneath surface assumptions."
 genres = ['Book Review', 'Security']
 tags = ['security', 'devsecops', 'investments unlimited', 'automation', 'transparency']
 [params]
   author = 'Matt Goodrich'
 +++
 
-![Investments Unlimited Book Cover](investments-unlimited.jpg)
+![Investments Unlimited Book Cover](investments-unlimited.png)
 
-A few weeks ago, I was headed to Amsterdam for our user conference (Alteryx Inspire EMEA). Anytime I travel, I usually get deep into an audiobook. I was able to finish one before take-off, and attempted to reflect a bit on the plane – but life gets busy, and I am just now getting around to talking about it.
+Flying to Amsterdam for Alteryx Inspire EMEA, I needed a good audiobook. Travel means deep-dive listening time, and Cory Stoker's recommendation proved perfect timing. I finished it before takeoff, spent the flight reflecting, then... life happened. Finally getting around to writing about it.
 
-I was recommended a book (*Investments Unlimited: A Novel About DevOps, Security, Audit Compliance, and Thriving in the Digital Age*) by a colleague (Cory Stoker) last month, that on the surface appeared to be like The Phoenix Project (Gene Kim), but for security and audit compliance. I know The Unicorn Project (Gene Kim) touched on security a bit – but this book resonated with me a bit more as several of the topics are items I have recently had to think about or dig into at some level this year. At a high level, it’s a story about a financial institution that was put on notice about releasing products that were full of defects, and showed a lack of rigor around security – and they had to fix this in order to regain faith with the auditors. From within the business, consensus is generally that everything appears to be working, it’s assumed that folks are following process, things are tracked, developers are following the practices they should, etc. After digging a bit deeper several different issues begin to surface. Asset inventory/CMDB not up to date, Change Advisory Boards (CABs) are seen as useless and slow even by those on the board, developers have numerous different build systems, teams using different pipeline processes and policies, and the list goes on.
+The premise sounded like "The Phoenix Project for security" - and honestly, it hit much closer to home than Gene Kim's work. This book tackled issues I'm dealing with right now at Alteryx.
 
-At my current gig at Alteryx, we are working on getting many of our products under ISO27001 and SOC 2 Type II, if they are not already. In approaching this work, working with my Product Management and Engineering colleagues, I am one of the few people at Alteryx that has to find a way to reach numerous development teams, understanding what they are working on, what code reaches production or is released to customers, what processes they follow, and determine where any deficiencies are so that we can work together to fix them. In doing this work (and coming from the engineering and product side of the house previously), I am very aware that heavy process, gates, and sometimes even taking away development time to chat about the security topic of the week are not always viewed favorably by those teams. They are often focused on meeting deadlines and trying to determine how to go faster while leaving the least amount of technical debt in their wake.
+**The story:** A financial institution gets hammered by auditors for defect-ridden products and loose security practices. **Leadership assumes everything works fine** - processes are followed, developers do the right things, systems are tracked.
 
-While this book had no silver bullets, the message was clear; automate everything you can, security should not be a blocker to going fast, and things are not always what they seem at the surface. I would recommend this book, especially to my fellow Product/Application security and DevSecOps peers.
+**Reality after investigation:** Asset inventories are outdated, CABs are universally seen as useless (even by CAB members), build systems are inconsistent across teams, pipeline policies vary wildly. **The usual enterprise software development nightmare.**
+
+**Why this resonated: I'm living this at Alteryx.** Working on ISO27001 and SOC 2 Type II compliance across multiple product teams means I'm constantly reaching out to development teams, understanding their processes, identifying gaps, and figuring out how to fix them together.
+
+**Coming from the engineering and product side myself, I'm acutely aware that security can be viewed as overhead.** Heavy processes, approval gates, and "security topic of the week" conversations aren't popular with teams focused on shipping features and minimizing technical debt.
+
+**The book's message was crystal clear: automate everything possible, don't let security block velocity, and always dig beneath surface assumptions.** No silver bullets, just practical wisdom.
+
+**Highly recommended for fellow Product Security, AppSec, and DevSecOps practitioners.** This one will hit close to home.

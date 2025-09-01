@@ -3,7 +3,7 @@ date = '2024-01-02T12:00:00-07:00'
 draft = false
 title = 'The Power of Vulnerability: Lessons from Getting Naked'
 aliases = ['/consulting/getting-naked/']
-summary = "As I reflect on my experiences as a consultant, I realize that being vulnerable is hard, but it's also essential for growth and learning. I wish I had read Getting Naked earlier in my career because it would have helped me better understand clients' needs, communicate more effectively, and work smarter."
+summary = "Six years after receiving 'Getting Naked' during Slalom onboarding, I finally read it. The three fears that sabotage client loyalty - embarrassment, feeling inferior, losing business - hit hard. Being vulnerable is terrifying, but it's also where growth happens."
 genres = ['Book Review', 'Career Development']
 tags = ['vulnerability', 'consulting', 'getting naked', 'business', 'communication', 'leadership']
 [params]
@@ -12,18 +12,25 @@ tags = ['vulnerability', 'consulting', 'getting naked', 'business', 'communicati
 
 ![Getting Naked Book Cover](getting-naked.jpeg)
 
-Being vulnerable is hard.
+**Being vulnerable is hard.**
 
-I joined Slalom, my previous employer, in February 2018. During onboarding, I was given a copy of *Getting Naked: A Business Fable About Shedding the Three Fears that Sabotage Client Loyalty*, as was every other consultant that joined the office at the time. At that point in my life, I was (foolishly) proud that I hadn't read a book in a number of years. Now, nearly 6 years later, I finally read it.
+**February 2018: Slalom onboarding.** Every new consultant received a copy of *Getting Naked: A Business Fable About Shedding the Three Fears that Sabotage Client Loyalty*. **At the time, I was foolishly proud of not reading books.** Six years later, I finally cracked it open.
 
-Without spoiling the book, the three fears that sabotage client loyalty are: fear of being embarrassed, fear of feeling inferior, and fear of losing the business. Having been in a consulting role at several points in my career, these resonated with me like you would not believe. 
+**The three fears that sabotage client loyalty:**
+1. **Fear of being embarrassed**
+2. **Fear of feeling inferior**  
+3. **Fear of losing the business**
 
-Day one of my first job after I graduated from university, I showed up to the office to get a crash course on identity and access management and PingFederate (thanks, Cody Cook), and the next day I flew to a client site where I was expected to be "the expert". All three of those fears ran deep through me that first week, first month, first year, and at many points during my later six years of consulting.
+**These hit me like a freight train.** Multiple consulting roles, same fears every time. 
 
-Having been out of the consulting game for four years now, I can tell you that these three fears  are not specific to consulting. I see examples of each of these in my current role fairly frequently. So often I see nobody speaking up in a large group setting, only to get a myriad of questions behind the scenes. Speaking up in those settings, particularly as someone early in career or working with a new team, requires vulnerability. 
+**Day one out of university:** Crash course on IAM and PingFederate (thanks, Cody Cook). **Day two:** Fly to client site as "the expert." **All three fears consumed me** - first week, first month, first year, and throughout six years of consulting.
 
-I make an effort to gauge the foundational knowledge of individuals in the room before delving into a topic. However, there are instances when I unintentionally make assumptions, only to be humbled by individuals who pose questions about something I had assumed was familiar to my intended audience. Asking those questions takes vulnerability, but it also sets a positive example that could help others, too.
+**Four years out of consulting, I realize these fears aren't consulting-specific.** They show up constantly in my current role. **Large group meetings where nobody speaks up, then private messages flood in afterward.** Speaking up in those moments - especially early career or with new teams - requires vulnerability. 
 
-Through most of my years consulting I had the mindset of “I am being paid to be here because the client doesn’t know how to do what I do.” I closely related my value to the things I could do, or the things that I knew. Saying “I don’t know” was scary; saying it required vulnerability. If I had been more vulnerable in my early consulting years, I likely would have learned more about myself, my clients, and my areas of expertise. There is growth in vulnerability.
+**I try to gauge knowledge levels before diving into topics, but I make assumptions.** When someone asks about something I thought was basic, I get humbled. **But those questions require vulnerability from the asker, and they help everyone in the room.**
 
-Looking back, I can think of several points throughout my career where I have stories (positive and negative) about the lessons discussed in this book. One thing is for sure–I wish I had read the book when I first received it. If I had, I would have likely been able to better understand what problem the customer was really trying to solve, helped others in the room through their confusion, and ultimately worked fewer hundred hour weeks.
+**My consulting mindset for years: "I'm paid to be here because clients can't do what I do."** I tied my value to knowledge and capabilities. **Saying "I don't know" felt dangerous - it required vulnerability I wasn't ready for.**
+
+**If I'd been more vulnerable earlier, I would have learned more about myself, clients, and my expertise.** There is growth in vulnerability.
+
+**Looking back, I have countless stories (good and bad) that illustrate these lessons.** One thing is certain: **I wish I'd read this book when I first received it.** I would have understood real customer problems better, helped confused colleagues more effectively, and worked fewer hundred-hour weeks.

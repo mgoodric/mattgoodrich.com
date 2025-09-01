@@ -3,50 +3,38 @@ date = '2024-10-13T12:00:00-07:00'
 draft = false
 title = 'Cross Platform Encryption using AES-256 (NodeJS, PowerShell, C#)'
 aliases = ['/security/aes-256-encryption-dotnet-node-powershell/']
-summary = "I have had to implement encryption in code for services that are implemented in different languages, and getting that to work properly takes a little bit of time. I decided to share the code I used to do it so that others can spend less time figuring it out."
+summary = "Cross-platform encryption is a pain - different languages, same algorithm, different implementations. Here's working AES-256 code for C#, Node.js, and PowerShell that actually interoperates correctly, so you don't have to debug crypto edge cases."
 genres = ['Security', 'Development']
 tags = ['cryptography', 'encryption', 'security', 'AES-256', 'Advanced Encryption Standard', 'symmetric-key block cipher', 'data security', 'c-sharp', 'nodejs', 'powershell']
 [params]
   author = 'Matt Goodrich'
 +++
 
-In cybersecurity, few areas are as intricate and nuanced as cryptography. For those new to the field, the sheer breadth of concepts, techniques, and terminology can be overwhelming. Despite its importance, cryptography remains a complex domain that often intimidates even seasoned security professionals.
+**Cross-platform encryption is a nightmare.** Same algorithm, different languages, endless edge cases where encrypt-in-NodeJS-decrypt-in-C# fails spectacularly.
 
-At its core, encryption is a fundamental component of many cybersecurity controls. It serves as a crucial layer of protection for sensitive data, ensuring it remains confidential in the event of unauthorized access or data breaches.
+**I've been there.** Multiple services, different tech stacks, all needing to speak the same encrypted language. **Hours wasted debugging why perfectly valid AES-256 implementations can't talk to each other.**
 
-In some cases, implementing encryption within code is not only necessary but also crucial for protecting sensitive information. This can involve encrypting data at rest, such as files or database entries, or encrypting communications between systems, like API keys or confidential messages. 
+**Here's the working code I wish I'd found earlier.** Encrypt in one language, decrypt in another - actually works.
 
-Selecting the right encryption algorithm for a given task can be daunting, as each has its strengths and weaknesses in terms of security, performance, and compatibility. Among the various encryption algorithms available, one stands out for its exceptional strength and versatility: Advanced Encryption Standard (AES) with 256-bit key length, commonly referred to as AES-256.
+## **AES-256: The Gold Standard**
 
-## What is AES-256?
+**AES-256 = Advanced Encryption Standard with 256-bit keys.** NIST developed it to replace the aging DES standard. **256-bit key space means 2^256 possible keys** - computationally impossible to brute force.
 
-AES-256 is a symmetric-key block cipher that encrypts data in blocks of 128 bits. It was developed by the National Institute of Standards and Technology (NIST) to replace the Data Encryption Standard (DES), which had become vulnerable due to advancements in computing power and cryptanalysis techniques.
+**Why AES-256?**
+- **Security**: That massive key space makes brute force impractical
+- **Performance**: Fast enough for real-time use  
+- **Compatibility**: Supported everywhere
+- **Compliance**: Required/recommended for regulated industries
 
-The "256" in AES-256 refers to the key size used for encryption, where each key is 32 bytes long. This is much larger than the 56-bit keys of DES, making AES significantly more secure against brute-force attacks. The algorithm itself operates on blocks of data, ensuring that even if a portion of the encrypted text is compromised, the entire dataset remains safe.
+**Perfect for data at rest, data in transit, and secure communications.**
 
-## Why Choose AES-256?
+## **The Cross-Platform Problem**
 
-AES-256 is widely regarded as one of the most secure encryption algorithms in use today for several reasons:
+**Third-party crypto libraries exist everywhere, but they add risk** - licensing issues, security vulnerabilities, unnecessary dependencies. **Most languages have built-in AES-256 support that's perfectly adequate.**
 
-* **Strength Against Brute Force Attacks**: The sheer size of the key space (2^256 possible keys) makes it computationally impractical to decrypt data using brute force methods, even with the most powerful computers available.
-* **High Performance**: Despite its strength, AES-256 has a relatively high performance compared to other encryption algorithms, making it suitable for both encrypting large volumes of data and securing real-time communications.
-* **Widespread Adoption**: AES-256 is supported by virtually all modern operating systems, devices, and software applications that require encryption, ensuring seamless integration into existing infrastructure.
-* **Regulatory Compliance**: In many jurisdictions, the use of AES-256 is mandated or strongly recommended for protecting sensitive data, especially in fields like finance, healthcare, and government services.
-
-## Use Cases for AES-256
-
-Given its broad acceptance and high security standards, AES-256 can be used in a variety of contexts:
-
-* **Data Storage**: Use AES-256 to securely store data on devices, servers, or the cloud, ensuring that even if data is stolen, it remains encrypted.
-* **Communication Security**: Encrypt communications between users using AES-256 for privacy and security.
-* **Secure Key Exchange**: Utilize AES-256 as part of key exchange protocols like SSL/TLS to securely transmit keys between parties.
-
-## Encryption in Code
-
-You do not have to look far to find a library in your language of choice that does encryption, but adding a third-party libraries to your code base just for the purposes of doing encryption may not be worth the risk (license violations, other functionality that could be vulnerable, etc). Performing encryption in many languages is relatively short. Before digging into the examples below, a couple of notes:
-
-* The encryption/decryption code below works across language examples below (ex. encrypt in NodeJS, decrypt in C#)
-* The encryption key should never be hard coded in a production application
+**Two critical notes before we dive in:**
+- **All code below interoperates** - encrypt in Node.js, decrypt in C#, no problem
+- **Never hardcode keys in production** - use environment variables, key vaults, or secure configuration
 
 ### C# / .NET Core
 
@@ -277,4 +265,12 @@ Write-Host "Decrypted String: "
 Write-Host $DecryptedString
 ```
 
-AES-256 represents the current gold standard in encryption technology, providing unparalleled strength against potential threats while also offering excellent performance. Its widespread adoption across all major platforms makes it a practical choice for organizations and individuals alike seeking to protect sensitive information from unauthorized access. As data security continues to evolve, AES-256 remains at the forefront of encryption technologies, ensuring that secure communication and storage practices remain up-to-date with the latest advancements in cryptography.
+## **Key Takeaways**
+
+**AES-256 remains the gold standard** - strong enough for government use, fast enough for production systems, supported everywhere that matters.
+
+**The code above solves the cross-platform interoperability problem** that wastes countless hours. Encrypt in one language, decrypt in another, without debugging cryptographic edge cases.
+
+**Remember: these examples work for testing and learning.** Production systems need proper key management, secure key storage, and additional security considerations like authentication and message integrity.
+
+**Save yourself the debugging headaches.** Use these implementations as starting points for your own cross-platform encryption needs.

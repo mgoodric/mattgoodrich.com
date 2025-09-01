@@ -3,19 +3,28 @@ date = '2021-12-22T12:00:00-07:00'
 draft = false
 title = 'A New Chapter for mattgoodrich.com: From Web Forms to Markdown with Jekyll'
 aliases = ['/personal/my-return/']
-summary = "I've traded in my web development worries for a low-maintenance static site hosted on GitHub pages using Jekyll. It's been a refreshing change of pace, and I'm excited to share more content with you!"
+summary = "After 14 years of domain ownership and multiple redesigns, I finally found the perfect solution: a Jekyll static site on GitHub Pages. No more worrying about AppPools, NGINX configs, or hosting costs - just markdown files and content focus."
 genres = ['Development']
 tags = ['markdown', 'jekyll', 'github-pages', 'web-development']
 [params]
   author = 'Matt Goodrich'
 +++
 
-Since I first registered mattgoodrich.com (MGDC) way back on July 17, 2007 my internet presence has taken a number of forms. The early days of MGDC included a lot of .NET Web Forms snippets and custom controls that I had put together over my early days using the .NET Framework to develop websites for Colorado State University. Through several re-designs the content stayed the same, but eventually I got tired of managing a web host, and like it usually does - life got busy.
+**July 17, 2007.** That's when I first registered mattgoodrich.com, and my internet presence has been through more iterations than I care to count.
+
+**The early days were pure .NET nostalgia** - Web Forms snippets, custom controls, everything I'd built while developing websites for Colorado State University. Multiple redesigns later, the content stayed the same, but I got tired of managing web hosts. **Life got busy, as it does.**
 
 ![RTFM XKCD](https://imgs.xkcd.com/comics/rtfm.png)
 
-I was reading some documentation a couple of months back for a library I was looking to consume (always RTFM kids), and realized they had a really good looking site and it was hosted on GitHub pages. I started thinking this might get me over my dread of spinning up MGDC or another website again because I didn't want to have to worry about managing AppPools, NGINX configs, or paying money for something I would end up hating. I thought "Hey, I am still decent at HTML, CSS, JS, etc. - maybe I should just do a completely static site and host it somewhere for low/no cost." As my brain often does, I started to think "I love using Markdown, maybe I could make something that parses Markdown into HTML", and then ultimately I ended up at "I bet this has been done before". Sure enough, I was right! MGDC is up and running on GitHub pages using Jekyll!
+**The breakthrough came while reading documentation** (always RTFM, kids). I noticed the library's site looked fantastic and was hosted on GitHub Pages. **Suddenly, I saw a path back to having a website without the operational overhead I dreaded.**
 
-Stay tuned for more content!
+**No more worrying about:**
+- AppPools going down
+- NGINX configurations
+- Monthly hosting bills for something I might abandon
 
--G$
+**My brain followed its usual pattern:** "I'm still decent at HTML/CSS/JS - maybe a static site?" → "I love Markdown - maybe I could build a parser?" → **"I bet this has been done before."**
+
+**Spoiler alert: It has.** MGDC is now running on GitHub Pages with Jekyll, and I couldn't be happier with the simplicity.
+
+**More content coming soon.**

@@ -3,22 +3,22 @@ date = '2024-10-14T12:00:00-07:00'
 draft = false
 title = 'Streamlining SSH Key Management with 1Password'
 aliases = ['/security/1password-ssh-agent/']
-summary = "As someone who has struggled with managing SSH keys across devices and projects, I've found that using a password manager like 1Password to securely store and access them has been a game-changer. By utilizing 1Password's SSH Agent functionality and making some configuration changes, I was able to simplify my workflow, increase security, and reduce the sharing of SSH Keys between different systems and tenants."
+summary = "Fed up with losing SSH keys during my annual machine rebuilds, I discovered 1Password's SSH Agent functionality. With some configuration tweaks, I now manage keys securely across devices and projects while adding MFA protection to every SSH operation."
 genres = ['Security', 'Productivity', 'Development', 'Tools']
 tags = ['1password', 'ssh keys', 'password manager', 'security', 'productivity', 'development']
 [params]
   author = 'Matt Goodrich'
 +++
 
-I like many tech folks out there hate when my machine gets too bloated, and will typically erase everything and start over on an annual basis at least. I typically go through and make sure I have all my files backed up, but more than once have I forgotten to do *something* with my SSH keys. This isn't usually a big deal - I can create new ones, and re-add them to the applications where I use them most commonly - GitLab, GitHub, etc. Re-creating them though and re-uploading them does take time, and is unnecessary.
+**Like many developers, I hate bloated machines.** I rebuild everything from scratch at least annually, carefully backing up files but inevitably forgetting *something* related to my SSH keys. Sure, I can generate new keys and re-upload them to GitHub, GitLab, etc., but that takes time and is completely unnecessary.
 
-Now you might be saying, just back up your SSH keys and move them to your new machine, and sure, that's an option - not even a bad one. This could leave my SSH keys available in a spot where I have them backed up, which generally feels less secure than it could be. My solution.... 1Password.
+**You might think: "Just back up your SSH keys."** That works, but it means keys live in backup locations that feel less secure than they should. **My solution? 1Password.**
 
-I have used a number of password managers over the years. Starting with [KeePass](https://keepass.info/), later moving to [LastPass](https://www.lastpass.com/), but several years ago I moved to [1Password](https://1password.com/), and haven't looked back.
+**I've migrated through the usual password manager progression:** KeePass → LastPass → 1Password. **1Password won and I haven't looked back.**
 
-1Password has an immense amount of functionality, and I am sure I am not using it to its' fullest potential, but over the past several months I have been using the SSH Agent functionality to add a layer of security, as well as facilitate the storage of my SSH keys across devices.
+**1Password has functionality I'm probably not even aware of,** but recently I've been using its SSH Agent feature to both secure my keys and sync them across devices. **It adds MFA protection to every SSH operation while eliminating the machine rebuild headache.**
 
-I have several personal projects I spend time on, and will occasionally jump in and help some friends with their projects as well. When I do this, I will occasionally create new accounts and/or SSH keys to work in their ecosystems, and now I create them within 1Password, and will often store them in a separate vault to keep my credentials for side projects separated. 
+**Managing multiple projects creates key management complexity.** Between personal projects and helping friends with their systems, I often need separate accounts and SSH keys for different ecosystems. **Now I create all keys directly in 1Password and store them in separate vaults to maintain clear boundaries between projects.** 
 
 By default, the 1Password SSH agent will make every eligible key (SSH Key item type, that is not archived) in the built-in **Personal**, **Private**, or **Employee** vault of your 1Password accounts available to offer to SSH servers. This configuration is automatically set up when you [turn on the SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent). This means right out of the box, if all of your SSH keys are in one of those bolded vaults above, you will be prompted for the key you would like to use when performing an action that requires an SSH key.
 

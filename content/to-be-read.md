@@ -1,0 +1,462 @@
++++
+date = '2025-08-31T07:52:59-07:00'
+draft = false
+title = 'Books Up Next'
++++
+
+This is my TBR (To Be Read) list. Most of these were recommended to me from people I know, or mentioned in other books I have read.
+
+# Technical/Engineering
+- Team Topologies: Organizing Business and Technology Teams for Fast Flow
+	- Matthew Skelton
+	- #engineering, #technology, #management, #non-fiction, #audiobook
+- The Mythical Man-Month: Essays on Software Engineering
+	- Frederick P. Brooks Jr.
+	- #engineering, #technology, #non-fiction, #audiobook
+- Driving Technical Change: Why People On Your Team Don't Act On Good Ideas, and How to Convince Them They Should
+	- Terrence Ryan
+	- #engineering, #technology, #leadership, #non-fiction, #audiobook
+- A Seat at the Table: IT Leadership in the Age of Agility
+	- Mark Schwartz
+	- #engineering, #technology, #leadership, #non-fiction, #audiobook
+- The Software Architect Elevator: Redefining the Architect's Role in the Digital Enterprise
+	- Gregor Hohpe
+	- #engineering, #technology, #architecture, #non-fiction, #audiobook
+- Accelerate: Building and Scaling High Performing Technology Organizations
+	- Nicole Forsgren
+	- #engineering, #technology, #devops, #non-fiction, #audiobook
+- Kill It with Fire: Manage Aging Computer Systems
+	- Marianne Bellotti
+	- #engineering, #technology, #non-fiction, #audiobook
+- The Art Of Business Value
+	- Mark Schwartz
+	- #engineering, #business, #technology, #non-fiction, #audiobook
+- Building Microservices: Designing Fine-Grained Systems
+	- Sam Newman
+	- #engineering, #architecture, #technology, #non-fiction, #audiobook
+	- *Technical architecture that bridges engineering and management*
+- Technology Strategy Patterns: Architecture as Strategy
+	- Eben Hewitt
+	- #technology, #strategy, #architecture, #engineering, #audiobook
+	- *Technical strategy like your highly-rated technical leadership books*
+- Ahead in the Cloud: Best Practices for Navigating the Future of Enterprise IT
+	- Stephen Orban
+	- #technology, #cloud, #enterprise, #non-fiction, #audiobook
+
+# Leadership/Management
+- Dare to Lead
+	- Brené Brown
+	- #leadership, #management, #non-fiction, #audiobook
+- The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change
+	- Stephen R. Covey
+	- #leadership, #self-help, #non-fiction, #audiobook
+- 1% Leadership: Master the Small, Daily Improvements that Set Great Leaders Apart
+	- Andy Ellis
+	- #leadership, #management, #non-fiction, #audiobook
+- Leadership Strategy and Tactics: Field Manual
+	- Jocko Willink
+	- #leadership, #management, #non-fiction, #audiobook
+- Reality-Based Leadership: Ditch the Drama, Restore Sanity to the Workplace, and Turn Excuses Into Results
+	- Cy Wakeman
+	- #leadership, #management, #non-fiction, #audiobook
+- Crucial Conversations: Tools for Talking When Stakes are High
+	- Kerry Patterson
+	- #leadership, #communication, #management, #non-fiction, #audiobook
+- The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever
+	- Michael Bungay Stanier
+	- #leadership, #coaching, #management, #non-fiction, #audiobook
+- Wooden on Leadership: How to Create a Winning Organization
+	- John Wooden
+	- #leadership, #management, #non-fiction, #audiobook
+- Leadership: In Turbulent Times
+	- Doris Kearns Goodwin
+	- #leadership, #history, #non-fiction, #audiobook
+- Leaders Eat Last: Why Some Teams Pull Together and Others Don't
+	- Simon Sinek
+	- #leadership, #management, #culture, #audiobook
+- The Infinite Game
+	- Simon Sinek
+	- #leadership, #business, #philosophy, #non-fiction, #audiobook
+- Armstrong on Reinventing Performance Management: Building a Culture of Continuous Improvement
+	- Michael Armstrong
+	- #management, #performance, #culture, #non-fiction
+- Manager as Negotiator
+	- David A. Lax
+	- #management, #negotiation, #leadership, #non-fiction
+- Radical Candor: Be a Kickass Boss Without Losing Your Humanity
+	- Kim Malone Scott
+	- #leadership, #management, #culture, #non-fiction, #audiobook
+- Leading From Anywhere: The Essential Guide to Managing Remote Teams
+	- David Burkus
+	- #leadership, #management, #remote-work, #non-fiction, #audiobook
+- The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company
+	- Robert Iger, Joel Lovell
+	- #leadership, #business, #management, #non-fiction, #audiobook
+- The Five Temptations of a CEO: A Leadership Fable
+	- Patrick Lencioni
+	- #leadership, #business-fable, #management, #audiobook
+	- *Another business fable by your favorite 5-star author*
+- Silos, Politics and Turf Wars: A Leadership Fable About Destroying the Barriers That Turn Colleagues Into Competitors
+	- Patrick Lencioni
+	- #leadership, #business-fable, #culture, #audiobook
+	- *Leadership fable format you consistently rate 5-star*
+- The First 90 Days: Proven Strategies for Getting Up to Speed Faster and Smarter
+	- Michael Watkins
+	- #leadership, #management, #career, #audiobook
+	- *Leadership transition book, management focus like your 4-star books*
+- Multipliers: How the Best Leaders Make Everyone Smarter
+	- Liz Wiseman
+	- #leadership, #management, #culture, #audiobook
+	- *Leadership effectiveness, similar to your management books*
+- Team of Teams: New Rules of Engagement for a Complex World
+	- General Stanley McChrystal
+	- #leadership, #military, #management, #audiobook
+	- *Military leadership applied to business (like Jocko books you rated highly)*
+- The 4 Disciplines of Execution: Achieving Your Wildly Important Goals
+	- Chris McChesney
+	- #leadership, #execution, #business, #non-fiction
+- Action Inquiry: The Secret of Timely and Transforming Leadership
+	- Bill Torbert
+	- #leadership, #transformation, #management, #non-fiction
+- Don't Hire Anyone Without Me!: A revolutionary approach to interviewing and hiring the best
+	- Carol Quinn
+	- #leadership, #hiring, #hr, #non-fiction
+- Ego Free Leadership: Ending the Unconscious Habits That Hijack Your Business
+	- Brandon Black
+	- #leadership, #self-awareness, #management, #non-fiction
+- Entreleadership: 20 Years of Practical Business Wisdom from the Trenches
+	- Dave Ramsey
+	- #leadership, #business, #entrepreneurship, #non-fiction
+- First, Break All the Rules: What the World's Greatest Managers Do Differently
+	- Marcus Buckingham
+	- #leadership, #management, #hr, #non-fiction
+- Good Leaders Ask Great Questions: Your Foundation for Successful Leadership
+	- John C. Maxwell
+	- #leadership, #questioning, #management, #non-fiction
+- Leadershift: The 11 Essential Changes Every Leader Must Embrace
+	- John C. Maxwell
+	- #leadership, #change, #transformation, #non-fiction
+- Leadership and Self-Deception: Getting Out of the Box
+	- The Arbinger Institute
+	- #leadership, #self-awareness, #psychology, #non-fiction
+- Leading Change
+	- John P. Kotter
+	- #leadership, #change-management, #transformation, #non-fiction
+- Meetings Suck: Turning One of The Most Loathed Elements of Business into One of the Most Valuable
+	- Cameron Herold
+	- #leadership, #meetings, #productivity, #non-fiction
+- Quiet Leadership: Six Steps to Transforming Performance at Work
+	- David Rock
+	- #leadership, #performance, #coaching, #non-fiction
+- Switch: How to Change Things When Change Is Hard
+	- Chip Heath
+	- #leadership, #change, #psychology, #non-fiction
+- The 21 Irrefutable Laws of Leadership: Follow Them and People Will Follow You
+	- John C Maxwell
+	- #leadership, #principles, #management, #non-fiction
+- The Effective Executive: The Definitive Guide to Getting the Right Things Done
+	- Peter F. Drucker
+	- #leadership, #management, #productivity, #non-fiction
+- The Leadership Moment: Nine True Stories of Triumph and Disaster and Their Lessons for Us All
+	- Michael Useem
+	- #leadership, #case-studies, #management, #non-fiction
+- The Leadership Secrets of Colin Powell
+	- Oren Harari
+	- #leadership, #military, #biography, #non-fiction
+- The Twelve Absolutes of Leadership
+	- BURNISON
+	- #leadership, #principles, #management, #non-fiction
+- The Vision Driven Leader: 10 Questions to Focus Your Efforts, Energize Your Team, and Scale Your Business
+	- Michael Hyatt
+	- #leadership, #vision, #strategy, #non-fiction
+- Theodore Roosevelt on Leadership: Executive Lessons from the Bully Pulpit
+	- James Strock
+	- #leadership, #history, #biography, #non-fiction
+- Total Leadership: Be a Better Leader, Have a Richer Life
+	- Stewart D. Friedman
+	- #leadership, #work-life-balance, #management, #non-fiction
+- Tribes: We Need You to Lead Us
+	- Seth Godin
+	- #leadership, #community, #influence, #non-fiction
+- Virtuous Leadership
+	- Alexandre Havard
+	- #leadership, #virtue, #ethics, #non-fiction
+- We Shall Not Fail: The Inspiring Leadership of Winston Churchill
+	- Celia Sandys
+	- #leadership, #biography, #history, #non-fiction
+- John P. Kotter on What Leaders Really Do
+	- John P. Kotter
+	- #leadership, #management, #change, #non-fiction
+- Why Great Leaders Don't Take Yes for an Answer: Managing for Conflict and Consensus
+	- Michael Roberto
+	- #leadership, #decision-making, #conflict, #non-fiction
+- Communicating for a Change: Seven Keys to Irresistible Communication
+	- Andy Stanley
+	- #leadership, #communication, #speaking, #non-fiction
+- Conversational Capacity: The Secret to Building Successful Teams That Perform When the Pressure Is On
+	- Craig Weber
+	- #leadership, #communication, #teamwork, #non-fiction
+- Emotional Intelligence 2.0
+	- Travis Bradberry
+	- #leadership, #emotional-intelligence, #self-awareness, #non-fiction
+- How to Work with Jerks: Getting Stuff Done with People You Can't Stand
+	- Eric L. Williamson
+	- #leadership, #communication, #workplace, #non-fiction
+- Influence Redefined: Be the Leader You Were Meant to Be, Monday to Monday
+	- Stacey Hanke
+	- #leadership, #influence, #communication, #non-fiction
+- The Anatomy of Peace: Resolving the Heart of Conflict
+	- The Arbinger Institute
+	- #leadership, #conflict-resolution, #psychology, #non-fiction
+- The Culture Code: The Secrets of Highly Successful Groups
+	- Daniel Coyle
+	- #leadership, #culture, #teamwork, #non-fiction
+
+# Business/Entrepreneurship
+- The Culture Map: Breaking Through the Invisible Boundaries of Global Business
+	- Erin Meyer
+	- #business, #culture, #communication, #non-fiction, #audiobook
+- The Lean Startup
+	- Eric Ries
+	- #entrepreneurship, #business, #startup, #audiobook
+- The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business
+	- Clayton M. Christensen
+	- #business, #innovation, #entrepreneurship, #non-fiction, #audiobook
+- Influence: The Psychology of Persuasion
+	- Robert B. Cialdini
+	- #psychology, #persuasion, #business, #non-fiction, #audiobook
+- The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you
+	- Rob Fitzpatrick
+	- #business, #entrepreneurship, #customer-development, #non-fiction, #audiobook
+- Zero to One: Notes on Startups, or How to Build the Future
+	- Peter Thiel
+	- #entrepreneurship, #business, #startup, #audiobook
+- The Personal MBA: Master the Art of Business
+	- Josh Kaufman
+	- #business, #entrepreneurship, #education, #non-fiction, #audiobook
+- The 4-Hour Workweek
+	- Timothy Ferriss
+	- #business, #productivity, #entrepreneurship, #non-fiction, #audiobook
+- Good to Great: Why Some Companies Make the Leap... and Others Don't
+	- Jim Collins
+	- #business, #management, #strategy, #audiobook
+- Good Strategy Bad Strategy: The Difference and Why It Matters
+	- Richard P. Rumelt
+	- #business, #strategy, #management, #non-fiction
+- The Tipping Point: How Little Things Can Make a Big Difference
+	- Malcolm Gladwell
+	- #business, #psychology, #sociology, #non-fiction, #audiobook
+- How To Win Friends and Influence People
+	- Dale Carnegie
+	- #business, #communication, #relationships, #audiobook
+- Made to Stick: Why Some Ideas Survive and Others Die
+	- Chip Heath
+	- #business, #communication, #marketing, #non-fiction
+- Berkshire Hathaway Letters to Shareholders, 2023
+	- Warren Buffett
+	- #finance, #investment, #business, #non-fiction
+- The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers―Straight Talk on the Challenges of Entrepreneurship
+	- Ben Horowitz
+	- #entrepreneurship, #business, #leadership, #non-fiction
+- Brief: Make a Bigger Impact by Saying Less
+	- Joseph McCormack
+	- #business, #communication, #leadership, #non-fiction
+- Who Not How: The Formula to Achieve Bigger Goals Through Accelerating Teamwork
+	- Dan Sullivan
+	- #business, #productivity, #leadership, #non-fiction
+- Brave New Work: Are You Ready to Reinvent Your Organization?
+	- Aaron Dignan
+	- #business, #organizational-change, #innovation, #non-fiction
+- Business Made Simple: 60 Days to Master Leadership, Sales, Marketing, Execution, Management, Personal Productivity and More (Made Simple Series)
+	- Donald Miller
+	- #business, #entrepreneurship, #productivity, #non-fiction
+- Know What You're FOR: A Growth Strategy for Work, An Even Better Strategy for Life
+	- Jeff Henderson
+	- #business, #strategy, #purpose, #non-fiction
+- Predictable Success: Getting Your Organization on the Growth Track-And Keeping It There
+	- Les McKeown
+	- #business, #growth, #organizational-development, #non-fiction
+- Profit First: Transform Your Business from a Cash-Eating Monster to a Money-Making Machine (Entrepreneurship Simplified)
+	- Mike Michalowicz
+	- #business, #finance, #entrepreneurship, #non-fiction
+- That Will Never Work: The Birth of Netflix and the Amazing Life of an Idea
+	- Marc Randolph
+	- #business, #entrepreneurship, #startup, #biography
+- The Advantage: Why Organizational Health Trumps Everything Else In Business
+	- Patrick M. Lencioni
+	- #business, #organizational-health, #leadership, #non-fiction
+- Blink: The Power of Thinking Without Thinking
+	- Malcolm Gladwell
+	- #business, #psychology, #decision-making, #non-fiction
+- Never Eat Alone: And Other Secrets to Success, One Relationship at a Time
+	- Keith Ferrazzi
+	- #business, #networking, #relationships, #non-fiction
+- Nudge: Improving Decisions About Health, Wealth, and Happiness
+	- Richard H. Thaler
+	- #business, #behavioral-economics, #decision-making, #non-fiction
+- Talking to Strangers: What We Should Know About the People We Don't Know
+	- Malcolm Gladwell
+	- #business, #psychology, #communication, #non-fiction
+- Building a StoryBrand 2.0: Clarify Your Message So Customers Will Listen
+	- Donald Miller
+	- #business, #marketing, #communication, #non-fiction
+- Crucial Accountability: Tools for Resolving Violated Expectations, Broken Commitments, and Bad Behavior
+	- PATTERSON
+	- #business, #accountability, #communication, #non-fiction
+- The Challenger Sale: Taking Control of the Customer Conversation
+	- Matthew Dixon
+	- #business, #sales, #customer-development, #non-fiction
+- Great Demo!: How to Create and Execute Stunning Software Demonstrations
+	- Peter Cohan
+	- #business, #sales, #software, #non-fiction
+- Doing Discovery: The Single Most Important Element of Software Sales and Buyer Enablement Processes
+	- Peter Cohan
+	- #business, #sales, #customer-development, #non-fiction
+- The Trusted Advisor
+	- David H. Maister
+	- #business, #consulting, #relationships, #non-fiction
+- The Trusted Advisor Sales Engineer
+	- John Care
+	- #business, #sales, #technical-sales, #non-fiction
+- Mastering Technical Sales: The Sales Engineer's Handbook
+	- John Care
+	- #business, #sales, #technical-sales, #non-fiction
+- The Six Habits of Highly Effective Sales Engineers
+	- Chris White
+	- #business, #sales, #technical-sales, #non-fiction
+
+# Aviation
+- Skunk Works: A Personal Memoir of My Years at Lockheed
+	- Ben R. Rich
+	- #aviation, #military, #engineering, #audiobook
+- Freight Dog: The Dark Side of Aviation
+	- Kimber C. Turner
+	- #aviation, #non-fiction
+- The Vanishing of Flight MH370: The True Story of the Hunt for the Missing Malaysian Plane
+	- Richard Quest
+	- #aviation, #mystery, #non-fiction
+- Ferry Pilot: Nine Lives Over the North Atlantic.
+	- Kerry McCauley
+	- #aviation, #adventure, #non-fiction
+- Dangerous Flights: What Could Possibly Go Wrong?
+	- Kerry McCauley
+	- #aviation, #adventure, #non-fiction
+- Mike Busch on Airplane Ownership (Volume 1): What every aircraft owner needs to know about selecting, purchasing, insuring, maintaining, troubleshooting, modifying, and flying light airplanes
+	- Mike Busch
+	- #aviation, #maintenance, #ownership, #non-fiction
+- Mike Busch on Airplane Ownership
+	- Mike Busch
+	- #aviation, #maintenance, #ownership, #non-fiction
+- The Crash Detectives: Investigating the World's Most Mysterious Air Disasters
+	- Christine Negroni
+	- #aviation, #investigation, #safety, #audiobook
+
+# Security/Cybersecurity
+- CISO Desk Reference Guide Volume 2: A Practical Guide for CISOs
+	- Bill Bonney, Gary Hayslip, Matt Stamper
+	- #cybersecurity, #security, #leadership, #non-fiction
+- CISO Desk Reference Guide: A Practical Guide for CISOs
+	- Bill Bonney, Gary Hayslip, Matt Stamper
+	- #cybersecurity, #security, #leadership, #non-fiction
+- CISO Impact and Influence: How Cybersecurity Executives Can Take the Lead and Nudge the World
+	- Chris Brown
+	- #cybersecurity, #security, #leadership, #non-fiction
+- Why CISOs Fail: The Missing Link in Security Management--and How to Fix It
+	- Barak Engel
+	- #cybersecurity, #security, #leadership, #non-fiction
+- The Cyber Leadership Imperative: Powerful Strategies to Unlock Your Potential and Become an Exceptional Cybersecurity Executive
+	- Phillimon Zongo, Darren Argyle, Jan Schreuder
+	- #cybersecurity, #security, #leadership, #non-fiction
+
+# Product Management
+- Empowered: Ordinary People, Extraordinary Products
+	- Marty Cagan
+	- #product-management, #business, #leadership, #non-fiction
+- Product Roadmaps Relaunched: How to Set Direction while Embracing Uncertainty
+	- C. Todd Lombardo
+	- #product-management, #business, #strategy, #non-fiction
+- Product Leadership: How Top Product Managers Launch Awesome Products and Build Successful Teams
+	- Richard Banfield
+	- #product-management, #leadership, #business, #non-fiction
+- Inspired: How to Create Tech Products Customers Love
+	- Marty Cagan
+	- #product-management, #business, #technology, #non-fiction
+- Project to Product: How to Survive and Thrive in the Age of Digital Disruption with the Flow Framework
+	- Mik Kersten
+	- #product-management, #business, #transformation, #non-fiction
+- Sooner Safer Happier: Antipatterns and Patterns for Business Agility
+	- Jonathan Smart
+	- #product-management, #agile, #business, #non-fiction
+
+# Personal Development
+- Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+	- James Clear
+	- #self-help, #productivity, #habits, #audiobook
+- Think Again: The Power of Knowing What You Don't Know
+	- Adam M. Grant
+	- #psychology, #self-help, #learning, #non-fiction, #audiobook
+- Getting Things Done: The Art of Stress-Free Productivity
+	- David Allen
+	- #productivity, #self-help, #organization, #audiobook
+- Thinking, Fast and Slow
+	- Daniel Kahneman
+	- #psychology, #decision-making, #behavioral-economics, #audiobook
+- The Checklist Manifesto: How to Get Things Right
+	- Atul Gawande
+	- #productivity, #systems, #process, #non-fiction, #audiobook
+- Thinking In Systems: A Primer
+	- Donella H. Meadows
+	- #systems-thinking, #complexity, #problem-solving, #non-fiction
+- The Goal: A Process of Ongoing Improvement
+	- Eliyahu M. Goldratt
+	- #process-improvement, #systems, #business, #non-fiction
+- Deviate: The Science of Seeing Differently
+	- Beau Lotto
+	- #psychology, #perception, #creativity, #non-fiction
+- Finish: Give Yourself the Gift of Done
+	- Jon Acuff
+	- #productivity, #goal-setting, #self-help, #non-fiction
+- Living Forward: A Proven Plan to Stop Drifting and Get the Life You Want
+	- Michael Hyatt
+	- #personal-development, #goal-setting, #life-planning, #non-fiction
+- Free to Focus: A Total Productivity System to Achieve More by Doing Less
+	- Michael Hyatt
+	- #productivity, #personal-development, #focus, #non-fiction
+- Building a Second Brain: A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential
+	- Tiago Forte
+	- #productivity, #knowledge-management, #organization, #non-fiction
+- The Elements of Style
+	- William Strunk Jr.
+	- #writing, #communication, #reference, #classic
+- On Writing Well
+	- William Zinsser
+	- #writing, #communication, #craft, #non-fiction
+- Resonate: Present Visual Stories that Transform Audiences
+	- Nancy Duarte
+	- #communication, #presentation, #storytelling, #non-fiction
+- slide:ology: The Art and Science of Creating Great Presentations
+	- Nancy Duarte
+	- #communication, #presentation, #design, #non-fiction
+- Talk Like TED
+	- Carmine Gallo
+	- #communication, #presentation, #speaking, #non-fiction
+- The Presentation Secrets of Steve Jobs: How to Be Insanely Great in Front of Any Audience
+	- Carmine Gallo
+	- #communication, #presentation, #speaking, #biography
+
+# Finance/Business Cases
+- Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis — and Themselves
+	- Andrew Ross Sorkin
+	- #finance, #crisis, #economics, #non-fiction, #audiobook
+- The Big Short: Inside the Doomsday Machine
+	- Michael Lewis
+	- #finance, #economics, #crisis, #audiobook
+- The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron
+	- Bethany McLean
+	- #business, #finance, #scandal, #non-fiction, #audiobook
+- Bad Blood: Secrets and Lies in a Silicon Valley Startup
+	- John Carreyrou
+	- #business, #startup, #scandal, #audiobook
+- Cable Cowboy: John Malone and the Rise of the Modern Cable Business
+	- Mark Robichaux
+	- #business, #biography, #telecommunications, #non-fiction, #audiobook

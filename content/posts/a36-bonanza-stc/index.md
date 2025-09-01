@@ -3,60 +3,59 @@ date = '2022-04-15T12:00:00-07:00'
 draft = false
 title = 'The Excitement of Building an Aircraft Modification List: Certified vs Experimental Aircraft'
 aliases = ['/aviation/a36-bonanza-stc/']
-summary = "I've caught the bug again - building elaborate lists of modifications for my dream plane, just like I did with cars when I was 13! This time, it's a 1977 A36 Bonanza. However, I've learned that modifying certified aircraft is more complex than in the automotive world, and I'm excited to explore the world of Supplemental Type Certificates (STCs)."
+summary = "At 13, I built elaborate Excel spreadsheets of car modifications I couldn't afford. Now I'm doing it again with aircraft - researching every possible STC for a 1977 A36 Bonanza. Unlike cars, certified aircraft modifications require FAA approval, but that just makes the research more interesting."
 genres = ['Aviation', 'Aircraft Maintenance', 'Plane Modifications']
 tags = ['Aircraft Modification', 'Beechcraft Bonanza A36', 'Certified Aircraft', 'Experimental Aircraft', 'Supplemental Type Certificate', 'STC']
 [params]
   author = 'Matt Goodrich'
 +++
 
-When I was around 13 years old I was incredibly interested in cars. This was only solidified when *The Fast and the Furious* came out in 2001. I spent hours and hours reading magazines like *Super Street* and *Import Tuner* along with searching what was around on the internet at the time for car parts. Of course at age 13 I had no money to actually indulge in buying these parts, let alone the car to put them on - but I still built elaborate Microsoft Excel sheets that listed the car and all of the mods I would do to it. I continued to do this, even after I did finally pick up my first car - a 1964 1/2 Ford Mustang.
+**Some habits never die.**
+
+At 13, I was obsessed with cars - an obsession that *The Fast and the Furious* (2001) only amplified. **I spent hours reading *Super Street* and *Import Tuner*, building elaborate Excel spreadsheets of modifications for cars I couldn't afford.** MK4 Toyota Supra was the dream, complete with every bolt-on imaginable meticulously researched and priced.
 
 ![1964 Ford Mustang](Mustang.jpg)
 
-Well.... I once again have found myself with that same boyish desire to pull out an Excel spreadsheet and start listing out everything I would like to do to a plane before I even have the plane in my possession. I am admittedly a little further along in my plane journey than I was as a 13 year old with no money wanting a MK4 Toyota Supra. As I am writing this I am under contract on a 1977 A36 Bonanza that does not have much more done to it than the factory delivered. 
+**Flash forward to today, and I'm doing it again.** Same boyish excitement, same Excel spreadsheet obsession, but this time it's aircraft modifications. **The difference? I'm actually under contract on a 1977 A36 Bonanza** - a factory-standard bird just begging for upgrades. 
 
 ![1964 Ford Mustang](Bonanza.jpeg)
 
-The world of aviation does differ from the automotive world when it comes to making modifications to what was delivered from the factory. In the automotive world you can replace, modify, add, or remove any portion of the vehicle - pending remaining road legal per the Department of Transportation wherever you happen to live - or just treat it as an off-road or track vehicle and have more or different freedoms around modification. The same is not true for certified aircraft.
+**Here's where aviation gets complicated.** In the automotive world, you can modify anything as long as it remains road legal - or just build a track car with complete freedom. **Certified aircraft? Not so simple.**
 
-## Certified vs Experimental Aircraft
-The Federal Aviation Administration (FAA) deals with three types of certification:
+## **The FAA's Three-Tier System**
 
-* **Type certification** - the approval of the design of an aircraft and all component parts (propellers, engines, controls, etc.) Type certification signifies the design is in compliance with applicable airworthiness, noise, fuel venting, and exhaust emission standards.
-* **Production certification** - the approval to manufacture duplicate products under an FAA approved type design. Production certification signifies than an organization and its personnel, facilities, and quality systems can produce a product that conforms to its approved design.
-* **Airworthiness certification** - signifies that an aircraft meets its approved type design (if applicable) and is in a condition for safe operation.
+**The FAA controls aircraft through three levels of certification:**
+
+* **Type Certification** - Design approval for the aircraft and every component (engines, props, avionics, etc.). **Think of it as the blueprint getting government approval.**
+* **Production Certification** - Permission to manufacture aircraft based on that approved design. **Quality control meets bureaucracy.**  
+* **Airworthiness Certification** - Individual aircraft approval proving it matches the type design and is safe to fly. **Your specific plane's birth certificate.**
 
 These three types of certification are covered in the [Code of Federal Regulations (CFR), Title 14, Part 21](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-21)
 
-### Certified Aircraft
-Aircraft manufacturers, like Beechcraft/Textron Aviation, went through the process of designing an aircraft, building an aircraft, getting the design/implementation of that aircraft a type certification from the FAA, then proceeded to get a production certification to build more than that single instance of that aircraft, and each aircraft when coming off of the production line was granted an airworthiness certification.
+### **Certified Aircraft: The Corporate Path**
+**Beechcraft/Textron followed the full process:** design approval, production approval, individual aircraft certification. **Every Bonanza that rolled off the line has government blessing at every level.**
 
-### Experimental Aircraft
-There are other avenues for taking to the sky. You can in fact build your own airplane according to your own design, build an airplane from a kit, or buy an airplane that someone else has built from their design or from a kit. 
+### **Experimental Aircraft: The Builder's Path**  
+**Multiple routes to experimental certification:**
+- **Scratch-built from your own design** (no type cert needed)
+- **Kit aircraft** like [Van's Aircraft](https://www.vansaircraft.com/) builds (kit manufacturer has production cert, but no type cert)
+- **Buying someone else's experimental**
 
-#### Amateur Designed & Built Aircraft
-When building a plane from your own design - the plane will not have a type certificate, and the production certificate is likely not applicable. 
+**All still need individual airworthiness certification, but the path is different.**
 
-#### Amateur Built Kit Aircraft
-If you choose to build a plane from a kit (I do hope to do this someday) - like an aircraft from [Vans Aircraft](https://www.vansaircraft.com/) - Vans will hold a production certification to produce the kits, but no type certification. 
+## **The Modification Reality Check**
 
-In any experimental aircraft however, an airworthiness certification must be obtained.
+**Certified Aircraft:** Unapproved modification = grounded aircraft. **Period.** Getting airworthiness back is expensive and painful.
 
-## Modifications to Certified Aircraft
-If an unapproved modification is made to a certified aircraft, that aircraft simply becomes unairworthy - unable to fly entirely. There are ways to regain this airworthiness, but it's typically a long, expensive and arduous process. 
+**Experimental Aircraft:** Modify freely, but flight characteristic changes require new testing. **Much more flexibility.**
 
-## Modifications to Experimental Aircraft
-If a modification is made to an experimental aircraft - and only if that modification changes flight characteristics - the aircraft will likely have to undergo flight testing again to regain it's airworthiness certification.
+## **Enter STCs: The Certified Modification Solution**
 
-## TL;DR
-Certified aircraft can only remain airworthy if approved modifications are made. Experimental aircraft can make many changes, and only changes that alter flight characteristics would require recertification to remain airworthy.
+**Supplemental Type Certificates (STCs) are the key to legally modifying certified aircraft.** Think of them as FAA-approved modification kits that supplement the original type certificate. **Each STC is aircraft-specific - no universal solutions.**
 
-## What is an STC?
-The above explanation is a detailed explanation to state that unless a modification is approved on a certified aircraft - it cannot be done. This is where Supplemental Type Certificates commonly called STCs come into play. A Supplemental Type Certificate is a type certificate that is issued by the FAA when approval has been given to modify an aeronautical product from its original design. STCs add to an existing type certificate, and as such STCs are produced for specific aircraft.
+## **My A36 Bonanza STC Research**
 
-## A36 Bonanza STCs
-A question I have seen many times in forums, and something I am finding is not really available and consolidated is a list of STCs available for A36 bonanzas. In doing my research to build my ideal Bonanza in my Excel file I have run across many, and hope I can begin to create a place of reference that may help others. I do hope to keep this updated as I find more.
+**Forum posts constantly ask: "What STCs are available for A36 Bonanzas?"** I couldn't find a consolidated list anywhere, so while building my dream Bonanza Excel spreadsheet (yes, really), I've compiled every STC I could find. **Consider this a living reference for fellow Bonanza dreamers.**
 
 | STC | Description | 
 | --- | ----------- |

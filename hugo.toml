@@ -10,15 +10,30 @@ theme = "hugo-theme-m10c"
     url = "/"
     weight = 1
   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 2
+  [[menu.main]]
     identifier = "genres"
     name = "Categories"
     url = "/genres/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 3
+    weight = 4
+  [[menu.main]]
+    identifier = "read"
+    name = "Book Reviews"
+    url = "/read/"
+    weight = 5
+  [[menu.main]]
+    identifier = "to-be-read"
+    name = "Books Up Next"
+    url = "/to-be-read/"
+    weight = 6
 
 [taxonomies]
   genre = 'genres'

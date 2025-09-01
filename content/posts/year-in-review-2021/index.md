@@ -3,20 +3,26 @@ date = '2021-12-31T12:00:00-07:00'
 draft = false
 title = 'My 2021 Year in Review: Life, Leadership, and Learning'
 aliases = ['/personal/year-in-review-2021/']
-summary = "As I reflect on my year, I realize that leading several groups within an Information Security team was a significant departure from being deeply focused on technical details. Despite not meeting my resolution to be more healthy and lose weight, I made progress as a better business partner and took time off to focus on completing my private pilot's license."
+summary = "2021 was a year of major transitions - from shifting into leadership roles to earning my private pilot's license to becoming a father again. Despite missing my health goals (again), I discovered the value of taking extended parental leave and dove deep into reading, while navigating significant career and family changes."
 genres = ['Career Development', 'Personal Growth']
 tags = ['Year in Review', 'Leadership', 'Private Pilot License', 'DevSecOps', 'Family Life']
 [params]
   author = 'Matt Goodrich'
 +++
 
-When thinking about what I am going to write, these posts always sound better in my head. Having read several year in review posts myself over the last week, I have gone back and forth between covering the big things that happened in each month, using data from the various things I did throughout the year, or just something else entirely. I decided to go with a mixture of data and some of the high points throughout the year.
+**Let me be honest upfront: I failed at my New Year's resolution again.** Another year, another missed goal to lose weight and get healthier. But here's what I learned - sometimes the most important growth happens in areas you didn't plan for.
 
-This year started out like most years - a resolution to be more healthy and lose weight - and it turns out like every prior year that did not actually happen. What did make this year different however is that I was leading several groups within an Information Security team, instead of being deeply focused on the technical details I have been previously. As the Director of Security Architecture, my team and I were focused on enterprise/cloud/product security architecture and maturing our application security program. What I was most focused on however was being a better business partner; making sure less slipped through the cracks, and reducing the amount of time it took for us to respond to requests. 
+2021 marked a fundamental shift in my career. Instead of diving deep into technical details like I always had, I found myself leading multiple teams within our Information Security organization. **As Director of Security Architecture, my focus shifted from being the person who solved problems to being the person who enabled others to solve them faster.** 
+
+**The biggest change? Learning to be a better business partner.** This meant fewer things falling through the cracks, faster response times to requests, and actually understanding what other teams needed from us instead of just what we thought they needed. 
 
 ![Image of Cessna 172 - N523AB](523AB.jpg)
 
-Outside of work, I was focused on completing my private pilots license. This is a major step in a journey I started 18 years earlier when I first logged time in a Cessna 150 (N11518) on July 26, 2003 at Ryan Field (KRYN) in Tucson, Arizona. On February 2nd, 2021 I passed my check ride in a Cessna 172 (N523AB) at Erie Metropolitan Airport (KEIK) in Erie, Colorado. Since then, I have taken my family on several flights, and have myself visited several airports in the central and western United States, taken a mountain flying course, received my high performance endorsement, bought into a partnership of a Cessna 182 (N5788J) at Centennial Airport (KAPA), and sold my share of the partnership. Going into 2022, I am a few hours into my Instrument rating, and plan to get it wrapped up in early 2022. I flew for a total of 67.5 hours in 2021.
+**But the real milestone this year? Finally earning my private pilot's license.**
+
+Eighteen years. That's how long it took me from my first flight in a Cessna 150 at Ryan Field in Tucson (July 26, 2003) to passing my checkride in a Cessna 172 at Erie Municipal Airport on February 2nd, 2021. **Some goals take longer than expected, but persistence pays off.**
+
+Since earning my license, I've taken my family on multiple flights, explored airports across the central and western United States, completed mountain flying training, earned my high performance endorsement, and even briefly owned a share in a Cessna 182 partnership. The freedom to go places on my own schedule, to share aviation with my family, and to continue learning new skills like instrument flying has been incredible. **67.5 hours logged in 2021 - not bad for a new pilot.**
 
 ![Image of Cessna 182 - N5788J](5788J.jpg)
 
@@ -44,7 +50,11 @@ Outside of work, I was focused on completing my private pilots license. This is 
 
 ![Coco](coco.jpg)
 
-At the beginning of May my family welcomed home its' newest addition "Coco". I became a father to a beautiful daughter, and was on leave from work for 3 months thanks to the benefits provided by Alteryx. I was happy to have the time - I had only one week with our previous kiddo - but the longest I had not worked since I was 14 years old was 3 weeks. We had big ambitions and tight timelines at work... I definitely had FOMO prior to going out on leave, but that quickly went away. In sort of an unplanned drive, I decided to do some learning while I was out. Many of the mentors, peers, and leaders I have learned the most from in the past are avid readers and always have a number of recommendations. I read more in 2021, than I had in any previous year. Not something I am actually super proud of - but I definitely understand the love of books my wife has a little bit more now (for the record she read over 100 books this year). Here is what I read (or listened to):
+**In May, everything changed again when Coco arrived.** Becoming a father for the second time, I took advantage of Alteryx's generous parental leave policy - three months off compared to just one week with our first child.
+
+I'll be honest: **the longest I hadn't worked since I was 14 years old was three weeks.** With big projects and tight timelines at work, I definitely experienced some FOMO before going on leave. But that anxiety disappeared quickly once I embraced the time with my new daughter.
+
+What I didn't expect was to discover a love of reading. **Inspired by mentors and leaders who always had book recommendations, I read more in 2021 than in any previous year.** My wife read over 100 books that year (which puts my progress in perspective), but I finally understood why she's such an avid reader. Here's what got me through those early morning feedings and quiet moments:
 
 * *Oh Crap! Potty Training: Everything Modern Parents Need to Know to Do It Once and Do It Right* - Jamie Glowacki
 * *The Five Dysfunctions of a Team: A Leadership Fable* - Patrick Lencioni
@@ -64,24 +74,27 @@ I had another 8-10 books that I started, but did not make it through them yet.
 
 > "I read more in 2021, than I had in any previous year."
 
-After returning from leave, the latter half of the year has come with a number of changes.
-* I transitioned back into the Alteryx Engineering organization, and am building out a new team focused on DevSecOps
+**Returning from leave, the second half of 2021 brought massive changes:**
+
+* **Career pivot**: Transitioned back into the Engineering organization to build a new DevSecOps team
+* **Geographic reset**: Sold our Denver home, packed up the family, and moved across the country to Poulsbo, Washington  
+* **Family expansion**: Welcomed our first au pair to help manage the chaos
+
 ![Denver Home](3280.jpg)
-* We sold our home in Denver
-* We welcomed our first au pair to the family
+
 ![Poulsbo Home](2456.jpg)
-* We moved our family across the country and bought a home in Poulsbo, Washington
 
-We're still getting settled, and though we have moved almost a dozen times in the past decade, doing it with two kids is A LOT more work than it has been previously. 
+**Moving with two kids is exponentially harder than our previous dozen moves.** But sometimes you need major change to create the life you actually want, not just the one that happened to you. 
 
-Looking forward to 2022, here are some more realistic things I would like to accomplish:
-* Continue posting on mattgoodrich.com & improve my writing skills
-* Complete my Instrument Rating
-* Read at least as many books as I did this year
-* Keep my family healthy and safe
+**Looking toward 2022, I'm setting more realistic goals:**
 
-Stretch goals:
-* Buy a new (to me) airplane
-* Actually take our scheduled vacation to Maui in February
+* **Keep writing** - Continue posting here and actually improve my writing skills
+* **Finish what I started** - Complete my Instrument Rating  
+* **Maintain the reading habit** - Match or exceed this year's book count
+* **Priorities first** - Keep my family healthy and safe
 
--G$
+**Stretch goals (because why not dream big):**
+* Buy my own airplane
+* Actually take that scheduled Maui vacation in February
+
+**2021 taught me that the most meaningful growth often happens in unexpected areas.** Sometimes missing your original goal opens space for something better.

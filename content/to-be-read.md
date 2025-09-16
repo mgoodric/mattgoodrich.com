@@ -136,11 +136,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 	- #leadership, #management, #culture, #audiobook
 	- *Leadership effectiveness, similar to your management books*
 	<!-- - [Amazon](https://www.amazon.com/Multipliers-Revised-Updated-Leaders-Everyone/dp/0062663070) | [Audible](https://www.audible.com/pd/Multipliers-Revised-and-Updated-Audiobook/B06XY5L8GZ) | [Apple Books](https://books.apple.com/us/audiobook/multipliers-revised-and-updated/id1441392232) | [Google Books](https://books.google.com/books/about/Multipliers.html?id=kF26e_S6l_cC) -->
-- Team of Teams: New Rules of Engagement for a Complex World
-	- General Stanley McChrystal
-	- #leadership, #military, #management, #audiobook
-	- *Military leadership applied to business (like Jocko books you rated highly)*
-	<!-- - [Amazon](https://www.amazon.com/Team-Teams-Rules-Engagement-Complex/dp/1591847486) | [Audible](https://www.audible.com/pd/Team-of-Teams-Audiobook/B00WGWM9PW) | [Apple Books](https://books.apple.com/us/book/team-of-teams/id982302476) | [Google Books](https://books.google.com/books/about/Team_of_Teams.html?id=vDDHBQAAQBAJ) -->
 - The 4 Disciplines of Execution: Achieving Your Wildly Important Goals
 	- Chris McChesney
 	- #leadership, #execution, #business, #non-fiction

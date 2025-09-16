@@ -177,6 +177,11 @@ title = 'Book Reviews'
 	- Clay Scroggins
 	- #non-fiction , #audiobook , #leadership
 	<!-- - [Amazon](https://www.amazon.com/How-Lead-When-Youre-Charge/dp/0310531578) | [Audible](https://www.amazon.com/How-Lead-When-Youre-Charge/dp/B01MUCVSGL) | [Apple Books](https://books.apple.com/us/audiobook/how-to-lead-when-youre-not-in-charge/id1456988371) | [Google Books](https://books.google.com/books/about/How_to_Lead_When_You_re_Not_in_Charge.html?id=qOhSzwEACAAJ) -->
+- Team of Teams: New Rules of Engagement for a Complex World
+	- General Stanley McChrystal
+	- #leadership, #military, #management, #audiobook
+	- *Military leadership applied to business (like Jocko books you rated highly)*
+	<!-- - [Amazon](https://www.amazon.com/Team-Teams-Rules-Engagement-Complex/dp/1591847486) | [Audible](https://www.audible.com/pd/Team-of-Teams-Audiobook/B00WGWM9PW) | [Apple Books](https://books.apple.com/us/book/team-of-teams/id982302476) | [Google Books](https://books.google.com/books/about/Team_of_Teams.html?id=vDDHBQAAQBAJ) -->
 
 ## Business/Entrepreneurship
 - Rework

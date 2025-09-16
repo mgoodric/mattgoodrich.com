@@ -435,9 +435,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - Thinking, Fast and Slow
 	- Daniel Kahneman
 	- #psychology, #decision-making, #behavioral-economics, #audiobook
-- The Checklist Manifesto: How to Get Things Right
-	- Atul Gawande
-	- #productivity, #systems, #process, #non-fiction, #audiobook
 - Thinking In Systems: A Primer
 	- Donella H. Meadows
 	- #systems-thinking, #complexity, #problem-solving, #non-fiction

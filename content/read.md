@@ -149,6 +149,10 @@ title = 'Book Reviews'
 	- [Book Review: Escaping the Build Trap](/posts/product-led-growth/)
 
 ## Personal Development
+- The Checklist Manifesto: How to Get Things Right
+	- Atul Gawande
+	- #productivity, #systems, #process, #non-fiction, #audiobook
+	- [Book Review: The Checklist Manifesto](/posts/why-security-checklists-fail/)
 - Quiet: The Power of Introverts in a World That Can't Stop Talking
 	- Susan Cain
 	- #psychology, #non-fiction, #audiobook

@@ -278,9 +278,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - How To Win Friends and Influence People
 	- Dale Carnegie
 	- #business, #communication, #relationships, #audiobook
-- Made to Stick: Why Some Ideas Survive and Others Die
-	- Chip Heath
-	- #business, #communication, #marketing, #non-fiction
 - Berkshire Hathaway Letters to Shareholders, 2023
 	- Warren Buffett
 	- #finance, #investment, #business, #non-fiction

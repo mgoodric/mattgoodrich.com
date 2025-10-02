@@ -121,6 +121,9 @@ title = 'Book Reviews'
 	- Chris Voss
 	- #business, #negotiation, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805) | [Audible](https://www.audible.com/pd/Never-Split-the-Difference-Audiobook/B01CF5O89G) | [Apple Books](https://books.apple.com/us/audiobook/never-split-the-difference/id1441460629) | [Google Books](https://play.google.com/store/audiobooks/details/Never_Split_the_Difference_Negotiating_As_If_Your_?id=AQAAAACkl26X2M) -->
+- Made to Stick: Why Some Ideas Survive and Others Die
+	- Chip Heath
+	- #business, #communication, #marketing, #non-fiction
 
 ## Security/Cybersecurity
 - This Is How They Tell Me the World Ends: The Cyberweapons Arms Race

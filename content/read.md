@@ -111,6 +111,9 @@ title = 'Book Reviews'
 	- Simon Sinek
 	- #leadership, #management, #business, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447) | [Audible](https://www.audible.com/pd/Start-with-Why-Audiobook/B0F74JXTG5) | [Apple Books](https://books.apple.com/us/audiobook/start-with-why-15th-anniversary-edition-how-great/id1811492081) | [Google Books](https://books.google.com/books/about/Start_with_Why.html?id=mOQ_PwAACAAJ) -->
+- The No Asshole Rule: Building a Civilized Workplace and Surviving One That Isn't
+	- Robert I. Sutton
+	- #business, #management, #culture, #non-fiction, #audiobook
 
 ## Business/Entrepreneurship
 - The Dip: A Little Book That Teaches You When to Quit

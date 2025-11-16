@@ -109,9 +109,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 	- Kim Malone Scott
 	- #leadership, #management, #culture, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509) | [Audible](https://www.audible.com/pd/Radical-Candor-Audiobook/B01MZ6RMS4) | [Apple Books](https://books.apple.com/us/audiobook/radical-candor-be-a-kick-ass-boss-without-losing/id1442048873) | [Google Books](https://www.radicalcandor.com/the-book) -->
-- Leading From Anywhere: The Essential Guide to Managing Remote Teams
-	- David Burkus
-	- #leadership, #management, #remote-work, #non-fiction, #audiobook
 - The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company
 	- Robert Iger, Joel Lovell
 	- #leadership, #business, #management, #non-fiction, #audiobook
@@ -484,9 +481,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron
 	- Bethany McLean
 	- #business, #finance, #scandal, #non-fiction, #audiobook
-- Bad Blood: Secrets and Lies in a Silicon Valley Startup
-	- John Carreyrou
-	- #business, #startup, #scandal, #audiobook
 - Cable Cowboy: John Malone and the Rise of the Modern Cable Business
 	- Mark Robichaux
 	- #business, #biography, #telecommunications, #non-fiction, #audiobook

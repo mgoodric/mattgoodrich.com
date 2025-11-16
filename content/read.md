@@ -111,9 +111,12 @@ title = 'Book Reviews'
 	- Simon Sinek
 	- #leadership, #management, #business, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447) | [Audible](https://www.audible.com/pd/Start-with-Why-Audiobook/B0F74JXTG5) | [Apple Books](https://books.apple.com/us/audiobook/start-with-why-15th-anniversary-edition-how-great/id1811492081) | [Google Books](https://books.google.com/books/about/Start_with_Why.html?id=mOQ_PwAACAAJ) -->
+- Leading From Anywhere: The Essential Guide to Managing Remote Teams
+	- David Burkus
+	- #leadership, #management, #remote-work, #non-fiction, #audiobook
 - The No Asshole Rule: Building a Civilized Workplace and Surviving One That Isn't
 	- Robert I. Sutton
-	- #business, #management, #culture, #non-fiction, #audiobook
+	- #leadership, #management, #culture, #non-fiction #audiobook
 
 ## Business/Entrepreneurship
 - The Dip: A Little Book That Teaches You When to Quit
@@ -174,6 +177,11 @@ title = 'Book Reviews'
 	- #history, #military, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Area-51-Uncensored-Americas-Military/dp/0316202304) | [Audible](https://www.amazon.com/Area-51-Annie-Jacobsen-audiobook/dp/B00516Y1WG) | [Apple Books](https://books.apple.com/us/audiobook/area-51/id1456289717) | [Google Books](https://play.google.com/store/audiobooks/details/Annie_Jacobsen_Area_51?id=AQAAAAAueTR5CM) -->
 
+## Finance/Business Cases
+- Bad Blood: Secrets and Lies in a Silicon Valley Startup
+	- John Carreyrou
+	- #business, #startup, #scandal, #audiobook
+
 # 3 Star
 
 ## Technical/Engineering
@@ -190,7 +198,6 @@ title = 'Book Reviews'
 - Team of Teams: New Rules of Engagement for a Complex World
 	- General Stanley McChrystal
 	- #leadership, #military, #management, #audiobook
-	- *Military leadership applied to business (like Jocko books you rated highly)*
 	<!-- - [Amazon](https://www.amazon.com/Team-Teams-Rules-Engagement-Complex/dp/1591847486) | [Audible](https://www.audible.com/pd/Team-of-Teams-Audiobook/B00WGWM9PW) | [Apple Books](https://books.apple.com/us/book/team-of-teams/id982302476) | [Google Books](https://books.google.com/books/about/Team_of_Teams.html?id=vDDHBQAAQBAJ) -->
 
 ## Business/Entrepreneurship

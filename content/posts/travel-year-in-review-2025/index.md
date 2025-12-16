@@ -3,8 +3,8 @@ date = '2025-12-31T12:00:00-07:00'
 draft = true
 title = 'My Travels: 2025 Edition'
 aliases = ['/personal/my-travels-2025/']
-summary = ""
-genres = ['Travel']
+description = ""
+categories = ['Travel']
 tags = ['Year in Review']
 [params]
   author = 'Matt Goodrich'

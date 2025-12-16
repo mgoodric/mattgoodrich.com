@@ -3,8 +3,8 @@ date = '2009-06-19T12:00:00-07:00'
 draft = false
 title = 'Using the Ajax Popup Control Extender with GridView and Radio Buttons'
 aliases = ['/dotnet/ajax-popup-control-extender/']
-summary = "I was able to create a popup control extender with radio buttons for selecting logos in a GridView. The backend code was written in C# and used to populate the radio button list based on files in an image folder."
-genres = ['Development', '.NET Framework']
+description = "I was able to create a popup control extender with radio buttons for selecting logos in a GridView. The backend code was written in C# and used to populate the radio button list based on files in an image folder."
+categories = ['Development', '.NET Framework']
 tags = ['ajax', 'popupcontrol', 'radiobuttonlist', 'gridview']
 [params]
   author = 'Matt Goodrich'

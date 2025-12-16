@@ -2,6 +2,10 @@
 date = '2025-08-31T07:53:08-07:00'
 draft = false
 title = 'Book Reviews'
+[menu.main]
+  weight = 40
+  [menu.main.params]
+    icon = 'hash'
 +++
 
 # 5 Star

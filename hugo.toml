@@ -1,60 +1,62 @@
 baseURL = 'https://mattgoodrich.com/'
 languageCode = 'en-us'
 title = 'Matt Goodrich'
-theme = "hugo-theme-m10c"
-
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 2
-  [[menu.main]]
-    identifier = "genres"
-    name = "Categories"
-    url = "/genres/"
-    weight = 3
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 4
-  [[menu.main]]
-    identifier = "read"
-    name = "Book Reviews"
-    url = "/read/"
-    weight = 5
-  [[menu.main]]
-    identifier = "to-be-read"
-    name = "Books Up Next"
-    url = "/to-be-read/"
-    weight = 6
+theme = "hugo-theme-stack"
 
 [taxonomies]
-  genre = 'genres'
+  category = 'categories'
   tag = 'tags'
+  genre = 'genres'
 
 [params]
-    author = "Matt Goodrich"
-    description = "Private pilot. Security leader. Husband. Father."
-    avatar = "images/bio-photo.jpg"
-    favicon = ""
+  mainSections = ['posts']
+  featuredImageField = 'image'
+  rssFullContent = true
 
-    [[params.social]]
-    icon = "brand-linkedin"
+  [params.sidebar]
+    subtitle = "Private pilot. Security leader. Husband. Father."
+    [params.sidebar.avatar]
+      enabled = true
+      local = true
+      src = "img/avatar.jpg"
+
+  [params.article]
+    toc = true
+    readingTime = true
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [[params.widgets.homepage]]
+    type = "search"
+  [[params.widgets.homepage]]
+    type = "archives"
+  [[params.widgets.homepage]]
+    type = "tag-cloud"
+  [[params.widgets.page]]
+    type = "toc"
+
+[menu]
+  [[menu.social]]
+    identifier = "linkedin"
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/matthewg00drich/"
-    
-    [[params.social]]
-    icon = "brand-github"
-    name = "My Github"
-    url = "https://github.com/mgoodric"
+    [menu.social.params]
+      icon = "brand-linkedin"
 
-[services]
-  [services.googleAnalytics]
-    id = 'G-RHWWVR0716'
+  [[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/mgoodric"
+    [menu.social.params]
+      icon = "brand-github"
+
+[services.googleAnalytics]
+  id = 'G-RHWWVR0716'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false

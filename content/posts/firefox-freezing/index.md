@@ -3,8 +3,8 @@ date = '2009-06-01T12:00:00-07:00'
 draft = false
 title = 'Fixing Slow and Freezing Firefox with a Simple SQLite File Repair'
 aliases = ['/software/firefox-freezing/']
-summary = "I was given a tip by a colleague that helped me resolve issues with slow and freezing Firefox on my computer. After applying the suggested fix, I ran into an issue with my places.sql file being over 200MB, but a repair tool resolved the problem and got everything running smoothly again."
-genres = ['Software', 'Help desk']
+description = "I was given a tip by a colleague that helped me resolve issues with slow and freezing Firefox on my computer. After applying the suggested fix, I ran into an issue with my places.sql file being over 200MB, but a repair tool resolved the problem and got everything running smoothly again."
+categories = ['Software', 'Help desk']
 tags = ['firefox', 'issue', 'freezing', 'slow']
 [params]
   author = 'Matt Goodrich'

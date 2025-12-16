@@ -3,8 +3,8 @@ date = '2010-06-03T12:00:00-07:00'
 draft = false
 title = 'My Experience Installing Tube Fenders and Rear Corner Protection on My Jeep TJ'
 aliases = ['/automotive/metalcloak-archedtubefender-install/']
-summary = "I recently installed tube fenders and rear corner protection on my Jeep TJ, a project that required some prep work and patience. With the help of my step-dad Luke, we were able to complete the install in about 10 hours, and the result is a sleek and durable look that I'm really happy with."
-genres = ['Automotive']
+description = "I recently installed tube fenders and rear corner protection on my Jeep TJ, a project that required some prep work and patience. With the help of my step-dad Luke, we were able to complete the install in about 10 hours, and the result is a sleek and durable look that I'm really happy with."
+categories = ['Automotive']
 tags = ['jeep', 'tj', 'off-road', 'diy', 'metal cloak']
 [params]
   author = 'Matt Goodrich'

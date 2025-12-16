@@ -3,8 +3,8 @@ date = '2010-06-18T12:00:00-07:00'
 draft = false
 title = 'The Misconceptions of CIS Majors: A Computer Science Perspective'
 aliases = ['/university/difference-between-cs-and-cis/']
-summary = "As a Computer Science major, I've often heard that CIS majors are not as technically proficient, but after interacting with them, I realized they have a strong business-oriented perspective and are capable of making good IT decisions. This experience made me appreciate the complementary nature of CS and CIS majors, realizing that they will likely work together to ensure efficient systems."
-genres = ['University']
+description = "As a Computer Science major, I've often heard that CIS majors are not as technically proficient, but after interacting with them, I realized they have a strong business-oriented perspective and are capable of making good IT decisions. This experience made me appreciate the complementary nature of CS and CIS majors, realizing that they will likely work together to ensure efficient systems."
+categories = ['University']
 tags = ['computer-science', 'cis', 'business-intelligence', 'education']
 [params]
   author = 'Matt Goodrich'

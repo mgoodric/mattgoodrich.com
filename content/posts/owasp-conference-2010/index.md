@@ -3,8 +3,8 @@ date = '2010-06-19T12:00:00-07:00'
 draft = false
 title = 'Gaining Valuable Insights at OWASP Conference 2010'
 aliases = ['/security/owasp-conference-2010/']
-summary = "SNOWFROC 2010 was well worth it again."
-genres = ['Security', 'Conferences and Events']
+description = "SNOWFROC 2010 was well worth it again."
+categories = ['Security', 'Conferences and Events']
 tags = ['owasp', 'conference', 'security', 'hacking', 'vulnerabilities', 'snowfroc']
 [params]
   author = 'Matt Goodrich'

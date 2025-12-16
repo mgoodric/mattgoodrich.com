@@ -3,8 +3,8 @@ date = '2022-02-08T12:00:00-07:00'
 draft = false
 title = 'Breaking into Security: The Soft Skills That Matter Most'
 aliases = ['/security/breaking-into-security/']
-summary = "After a decade of accidentally falling into security and building teams across multiple domains, I've learned that the most successful security professionals share three crucial soft skills: genuine passion for the work, empathy for the teams they impact, and understanding of business context over absolute security."
-genres = ['Career Development', 'Professional Growth']
+description = "After a decade of accidentally falling into security and building teams across multiple domains, I've learned that the most successful security professionals share three crucial soft skills: genuine passion for the work, empathy for the teams they impact, and understanding of business context over absolute security."
+categories = ['Career Development', 'Professional Growth']
 tags = ['Security Field', 'Passion', 'Empathy', 'Business Acumen', 'Soft Skills']
 [params]
   author = 'Matt Goodrich'

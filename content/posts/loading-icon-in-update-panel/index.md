@@ -3,8 +3,8 @@ date = '2009-06-18T12:00:00-07:00'
 draft = false
 title = 'Overcoming UpdatePanel Loading GIF Issues with Custom JavaScript Handlers'
 aliases = ['/dotnet/loading-icon-in-update-panel/']
-summary = "I was struggling to get a loading GIF to display when updating my ASP.NET UpdatePanel, but I finally found a solution that works for me. By using custom JavaScript handlers, I can now control the display of my loading GIF based on specific conditions."
-genres = ['Development', '.NET Framework']
+description = "I was struggling to get a loading GIF to display when updating my ASP.NET UpdatePanel, but I finally found a solution that works for me. By using custom JavaScript handlers, I can now control the display of my loading GIF based on specific conditions."
+categories = ['Development', '.NET Framework']
 tags = ['ajax', 'updatepanel', 'javascript']
 [params]
   author = 'Matt Goodrich'

@@ -3,8 +3,8 @@ date = '2025-08-22T12:00:00-07:00'
 draft = false
 title = 'I Was Wrong About AI'
 aliases = []
-summary = "After initially viewing AI as just another hype cycle driven by market pressures, I became a daily user when Claude Code allowed me to harness AI's power within my existing development workflow."
-genres = ['Development', 'Productivity', 'Tools', 'Software', 'Artificial Intelligence']
+description = "After initially viewing AI as just another hype cycle driven by market pressures, I became a daily user when Claude Code allowed me to harness AI's power within my existing development workflow."
+categories = ['Development', 'Productivity', 'Tools', 'Software', 'Artificial Intelligence']
 tags = ['AI', 'Artificial Intelligence','Developer Tools','Claude Code','Software Developent','Innovation']
 [params]
   author = 'Matt Goodrich'

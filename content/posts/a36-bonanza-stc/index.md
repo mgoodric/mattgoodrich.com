@@ -3,8 +3,8 @@ date = '2022-04-15T12:00:00-07:00'
 draft = false
 title = "Why Aircraft Modifications Aren't Like Car Mods (And My A36 Bonanza Wishlist)"
 aliases = ['/aviation/a36-bonanza-stc/']
-summary = "At 13, I built elaborate Excel spreadsheets of car modifications I couldn't afford. Now I'm doing it again with aircraft - researching every possible STC for a 1977 A36 Bonanza. Unlike cars, certified aircraft modifications require FAA approval, but that just makes the research more interesting."
-genres = ['Aviation', 'Aircraft Maintenance', 'Plane Modifications']
+description = "At 13, I built elaborate Excel spreadsheets of car modifications I couldn't afford. Now I'm doing it again with aircraft - researching every possible STC for a 1977 A36 Bonanza. Unlike cars, certified aircraft modifications require FAA approval, but that just makes the research more interesting."
+categories = ['Aviation', 'Aircraft Maintenance', 'Plane Modifications']
 tags = ['Aircraft Modification', 'Beechcraft Bonanza A36', 'Certified Aircraft', 'Experimental Aircraft', 'Supplemental Type Certificate', 'STC']
 [params]
   author = 'Matt Goodrich'

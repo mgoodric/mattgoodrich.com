@@ -2,6 +2,10 @@
 date = '2025-08-31T07:52:59-07:00'
 draft = false
 title = 'Books Up Next'
+[menu.main]
+  weight = 50
+  [menu.main.params]
+    icon = 'hash'
 +++
 
 This is my TBR (To Be Read) list. Most of these were recommended to me from people I know, or mentioned in other books I have read.
@@ -56,7 +60,7 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 
 # Leadership/Management
 - Dare to Lead
-	- Brené Brown
+	- Brene Brown
 	- #leadership, #management, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Dare-Lead-Brave-Conversations-Hearts/dp/0399592520) | [Audible](https://www.audible.com/pd/Dare-to-Lead-Audiobook/B07DJYBXNC) | [Apple Books](https://books.apple.com/us/audiobook/dare-to-lead-brave-work-tough-conversations-whole-hearts/id1436989691) | [Google Books](https://brenebrown.com/books-audio/) -->
 - The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change
@@ -278,7 +282,7 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - Berkshire Hathaway Letters to Shareholders, 2023
 	- Warren Buffett
 	- #finance, #investment, #business, #non-fiction
-- The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers―Straight Talk on the Challenges of Entrepreneurship
+- The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers--Straight Talk on the Challenges of Entrepreneurship
 	- Ben Horowitz
 	- #entrepreneurship, #business, #leadership, #non-fiction
 	<!-- - [Amazon](https://www.amazon.com/Hard-Thing-About-Things-Building/dp/0062273205) | [Audible](https://www.audible.com/pd/The-Hard-Thing-About-Hard-Things-Audiobook/B00I0AJC2Y) | [Apple Books](https://books.apple.com/us/book/the-hard-thing-about-hard-things/id668832574) | [Google Books](https://a16z.com/books/the-hard-thing-about-hard-things/) -->
@@ -470,7 +474,7 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 	- #communication, #presentation, #speaking, #biography
 
 # Finance/Business Cases
-- Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis — and Themselves
+- Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis -- and Themselves
 	- Andrew Ross Sorkin
 	- #finance, #crisis, #economics, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Too-Big-Fail-Washington-Financial/dp/0143118242) | [Audible](https://www.audible.com/pd/Too-Big-to-Fail-Audiobook/B002V5CUEC) | [Apple Books](https://books.apple.com/us/audiobook/too-big-to-fail-the-inside-story-of-how-wall/id389089736) | [Google Books](https://books.google.com/books/about/Too_Big_to_Fail.html?id=jHyD2kOzgVEC) -->

@@ -3,8 +3,8 @@ date = '2025-09-15T00:00:00-07:00'
 draft = false
 title = 'Why Security Checklists Fail (And What Aviation Gets Right)'
 aliases = []
-summary = "As a pilot who's also guilty of creating monster security checklists, I finally realized the perfect example was right under my nose at 10,000 feet. Turns out aviation has been solving the 'comprehensive vs. actually useful' checklist problem for decades—and we can steal their homework."
-genres = ['Security', 'Development']
+description = "As a pilot who's also guilty of creating monster security checklists, I finally realized the perfect example was right under my nose at 10,000 feet. Turns out aviation has been solving the 'comprehensive vs. actually useful' checklist problem for decades—and we can steal their homework."
+categories = ['Security', 'Development']
 tags = ['security', 'checklists', 'aviation', 'development', 'process improvement', 'security practices', 'SSDLC', 'developer experience', 'best practices', 'CI/CD']
 [params]
   author = 'Matt Goodrich'

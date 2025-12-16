@@ -3,8 +3,8 @@ date = '2022-11-07T12:00:00-07:00'
 draft = false
 title = 'Lessons from Investments Unlimited: The Importance of Automation and Transparency in Security'
 aliases = ['/security/investments-unlimited/']
-summary = "Investments Unlimited hit close to home - a financial firm forced to fix their security posture discovers the same issues I face daily: outdated asset inventories, useless CABs, inconsistent pipelines. The message is clear: automate everything, don't block velocity, and dig beneath surface assumptions."
-genres = ['Book Review', 'Security']
+description = "Investments Unlimited hit close to home - a financial firm forced to fix their security posture discovers the same issues I face daily: outdated asset inventories, useless CABs, inconsistent pipelines. The message is clear: automate everything, don't block velocity, and dig beneath surface assumptions."
+categories = ['Book Review', 'Security']
 tags = ['security', 'devsecops', 'investments unlimited', 'automation', 'transparency']
 [params]
   author = 'Matt Goodrich'

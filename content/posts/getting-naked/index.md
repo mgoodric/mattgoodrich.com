@@ -3,8 +3,8 @@ date = '2024-01-02T12:00:00-07:00'
 draft = false
 title = 'The Power of Vulnerability: Lessons from Getting Naked'
 aliases = ['/consulting/getting-naked/']
-summary = "Six years after receiving 'Getting Naked' during Slalom onboarding, I finally read it. The three fears that sabotage client loyalty - embarrassment, feeling inferior, losing business - hit hard. Being vulnerable is terrifying, but it's also where growth happens."
-genres = ['Book Review', 'Career Development']
+description = "Six years after receiving 'Getting Naked' during Slalom onboarding, I finally read it. The three fears that sabotage client loyalty - embarrassment, feeling inferior, losing business - hit hard. Being vulnerable is terrifying, but it's also where growth happens."
+categories = ['Book Review', 'Career Development']
 tags = ['vulnerability', 'consulting', 'getting naked', 'business', 'communication', 'leadership']
 [params]
   author = 'Matt Goodrich'

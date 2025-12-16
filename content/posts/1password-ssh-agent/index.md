@@ -3,8 +3,8 @@ date = '2024-10-14T12:00:00-07:00'
 draft = false
 title = 'Streamlining SSH Key Management with 1Password'
 aliases = ['/security/1password-ssh-agent/']
-summary = "Fed up with losing SSH keys during my annual machine rebuilds, I discovered 1Password's SSH Agent functionality. With some configuration tweaks, I now manage keys securely across devices and projects while adding MFA protection to every SSH operation."
-genres = ['Security', 'Productivity', 'Development', 'Tools']
+description = "Fed up with losing SSH keys during my annual machine rebuilds, I discovered 1Password's SSH Agent functionality. With some configuration tweaks, I now manage keys securely across devices and projects while adding MFA protection to every SSH operation."
+categories = ['Security', 'Productivity', 'Development', 'Tools']
 tags = ['1password', 'ssh keys', 'password manager', 'security', 'productivity', 'development']
 [params]
   author = 'Matt Goodrich'

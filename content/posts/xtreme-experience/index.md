@@ -3,8 +3,8 @@ date = '2022-09-18T12:00:00-07:00'
 draft = false
 title = 'My Xtreme Experience: A Day of Driving Ferraris, Porsches, Lamborghinis, and Mustangs'
 aliases = ['/automotive/xtreme-experience/']
-summary = "Father's Day gift turned into supercar comparison test: Ferrari 488 GTB, Porsche GT3 RS, Lamborghini Huracan, and Shelby GT500 at Pacific Raceways. Spoiler alert: the American muscle car with 760hp destroyed the Italian exotics for pure driving excitement."
-genres = ['Automotive']
+description = "Father's Day gift turned into supercar comparison test: Ferrari 488 GTB, Porsche GT3 RS, Lamborghini Huracan, and Shelby GT500 at Pacific Raceways. Spoiler alert: the American muscle car with 760hp destroyed the Italian exotics for pure driving excitement."
+categories = ['Automotive']
 tags = ['ferrari', 'porsche', 'lamborghini', 'mustang', 'extreme driving experience']
 [params]
   author = 'Matt Goodrich'

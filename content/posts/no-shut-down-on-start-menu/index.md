@@ -3,8 +3,8 @@ date = '2009-04-14T12:00:00-07:00'
 draft = false
 title = 'Removing the Shut Down Option from the Start Menu in Windows XP (and other versions)'
 aliases = ['/windows/no-shut-down-on-start-menu/']
-summary = "I was looking for a way to remove the shut down option from the start menu in Windows XP, and I found that editing the registry key NoClose to a value of 1 achieves this."
-genres = ['Software', 'Windows']
+description = "I was looking for a way to remove the shut down option from the start menu in Windows XP, and I found that editing the registry key NoClose to a value of 1 achieves this."
+categories = ['Software', 'Windows']
 tags = ['windows', 'start menu']
 [params]
   author = 'Matt Goodrich'

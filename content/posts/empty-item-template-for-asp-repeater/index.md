@@ -3,8 +3,8 @@ date = '2009-04-05T12:00:00-07:00'
 draft = false
 title = 'Implementing a Custom Repeater Control with Empty Data Handling in ASP.NET'
 aliases = ['/dotnet/empty-item-template-for-asp-repeater/']
-summary = "I was looking for a way to handle empty data in my repeater control, and I found that creating a custom repeater class with an EmptyTemplate property achieves this. With this solution, I can now easily display a custom message when the data source is null or empty."
-genres = ['Development', '.NET Framework']
+description = "I was looking for a way to handle empty data in my repeater control, and I found that creating a custom repeater class with an EmptyTemplate property achieves this. With this solution, I can now easily display a custom message when the data source is null or empty."
+categories = ['Development', '.NET Framework']
 tags = ['repeatercontrol', 'emptydatatemplate', 'customclass', 'aspnet']
 [params]
   author = 'Matt Goodrich'

@@ -3,8 +3,8 @@ date = '2021-12-31T12:00:00-07:00'
 draft = false
 title = 'My 2021 Year in Review: Life, Leadership, and Learning'
 aliases = ['/personal/year-in-review-2021/']
-summary = "2021 was a year of major transitions - from shifting into leadership roles to earning my private pilot's license to becoming a father again. Despite missing my health goals (again), I discovered the value of taking extended parental leave and dove deep into reading, while navigating significant career and family changes."
-genres = ['Career Development', 'Personal Growth']
+description = "2021 was a year of major transitions - from shifting into leadership roles to earning my private pilot's license to becoming a father again. Despite missing my health goals (again), I discovered the value of taking extended parental leave and dove deep into reading, while navigating significant career and family changes."
+categories = ['Career Development', 'Personal Growth']
 tags = ['Year in Review', 'Leadership', 'Private Pilot License', 'DevSecOps', 'Family Life']
 [params]
   author = 'Matt Goodrich'

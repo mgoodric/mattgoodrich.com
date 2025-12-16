@@ -3,8 +3,8 @@ date = '2010-06-28T12:00:00-07:00'
 draft = false
 title = 'The SSL Certificate Conundrum: A Tale of Bitten Fingers and Base64 Encoding'
 aliases = ['/windows/ssl-problems-ie-xp/']
-summary = "I recently encountered an issue with our secure site not rendering in Internet Explorer on Windows XP machines, resulting in 4,000 Schannel errors a day. After trying various troubleshooting steps, including modifying registry keys and certificate settings, the problem was eventually solved by requesting a new SSL certificate with a reduced key length."
-genres = ['network-administration']
+description = "I recently encountered an issue with our secure site not rendering in Internet Explorer on Windows XP machines, resulting in 4,000 Schannel errors a day. After trying various troubleshooting steps, including modifying registry keys and certificate settings, the problem was eventually solved by requesting a new SSL certificate with a reduced key length."
+categories = ['network-administration']
 tags = ['ssl', 'tls', 'schannel', 'certificate-authority', 'issue']
 [params]
   author = 'Matt Goodrich'

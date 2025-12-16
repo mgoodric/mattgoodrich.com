@@ -3,8 +3,8 @@ date = '2010-12-27T12:00:00-07:00'
 draft = false
 title = 'Google Analytics .NET Integration'
 aliases = ['/dotnet/google-analytics-dot-net/']
-summary = "How I built an integration with Google Analytics with ASP.NET"
-genres = ['.NET Framework', 'Development']
+description = "How I built an integration with Google Analytics with ASP.NET"
+categories = ['.NET Framework', 'Development']
 tags = ['asp.net', 'development', 'google analytics', 'c-sharp']
 [params]
   author = 'Matt Goodrich'

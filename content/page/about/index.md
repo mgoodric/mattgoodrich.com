@@ -1,7 +1,12 @@
 +++
+title = 'About'
+description = 'About Matt Goodrich'
 date = '2025-08-31T07:20:31-07:00'
 draft = false
-title = 'About'
+[menu.main]
+  weight = -90
+  [menu.main.params]
+    icon = 'user'
 +++
 
 ## Personal Summary

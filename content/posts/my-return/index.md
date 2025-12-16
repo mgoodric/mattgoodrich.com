@@ -3,8 +3,8 @@ date = '2021-12-22T12:00:00-07:00'
 draft = false
 title = 'A New Chapter for mattgoodrich.com: From Web Forms to Markdown with Jekyll'
 aliases = ['/personal/my-return/']
-summary = "After 14 years of domain ownership and multiple redesigns, I finally found the perfect solution: a Jekyll static site on GitHub Pages. No more worrying about AppPools, NGINX configs, or hosting costs - just markdown files and content focus."
-genres = ['Development']
+description = "After 14 years of domain ownership and multiple redesigns, I finally found the perfect solution: a Jekyll static site on GitHub Pages. No more worrying about AppPools, NGINX configs, or hosting costs - just markdown files and content focus."
+categories = ['Development']
 tags = ['markdown', 'jekyll', 'github-pages', 'web-development']
 [params]
   author = 'Matt Goodrich'

@@ -3,8 +3,8 @@ date = '2009-03-24T12:00:00-07:00'
 draft = false
 title = 'Setting up Extensionless URL Rewriting with ASP.NET and IIS7'
 aliases = ['/dotnet/urlrewriternet/']
-summary = "This tutorial will guide you through setting up the extensionless Url Rewriter with ASP.NET, which allows for dynamic and user-friendly URLs that can improve search engine optimization and make it easier to update live sites. By following these steps, including downloading the binary, adding modules to the Web.Config file, and configuring rewrites in the configuration section, you can take advantage of this feature and create more streamlined and SEO-friendly URLs for your website."
-genres = ['.NET Framework','Development']
+description = "This tutorial will guide you through setting up the extensionless Url Rewriter with ASP.NET, which allows for dynamic and user-friendly URLs that can improve search engine optimization and make it easier to update live sites. By following these steps, including downloading the binary, adding modules to the Web.Config file, and configuring rewrites in the configuration section, you can take advantage of this feature and create more streamlined and SEO-friendly URLs for your website."
+categories = ['.NET Framework','Development']
 tags = ['seo', 'iis7', 'asp.net', 'url-rewriting', 'development']
 [params]
   author = 'Matt Goodrich'

@@ -3,8 +3,8 @@ date = '2009-07-29T12:00:00-07:00'
 draft = false
 title = 'Fixing a PDF Export Issue with InDesign CS4 and Adobe Acrobat'
 aliases = ['/software/acrobat-9-problem-2-pixel-white-line/']
-summary = "I helped my co-worker troubleshoot an issue where his exported PDFs from InDesign CS4 had a two-pixel white line on the right-hand side, which turned out to be an issue with Adobe Acrobat itself."
-genres = ['Software', 'Help desk']
+description = "I helped my co-worker troubleshoot an issue where his exported PDFs from InDesign CS4 had a two-pixel white line on the right-hand side, which turned out to be an issue with Adobe Acrobat itself."
+categories = ['Software', 'Help desk']
 tags = ['indesign', 'acrobat', 'pdf', 'export', 'adobe', 'issue']
 [params]
   author = 'Matt Goodrich'

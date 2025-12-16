@@ -3,8 +3,8 @@ date = '2022-09-15T12:00:00-07:00'
 draft = false
 title = 'Book Review: Product-Led Growth and Escaping the Build Trap'
 aliases = ['/security/product-led-growth/']
-summary = "Two product management books sparked an unexpected realization about the intersection between customer behavior analytics, security telemetry, and audit logging. Sometimes the most valuable insights come from applying frameworks outside their intended domain."
-genres = ['Product Management', 'Security']
+description = "Two product management books sparked an unexpected realization about the intersection between customer behavior analytics, security telemetry, and audit logging. Sometimes the most valuable insights come from applying frameworks outside their intended domain."
+categories = ['Product Management', 'Security']
 tags = ['product-led growth', 'escaping the build trap', 'data privacy impact assessment', 'security', 'audit logs']
 [params]
   author = 'Matt Goodrich'

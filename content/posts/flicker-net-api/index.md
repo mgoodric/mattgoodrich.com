@@ -3,8 +3,8 @@ date = '2009-06-20T12:00:00-07:00'
 draft = false
 title = 'Displaying Flickr Photos on a Web Page with C# and ASP.NET'
 aliases = ['/dotnet/flicker-net-api/']
-summary = "I was able to display my Flickr photos on a web page using the Flickr.Net API, which involved creating a repeater in an ASP.NET page and writing some backend code in C#. The end result is a simple paginated photo gallery that retrieves photos from Flickr based on user ID and other parameters."
-genres = ['.NET Framework', 'Development']
+description = "I was able to display my Flickr photos on a web page using the Flickr.Net API, which involved creating a repeater in an ASP.NET page and writing some backend code in C#. The end result is a simple paginated photo gallery that retrieves photos from Flickr based on user ID and other parameters."
+categories = ['.NET Framework', 'Development']
 tags = ['flickr', 'flickr.net', 'csharp', 'asp.net', 'api']
 [params]
   author = 'Matt Goodrich'

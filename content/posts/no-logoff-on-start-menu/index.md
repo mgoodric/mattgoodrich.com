@@ -3,8 +3,8 @@ date = '2009-05-12T12:00:00-07:00'
 draft = false
 title = 'Removing the Log Off Option from the Start Menu in Windows XP (and other versions)'
 aliases = ['/windows/no-logoff-on-start-menu/']
-summary = "I was looking for a way to remove the log off option from the start menu in Windows XP, and I found that editing the registry key StartMenuLogOff to a value of 1 achieves this."
-genres = ['Software', 'Windows']
+description = "I was looking for a way to remove the log off option from the start menu in Windows XP, and I found that editing the registry key StartMenuLogOff to a value of 1 achieves this."
+categories = ['Software', 'Windows']
 tags = ['windows', 'start menu']
 [params]
   author = 'Matt Goodrich'

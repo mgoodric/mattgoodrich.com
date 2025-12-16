@@ -3,8 +3,8 @@ date = '2009-05-09T12:00:00-07:00'
 draft = false
 title = 'Fixing Smooth Media Playback Issues on Laptops by Uninstalling IDE Channel'
 aliases = ['/windows/audio-video-system-freezes-and-jumping/']
-summary = "I was experiencing issues with smooth media playback on my laptop, but after researching the problem, I found that uninstalling the IDE channel solved the issue. By following a simple process in the device manager, I was able to resolve the problem and enjoy smoother video and audio playback."
-genres = ['Software', 'Help desk']
+description = "I was experiencing issues with smooth media playback on my laptop, but after researching the problem, I found that uninstalling the IDE channel solved the issue. By following a simple process in the device manager, I was able to resolve the problem and enjoy smoother video and audio playback."
+categories = ['Software', 'Help desk']
 tags = ['device-manager', 'audio', 'video', 'issue']
 [params]
   author = 'Matt Goodrich'

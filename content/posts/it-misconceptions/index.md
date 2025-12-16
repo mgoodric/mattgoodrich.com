@@ -3,8 +3,8 @@ date = '2010-06-17T12:00:00-07:00'
 draft = false
 title = 'Debunking Common Misconceptions About IT Professionals'
 aliases = ['/it/it-misconceptions/']
-summary = "As someone who's worked in IT for several years, I've encountered numerous misconceptions about my role - from being expected to fix problems on demand to not being valued as a critical part of an organization. In reality, my job is diverse and demanding, requiring technical skills, management abilities, and problem-solving expertise."
-genres = ['professional-experience']
+description = "As someone who's worked in IT for several years, I've encountered numerous misconceptions about my role - from being expected to fix problems on demand to not being valued as a critical part of an organization. In reality, my job is diverse and demanding, requiring technical skills, management abilities, and problem-solving expertise."
+categories = ['professional-experience']
 tags = ['it', 'technology', 'productivity', 'career-advice']
 [params]
   author = 'Matt Goodrich'

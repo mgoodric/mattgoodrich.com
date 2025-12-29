@@ -45,6 +45,11 @@ title = 'Book Reviews'
 	- #non-fiction, #economics, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Freakonomics-Economist-Explores-Hidden-Everything/dp/0060731338) | [Audible](https://www.audible.com/pd/Freakonomics-Revised-Edition-audiobook/B000TK5BS2) | [Apple Books](https://books.apple.com/us/audiobook/freakonomics-rev-ed/id1441508871) | [Google Books](https://books.google.com/books/about/Freakonomics.html?id=LkQPOSXMUscC) -->
 
+## Security/Cybersecurity
+- The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage
+	- Cliff Stoll
+	- #security, #cybersecurity, #non-fiction, #audiobook
+
 ## Aviation
 - Manifesto: A Revolutionary Approach to General Aviation Maintenance
 	- Mike Busch
@@ -121,6 +126,10 @@ title = 'Book Reviews'
 - The No Asshole Rule: Building a Civilized Workplace and Surviving One That Isn't
 	- Robert I. Sutton
 	- #leadership, #management, #culture, #non-fiction #audiobook
+- The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever
+	- Michael Bungay Stanier
+	- #leadership, #coaching, #management, #non-fiction, #audiobook
+	<!-- - [Amazon](https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749) | [Audible](https://www.audible.com/pd/The-Coaching-Habit-Audiobook/B01HH7JGD0) | [Apple Books](https://books.apple.com/us/audiobook/the-coaching-habit-say-less-ask-more-change-the-way/id1592103494) | [Google Books](https://books.google.com/books/about/The_Coaching_Habit.html?id=EGFPDAAAQBAJ) -->
 
 ## Business/Entrepreneurship
 - The Dip: A Little Book That Teaches You When to Quit

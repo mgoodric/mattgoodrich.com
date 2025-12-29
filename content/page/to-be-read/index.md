@@ -83,10 +83,7 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 	- Kerry Patterson
 	- #leadership, #communication, #management, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/1469266822) | [Audible](https://www.audible.com/pd/Crucial-Conversations-Audiobook/1639291172) | [Apple Books](https://books.apple.com/us/audiobook/crucial-conversations-tools-for-talking-when-stakes/id1643473832) | [Google Books](https://books.google.com/books/about/Crucial_Conversations_Tools_for_Talking.html?id=VhkQpRH9D9gC) -->
-- The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever
-	- Michael Bungay Stanier
-	- #leadership, #coaching, #management, #non-fiction, #audiobook
-	<!-- - [Amazon](https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749) | [Audible](https://www.audible.com/pd/The-Coaching-Habit-Audiobook/B01HH7JGD0) | [Apple Books](https://books.apple.com/us/audiobook/the-coaching-habit-say-less-ask-more-change-the-way/id1592103494) | [Google Books](https://books.google.com/books/about/The_Coaching_Habit.html?id=EGFPDAAAQBAJ) -->
+
 - Wooden on Leadership: How to Create a Winning Organization
 	- John Wooden
 	- #leadership, #management, #non-fiction, #audiobook

@@ -1,4 +1,5 @@
 baseURL = 'https://mattgoodrich.com/'
+timeout = '120s'
 languageCode = 'en-us'
 title = 'Matt Goodrich'
 theme = "hugo-theme-stack"

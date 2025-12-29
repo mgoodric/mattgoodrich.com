@@ -53,7 +53,7 @@ theme = "hugo-theme-stack"
       icon = "brand-github"
 
 [services.googleAnalytics]
-  id = 'G-RHWWVR0716'
+  ID = 'G-RHWWVR0716'
 
 [markup.goldmark.renderer]
   unsafe = true

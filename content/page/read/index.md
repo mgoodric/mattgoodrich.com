@@ -25,6 +25,10 @@ title = 'Book Reviews'
 	<!-- - [Amazon](https://www.amazon.com/Unicorn-Project-Developers-Disruption-Thriving/dp/1942788762) | [Audible](https://www.audible.com/pd/The-Unicorn-Project-Audiobook/1982642696) | [Apple Books](https://books.apple.com/us/book/the-unicorn-project/id1480924013) | [Google Books](https://books.google.com/books/about/The_Unicorn_Project.html?id=2m7MDwAAQBAJ) -->
 
 ## Leadership/Management
+- Radical Candor: Be a Kickass Boss Without Losing Your Humanity
+	- Kim Malone Scott
+	- #leadership, #management, #culture, #non-fiction, #audiobook
+	<!-- - [Amazon](https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509) | [Audible](https://www.audible.com/pd/Radical-Candor-Audiobook/B01MZ6RMS4) | [Apple Books](https://books.apple.com/us/audiobook/radical-candor-be-a-kick-ass-boss-without-losing/id1442048873) | [Google Books](https://www.radicalcandor.com/the-book) -->
 - Death by Meeting: A Leadership Fable… about Solving the Most Painful Problem in Business
 	- Patrick Lencioni
 	- #business, #business-fable, #audiobook
@@ -130,8 +134,24 @@ title = 'Book Reviews'
 	- Michael Bungay Stanier
 	- #leadership, #coaching, #management, #non-fiction, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749) | [Audible](https://www.audible.com/pd/The-Coaching-Habit-Audiobook/B01HH7JGD0) | [Apple Books](https://books.apple.com/us/audiobook/the-coaching-habit-say-less-ask-more-change-the-way/id1592103494) | [Google Books](https://books.google.com/books/about/The_Coaching_Habit.html?id=EGFPDAAAQBAJ) -->
+- Multipliers: How the Best Leaders Make Everyone Smarter
+	- Liz Wiseman
+	- #leadership, #management, #culture, #audiobook
+	<!-- - [Amazon](https://www.amazon.com/Multipliers-Revised-Updated-Leaders-Everyone/dp/0062663070) | [Audible](https://www.audible.com/pd/Multipliers-Revised-and-Updated-Audiobook/B06XY5L8GZ) | [Apple Books](https://books.apple.com/us/audiobook/multipliers-revised-and-updated/id1441392232) | [Google Books](https://books.google.com/books/about/Multipliers.html?id=kF26e_S6l_cC) -->
 
 ## Business/Entrepreneurship
+- The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company
+	- Robert Iger, Joel Lovell
+	- #leadership, #business, #management, #non-fiction, #audiobook
+	<!-- - [Amazon](https://www.amazon.com/Ride-Lifetime-Lessons-Learned-Company/dp/0399592091) | [Audible](https://www.audible.com/pd/The-Ride-of-a-Lifetime-Audiobook/0525499334) | [Apple Books](https://books.apple.com/us/audiobook/the-ride-of-a-lifetime-lessons-learned-from-15/id1480871999) | [Google Books](https://books.google.com/books/about/The_Ride_of_a_Lifetime.html?id=FIKMDwAAQBAJ) -->
+- Zero to One: Notes on Startups, or How to Build the Future
+	- Peter Thiel
+	- #entrepreneurship, #business, #startup, #audiobook
+	<!-- - [Amazon](https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296) | [Audible](https://www.audible.com/pd/Zero-to-One-Audiobook/B00M27LBU2) | [Apple Books](https://books.apple.com/us/audiobook/zero-to-one-notes-on-startups-or-how-to-build-the/id1417011675) | [Google Books](https://books.google.com/books?id=795977428) -->
+- The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers
+	- Ben Horowitz
+	- #entrepreneurship, #business, #leadership, #non-fiction
+	<!-- - [Amazon](https://www.amazon.com/Hard-Thing-About-Things-Building/dp/0062273205) | [Audible](https://www.audible.com/pd/The-Hard-Thing-About-Hard-Things-Audiobook/B00I0AJC2Y) | [Apple Books](https://books.apple.com/us/book/the-hard-thing-about-hard-things/id668832574) | [Google Books](https://a16z.com/books/the-hard-thing-about-hard-things/) -->
 - The Dip: A Little Book That Teaches You When to Quit
 	- Seth Godin
 	- #business, #non-fiction, #audiobook
@@ -204,6 +224,9 @@ title = 'Book Reviews'
 	<!-- - [Amazon](https://www.amazon.com/Kubernetes-Book-Nigel-Poulton/dp/1916585000) | [Audible](https://www.audible.com/pd/The-Kubernetes-Book-Audiobook/B07Q4FYG4Q) | [Apple Books](https://books.apple.com/us/book/the-kubernetes-book/id6450951852) | [Google Books](https://books.google.com/books/about/The_Kubernetes_Book.html?id=dY_6ygEACAAJ) -->
 
 ## Leadership/Management
+- Leading through Disruption: A Changemaker's Guide to Twenty-First Century Leadership
+	- Andrew Liveris
+	- #leadership, #business, #strategy, #non-fiction, #audiobook
 - How to Lead When You're Not in Charge
 	- Clay Scroggins
 	- #non-fiction , #audiobook , #leadership

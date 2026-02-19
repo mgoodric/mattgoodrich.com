@@ -106,14 +106,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - Manager as Negotiator
 	- David A. Lax
 	- #management, #negotiation, #leadership, #non-fiction
-- Radical Candor: Be a Kickass Boss Without Losing Your Humanity
-	- Kim Malone Scott
-	- #leadership, #management, #culture, #non-fiction, #audiobook
-	<!-- - [Amazon](https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509) | [Audible](https://www.audible.com/pd/Radical-Candor-Audiobook/B01MZ6RMS4) | [Apple Books](https://books.apple.com/us/audiobook/radical-candor-be-a-kick-ass-boss-without-losing/id1442048873) | [Google Books](https://www.radicalcandor.com/the-book) -->
-- The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company
-	- Robert Iger, Joel Lovell
-	- #leadership, #business, #management, #non-fiction, #audiobook
-	<!-- - [Amazon](https://www.amazon.com/Ride-Lifetime-Lessons-Learned-Company/dp/0399592091) | [Audible](https://www.audible.com/pd/The-Ride-of-a-Lifetime-Audiobook/0525499334) | [Apple Books](https://books.apple.com/us/audiobook/the-ride-of-a-lifetime-lessons-learned-from-15/id1480871999) | [Google Books](https://books.google.com/books/about/The_Ride_of_a_Lifetime.html?id=FIKMDwAAQBAJ) -->
 - The Five Temptations of a CEO: A Leadership Fable
 	- Patrick Lencioni
 	- #leadership, #business-fable, #management, #audiobook
@@ -129,11 +121,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 	- #leadership, #management, #career, #audiobook
 	- *Leadership transition book, management focus like your 4-star books*
 	<!-- - [Amazon](https://www.amazon.com/First-Days-Proven-Strategies-Getting/dp/1422188612) | [Audible](https://www.audible.com/pd/The-First-90-Days-Third-Edition-Audiobook/B07BLZDQPX) | [Apple Books](https://books.apple.com/us/book/the-first-90-days-updated-and-expanded/id669851623) | [Google Books](https://books.google.com/books/about/The_First_90_Days.html?id=kCGPPgAACAAJ) -->
-- Multipliers: How the Best Leaders Make Everyone Smarter
-	- Liz Wiseman
-	- #leadership, #management, #culture, #audiobook
-	- *Leadership effectiveness, similar to your management books*
-	<!-- - [Amazon](https://www.amazon.com/Multipliers-Revised-Updated-Leaders-Everyone/dp/0062663070) | [Audible](https://www.audible.com/pd/Multipliers-Revised-and-Updated-Audiobook/B06XY5L8GZ) | [Apple Books](https://books.apple.com/us/audiobook/multipliers-revised-and-updated/id1441392232) | [Google Books](https://books.google.com/books/about/Multipliers.html?id=kF26e_S6l_cC) -->
 - The 4 Disciplines of Execution: Achieving Your Wildly Important Goals
 	- Chris McChesney
 	- #leadership, #execution, #business, #non-fiction
@@ -253,10 +240,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you
 	- Rob Fitzpatrick
 	- #business, #entrepreneurship, #customer-development, #non-fiction, #audiobook
-- Zero to One: Notes on Startups, or How to Build the Future
-	- Peter Thiel
-	- #entrepreneurship, #business, #startup, #audiobook
-	<!-- - [Amazon](https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296) | [Audible](https://www.audible.com/pd/Zero-to-One-Audiobook/B00M27LBU2) | [Apple Books](https://books.apple.com/us/audiobook/zero-to-one-notes-on-startups-or-how-to-build-the/id1417011675) | [Google Books](https://books.google.com/books?id=795977428) -->
 - The Personal MBA: Master the Art of Business
 	- Josh Kaufman
 	- #business, #entrepreneurship, #education, #non-fiction, #audiobook
@@ -279,10 +262,6 @@ This is my TBR (To Be Read) list. Most of these were recommended to me from peop
 - Berkshire Hathaway Letters to Shareholders, 2023
 	- Warren Buffett
 	- #finance, #investment, #business, #non-fiction
-- The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers--Straight Talk on the Challenges of Entrepreneurship
-	- Ben Horowitz
-	- #entrepreneurship, #business, #leadership, #non-fiction
-	<!-- - [Amazon](https://www.amazon.com/Hard-Thing-About-Things-Building/dp/0062273205) | [Audible](https://www.audible.com/pd/The-Hard-Thing-About-Hard-Things-Audiobook/B00I0AJC2Y) | [Apple Books](https://books.apple.com/us/book/the-hard-thing-about-hard-things/id668832574) | [Google Books](https://a16z.com/books/the-hard-thing-about-hard-things/) -->
 - Brief: Make a Bigger Impact by Saying Less
 	- Joseph McCormack
 	- #business, #communication, #leadership, #non-fiction

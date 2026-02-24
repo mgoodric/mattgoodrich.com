@@ -10,7 +10,7 @@ image = 'DSC02496-HDR-optimised.jpg'
   author = 'Matt Goodrich'
 +++
 
-One of the highlights of the Patagonia cruise—the Falkland Islands. We piled into Land Rover Defenders and four-wheeled across the island to find penguins. Four out of five species the Falklands are home to: rockhoppers, gentoo, kings, and Magellanic. Each colony was completely different in character.
+One of the highlights of the Patagonia cruise—the Falkland Islands. We piled into Land Rover Defenders and four-wheeled across the island to find penguins. Four out of five species the Falklands are home to: Rockhopper, Gentoo, King, and Magellanic. Each colony was completely different in character.
 
 After the drive, we had a quick stroll through Stanley before catching the tender back to the ship.
 

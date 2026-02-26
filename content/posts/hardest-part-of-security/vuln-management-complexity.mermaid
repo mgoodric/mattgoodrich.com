@@ -1,0 +1,107 @@
+---
+title: "Vulnerability Management: What It Actually Looks Like"
+---
+flowchart TD
+    classDef finding fill:#dc2626,color:#fff,stroke:#991b1b
+    classDef question fill:#f59e0b,color:#000,stroke:#d97706
+    classDef action fill:#2563eb,color:#fff,stroke:#1d4ed8
+    classDef outcome fill:#16a34a,color:#fff,stroke:#15803d
+    classDef context fill:#7c3aed,color:#fff,stroke:#6d28d9
+    classDef loop fill:#ec4899,color:#fff,stroke:#db2777
+
+    FIND([🔍 Finding Discovered]):::finding
+
+    FIND --> SOURCE{Where did it<br/>come from?}:::question
+    SOURCE -->|Scanner| TOOL_TYPE{Which tool?}:::question
+    SOURCE -->|Customer Report| CUST_DRIVEN[Customer flagged via<br/>SBOM / their own scanner /<br/>third-party risk assessment]:::context
+    SOURCE -->|Architecture Review| DECIDED[Decided debt —<br/>conscious trade-off made.<br/>Was it even recorded?]:::context
+    SOURCE -->|Pen Test / Bug Bounty| EXTERNAL[External finding<br/>with its own<br/>severity assessment]:::context
+
+    TOOL_TYPE -->|SAST / SCA| APP_FINDING[Application-level finding]:::action
+    TOOL_TYPE -->|CSPM| CLOUD_FINDING[Cloud misconfiguration]:::action
+    TOOL_TYPE -->|DAST| RUNTIME_FINDING[Runtime finding]:::action
+    TOOL_TYPE -->|Container Scan| IMAGE_FINDING[Image vulnerability]:::action
+
+    APP_FINDING --> SCORE
+    CLOUD_FINDING --> SCORE
+    RUNTIME_FINDING --> SCORE
+    IMAGE_FINDING --> SCORE
+    EXTERNAL --> SCORE
+    CUST_DRIVEN --> CUST_PRESSURE[Customer expects<br/>remediation regardless<br/>of technical risk]:::context
+    CUST_PRESSURE --> SCORE
+
+    DECIDED --> RECORDED{Was the decision<br/>documented?}:::question
+    RECORDED -->|ADR / Risk Register| TRACKED[Can be revisited]:::action
+    RECORDED -->|Meeting Notes / Slack| FRAGILE[May be findable... for now]:::action
+    RECORDED -->|Only in people's heads| DARK[Organizational dark matter —<br/>risk exists but is invisible]:::action
+    TRACKED --> SCORE
+    FRAGILE --> SCORE
+    DARK -.->|Often never<br/>re-enters the system| INVISIBLE([💀 Unknown risk<br/>until incident]):::finding
+
+    SCORE{What's the<br/>actual severity?}:::question
+    SCORE --> CVSS{What scoring<br/>methodology?}:::question
+    CVSS -->|CVSS| CVSS_CONTEXT[Base score says Critical —<br/>but is that your reality?]:::context
+    CVSS -->|EPSS| EPSS_CONTEXT[Exploit probability<br/>may tell a<br/>different story]:::context
+    CVSS -->|Vendor-specific| VENDOR_CONTEXT[Your framework /<br/>customer may use<br/>different scoring]:::context
+    CVSS -->|Multiple| CONFLICT[Different methodologies<br/>may produce<br/>conflicting severities]:::context
+
+    CVSS_CONTEXT --> EXPLOITABLE
+    EPSS_CONTEXT --> EXPLOITABLE
+    VENDOR_CONTEXT --> EXPLOITABLE
+    CONFLICT --> EXPLOITABLE
+
+    EXPLOITABLE{Are you actually<br/>exploitable?}:::question
+    EXPLOITABLE -->|Code path analysis<br/>says no| NOT_VULN[Technically not vulnerable —<br/>but customer may<br/>not accept that answer]:::context
+    EXPLOITABLE -->|Yes| CONTROLS
+    EXPLOITABLE -->|Unknown /<br/>Can't determine| ASSUME[Assume yes —<br/>but at what priority?]:::context
+
+    NOT_VULN --> COMPLIANCE
+    ASSUME --> CONTROLS
+
+    CONTROLS{Compensating<br/>controls?}:::question
+    CONTROLS -->|WAF / Network segmentation /<br/>other mitigation in place| REDUCED[Effective risk reduced —<br/>but finding still open]:::context
+    CONTROLS -->|None| COMPLIANCE
+    REDUCED --> COMPLIANCE
+
+    COMPLIANCE{Compliance<br/>framework<br/>requirements?}:::question
+    COMPLIANCE -->|FedRAMP| FEDRAMP[30/90 day hard deadlines.<br/>Risk acceptance<br/>heavily constrained.]:::action
+    COMPLIANCE -->|PCI DSS| PCI[Prescribed risk scoring<br/>framework allowed.<br/>Context can inform evaluation.]:::action
+    COMPLIANCE -->|SOC 2 / Internal only| FLEXIBLE[More discretion<br/>in disposition]:::action
+    COMPLIANCE -->|Multiple frameworks| STRICTEST[Must satisfy the<br/>most restrictive<br/>requirement]:::action
+
+    FEDRAMP --> CAPACITY
+    PCI --> CAPACITY
+    FLEXIBLE --> CAPACITY
+    STRICTEST --> CAPACITY
+
+    CAPACITY{Does the owning<br/>team have capacity?}:::question
+    CAPACITY -->|Yes — in current sprint| PRIORITIZE
+    CAPACITY -->|Not until next quarter| WAIT[Finding ages in backlog.<br/>World changes around it.]:::context
+    CAPACITY -->|Team is heads-down<br/>on launch| COMPETE[Competes with features,<br/>tech debt, other<br/>security findings]:::context
+
+    WAIT --> REEVAL
+    COMPETE --> REEVAL
+
+    PRIORITIZE{Priority relative<br/>to everything else?}:::question
+    PRIORITIZE --> DISPOSITION
+
+    REEVAL{Has anything<br/>changed since<br/>last evaluation?}:::loop
+    REEVAL -->|New findings<br/>more severe| DEPRIORITIZED[This finding drops<br/>in relative priority]:::loop
+    REEVAL -->|Compensating control<br/>deployed| MITIGATED_NOW[Effective risk<br/>reduced since filing]:::loop
+    REEVAL -->|Service being<br/>decommissioned| MOOT[Finding may resolve<br/>itself — but when?]:::loop
+    REEVAL -->|Active exploitation<br/>in the wild| ESCALATE[Finding jumps<br/>to top of queue]:::loop
+    REEVAL -->|Nothing changed| PRIORITIZE
+
+    DEPRIORITIZED --> DISPOSITION
+    MITIGATED_NOW --> DISPOSITION
+    MOOT --> DISPOSITION
+    ESCALATE --> DISPOSITION
+
+    DISPOSITION{Disposition}:::question
+    DISPOSITION -->|Remediate| FIX([🔧 Fix it]):::outcome
+    DISPOSITION -->|Mitigate| MITIGATE([🛡️ Compensating control]):::outcome
+    DISPOSITION -->|Accept| ACCEPT([📝 Formal risk acceptance<br/>— if framework allows]):::outcome
+    DISPOSITION -->|Transfer| TRANSFER([🔄 Transfer the risk]):::outcome
+    DISPOSITION -->|No decision made| LIMBO([⏳ Sits in backlog<br/>— implicit risk acceptance<br/>disguised as an open ticket]):::loop
+
+    LIMBO --> REEVAL

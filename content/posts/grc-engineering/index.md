@@ -5,7 +5,7 @@ title = 'GRC Engineering: Stop Collecting Frameworks and Start Building a Progra
 description = "GRC engineering isn't about making spreadsheets fancier. It's about recognizing that compliance at scale is an engineering problem, and it deserves an engineering solution."
 categories = ['Security']
 tags = ['security', 'automation', 'AI', 'Artificial Intelligence', 'risk management', 'security architecture', 'devsecops', 'CI/CD', 'process improvement', 'grc engineering']
-image = ''
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

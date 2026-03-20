@@ -5,7 +5,7 @@ title = 'AI Needs to Be More Humble'
 description = "How AI systems that openly admit uncertainty and collaborate as thought partners can counteract cognitive biases and enhance security decision-making. From my appearance on the CISO Series."
 categories = ['Security']
 tags = ['AI', 'Artificial Intelligence', 'security', 'leadership']
-image = ''
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

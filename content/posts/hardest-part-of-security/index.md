@@ -5,7 +5,7 @@ title = "The Hardest Part of Security Isn't Finding the Problems"
 description = "Security teams are great at finding problems. The real challenge is navigating the messy space between finding and fixing — where competing priorities, misaligned incentives, and invisible debt quietly compound."
 categories = ['Security', 'Engineering']
 tags = ['security', 'cybersecurity', 'vulnerability-management', 'engineering', 'product-management', 'technical-debt', 'compliance', 'risk-management', 'strategy', 'organizational-design']
-image = ''
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

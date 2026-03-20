@@ -6,6 +6,7 @@ aliases = ['/security/aes-256-encryption-dotnet-node-powershell/']
 description = "Cross-platform encryption is a pain - different languages, same algorithm, different implementations. Here's working AES-256 code for C#, Node.js, and PowerShell that actually interoperates correctly, so you don't have to debug crypto edge cases."
 categories = ['Security', 'Development']
 tags = ['cryptography', 'encryption', 'security', 'AES-256', 'Advanced Encryption Standard', 'symmetric-key block cipher', 'data security', 'c-sharp', 'nodejs', 'powershell']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

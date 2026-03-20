@@ -6,6 +6,7 @@ aliases = ['/security/blue-hat-2024-day-1/']
 description = "After attending multiple security conferences this year, BlueHat 2024 stood out for all the right reasons: no vendors, no sales pitches, just pure technical content. The dual perspectives from security researchers and Microsoft's Security Response Center revealed that every security team faces the same fundamental challenges, just at different scales."
 categories = ['Security', 'Conferences and Events' ]
 tags = ['security conferences', 'BlueHat', 'CloudNativeSecurityCon', 'BSides Las Vegas', 'Black Hat', 'DEFCON', 'Microsoft Security Response Center', 'vulnerability disclosure', 'sdlc', 'authorization']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

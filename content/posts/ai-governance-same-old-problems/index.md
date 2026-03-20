@@ -6,6 +6,7 @@ aliases = []
 description = "AI governance challenges aren't fundamentally new - they're extensions of existing IT security problems like shadow IT, data inventory gaps, and data loss. Organizations with mature security programs already have the building blocks needed to govern AI, though some AI-specific challenges require additional consideration."
 categories = ['Security', 'Artificial Intelligence','Governance']
 tags = ['AI', 'Artificial Intelligence', 'governance', 'security', 'risk management', 'IT governance', 'shadow IT', 'data loss prevention', 'enterprise security', 'security architecture']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

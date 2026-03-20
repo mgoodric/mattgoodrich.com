@@ -6,6 +6,7 @@ aliases = []
 description = "After initially viewing AI as just another hype cycle driven by market pressures, I became a daily user when Claude Code allowed me to harness AI's power within my existing development workflow."
 categories = ['Development', 'Productivity', 'Tools', 'Software', 'Artificial Intelligence']
 tags = ['AI', 'Artificial Intelligence','Developer Tools','Claude Code','Software Developent','Innovation']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

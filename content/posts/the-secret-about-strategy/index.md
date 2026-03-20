@@ -6,6 +6,7 @@ aliases = []
 description = "Strategy isn't exclusive to executives - it happens at every organizational level, from individual contributors gathering operational insights to senior leaders making departmental decisions."
 categories = ['Career Development', 'Professional Growth', 'Leadership']
 tags = ['strategy', 'career development', 'leadership', 'professional growth', 'individual contributor', 'strategic thinking', 'networking', 'business alignment', 'career advancement', 'workplace skills']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

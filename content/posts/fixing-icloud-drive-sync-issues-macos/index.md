@@ -5,7 +5,7 @@ title = 'Fixing iCloud Drive Sync Issues on macOS: A Troubleshooting Guide'
 description = "If you've ever had files stuck uploading to iCloud Drive for days with no apparent progress, you're not alone. Here's how I diagnosed and resolved a stubborn sync issue that turned out to be caused by a corrupted keychain item."
 categories = ['Software', 'Help desk']
 tags = ['icloud', 'macos', 'troubleshooting', 'keychain', 'cloud-sync', 'issue']
-image = 'iCloud-Post-Image.png'
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

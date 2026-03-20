@@ -6,6 +6,7 @@ aliases = []
 description = "The convergence of economic downturn, AI adoption, and demographic shifts has created an unprecedented challenge for new graduates entering the job market. Companies using AI to boost productivity of existing workers rather than create new opportunities are inadvertently creating a generational career gap with long-term consequences."
 categories = ['Artificial Intelligence', 'Career Development', 'Economic Analysis']
 tags = ['AI', 'Artificial Intelligence', 'hiring crisis', 'new graduates', 'entry level jobs', 'job market', 'economic trends', 'workforce planning', 'productivity', 'tech layoffs', 'skills gap', 'workforce demographics', 'career development', 'generational gap']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

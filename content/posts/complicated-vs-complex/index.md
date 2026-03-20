@@ -5,7 +5,7 @@ title = 'Designing for Complexity: Why Security (and AI) Need a New Playbook'
 description = "Most security programs are designed for complicated problems. But the threat landscape — especially with AI — is complex. It's time for a different playbook."
 categories = ['Security', 'Engineering']
 tags = ['security', 'cybersecurity', 'AI', 'complexity', 'systems-thinking', 'engineering', 'leadership', 'strategy', 'resilience', 'threat-modeling']
-image = ''
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

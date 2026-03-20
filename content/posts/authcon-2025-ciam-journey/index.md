@@ -6,6 +6,7 @@ aliases = ['/automotive/xtreme-experience/']
 description = "I was invited to speak at the innagural AuthCon, the first Customer Identity and Access Management (CIAM) conference. During my presentation, I shared real-world insights from my company’s journey to SaaS. I outlined how customer identity and access management needs evolved across on-premises, hybrid, and cloud-native environments, and why building or buying the right identity features is critical for security, scalability, and customer satisfaction."
 categories = ['Security', 'Conferences and Events']
 tags = ['Identity and Access Management', 'CIAM', 'SaaS', 'Conference']
+image = 'header.png'
 [params]
   author = 'Matt Goodrich'
 +++

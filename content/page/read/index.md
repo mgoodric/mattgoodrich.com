@@ -90,6 +90,12 @@ title = 'Book Reviews'
 	- #business-fable, #devops, #security, #audiobook
 	<!-- - [Amazon](https://www.amazon.com/Investments-Unlimited-Compliance-Thriving-Digital/dp/1950508536) | [Audible](https://www.audible.com/pd/Investments-Unlimited-Audiobook/B0B5LW9XL5) | [Apple Books](https://books.apple.com/us/book/investments-unlimited/id1593746275) | [Google Books](https://books.google.com/books/about/Investments_Unlimited.html?id=50uYzgEACAAJ) -->
 	- [Book Review: Investments Unlimited](/posts/investments-unlimited/)
+- AI Engineering: Building Applications with Foundation Models
+	- Chip Huyen
+	- #engineering, #ai, #technology, #non-fiction
+- Designing Multi-Agent Systems
+	- Victor Dibia
+	- #engineering, #ai, #multi-agent, #technology, #non-fiction
 
 ## Leadership/Management
 - The Speed of Trust: The One Thing that Changes Everything

@@ -13,6 +13,7 @@ theme = "hugo-theme-stack"
   mainSections = ['posts']
   featuredImageField = 'image'
   rssFullContent = true
+  favicon = "favicon.png"
 
   [params.sidebar]
     subtitle = "Private pilot. Security leader. Husband. Father."

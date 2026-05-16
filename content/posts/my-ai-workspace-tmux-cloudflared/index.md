@@ -147,3 +147,49 @@ The Mac Studio is a single point of failure for availability. If it goes down, t
 The same centralization that gives me one place to manage availability also concentrates *confidentiality*. Every agent, every loaded context, every credential the agents can reach lives on the same host. So my threat model for that machine is closer to "production server" than "personal Mac" — patching cadence, audit logging, account separation, and least-privilege all get treatment I'd never bother applying to the laptop. The single-host architecture is the right tradeoff for me. It's also a tradeoff I had to be deliberate about, not a default I drifted into.
 
 The honest answer on multi-machine is that 95% of what I do fits comfortably on one Mac Studio, and the other 5% is rare enough that I just deal with it. The setup does what I wanted: one place, reachable from anywhere, always there when I come back.
+
+## The Questions That Came Back
+
+A coworker read this and came back with three questions. They're the ones I'd ask too, so here they are with answers.
+
+**Are the agents running under your primary user with full keychain access, or isolated per agent with separate accounts, separate keychains, or some kind of per-session credential scoping?**
+
+Single primary macOS user — I don't have separate accounts per agent. The isolation happens one layer up, via 1Password. The agents authenticate using a service account token that's scoped to a *single dedicated vault* called "Claude" — that vault contains only the secrets I've explicitly whitelisted for AI use (a handful of API keys, nothing else). My personal vault, family shared vault, and any other 1Password content is unreachable by the service account.
+
+At process start, `op run` injects the resolved secrets into environment variables for the lifetime of the run — they don't live on disk and they don't live in my system keychain. The keychain holds exactly one thing for this flow: the service account token itself, which is the bootstrap secret. I wrote up the full pattern in [Stop Putting Secrets in .env Files](/posts/1password-service-account-claude-secrets/) — same model, more detail.
+
+What I don't have, and have thought about, is true per-agent isolation at the macOS user level. That's a real next step if my threat model changes, but for one operator on one box, vault scoping plus short-lived process-scoped credentials has been the right cut for me so far.
+
+**If the Mac Studio gets compromised, what actually is leaked?**
+
+Honest enumeration — this is exactly the threat-model exercise I run on it periodically:
+
+- Anything in the "Claude" 1Password vault — the API keys I've explicitly whitelisted for AI use. By design, this is the *only* 1Password content reachable from the box.
+- Whatever the running agent sessions have loaded — files Claude Code has been reading, chat context, in-flight tool outputs. Memory-resident, but very real.
+- Local source for the projects in `~/Development` — personal AI work, blog source, side projects. None of it has production credentials in it (that's the point of the 1Password setup), but it's still my code.
+- SSH keys for Git remotes and system-level tokens (Cloudflare Tunnel creds, LaunchAgent configs, the bot and MCP server tokens that run as services on the box).
+- Mackup-synced app settings (preferences, not credentials — but worth listing).
+
+What's *not* on it because I keep it that way: personal logins outside the Claude vault, family shared vault contents, any work credentials. The blast radius is real but bounded — and it's bounded by *discipline* (keeping non-AI creds out of that vault), not by something I can fully delegate to a control.
+
+The thing I treat as production-grade for this reason: patching cadence, audit logging on the box, and a short list of LaunchAgents I actually want running. Not perfect. Better than the laptop, by a long way.
+
+**How do you turn on Screen Sharing remotely if it's off by default?**
+
+SSH is always on — that's the Cloudflare Tunnel path. Screen Sharing is off until I need it. So when I need to click something on the actual desktop, I SSH in first and toggle the screensharing daemon from the shell:
+
+```bash
+# enable
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.screensharing.plist
+
+# ...forward the port and connect a VNC viewer:
+# (from the client)  ssh -L 5900:localhost:5900 studio
+# then point your VNC viewer at localhost:5900
+
+# disable when done
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.screensharing.plist
+```
+
+On Sequoia the `enable system/com.apple.screensharing` + `bootstrap`/`bootout` syntax is the more modern path, but the `load -w` / `unload -w` pattern still works and it's the one I have muscle memory for. I wrap it in a small alias so the toggle is one command — keeps the surface small without making me think about it every time.
+
+The thing I'd flag honestly: the same Cloudflare Access policy that gates SSH gates this VNC path, so an SSH-key compromise grants screen access during the window it's on. That's why I leave it off by default and only flip it for the few minutes I actually need it. It's the thinnest layer in the setup — worth being deliberate about, not pretending it's bulletproof.

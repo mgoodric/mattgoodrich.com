@@ -117,9 +117,11 @@ What to avoid:
 - **Three short staccato sentences** ("It's small. It's solvable. It's not existential.") are a permitted and effective rhythm — distinct from the marketing "three-part rhythm in titles/claims" tell flagged in the words-to-avoid table. Stand-alone sentences with periods are crisp; comma-joined three-item lists inside a title or claim are not.
 
 ### Em-dashes
-- Used, but not constantly. Reserve them for setting off a clarification or twist
-- Don't use them as a substitute for commas or parentheses out of habit
-- A useful test: if you have more than one em-dash in a paragraph, ask if either could be a comma or a period
+- Use them sparingly. They are a seasoning, not a staple. A whole post should contain at most a handful, and zero is fine.
+- Reserve them for a genuine twist or interruption that a comma cannot carry. If a comma, a period, or parentheses would do the job, use one of those instead. That is almost always the case.
+- Never reach for an em-dash as a habitual substitute for a comma or parentheses.
+- A useful test: when an em-dash appears at all, check whether it earns its place. If a post has more than a handful, do a dedicated editing pass and cut them down.
+- Em-dash-heavy prose reads as crafted-essay AI output rather than spoken thought. Cutting em-dashes is one of the highest-signal edits toward Matt's voice.
 
 ---
 

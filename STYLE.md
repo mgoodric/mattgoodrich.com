@@ -1,6 +1,6 @@
 # mattgoodrich.com — Writing Style Guide
 
-A working description of Matt's voice, derived from the most recent 2026 posts (BlackDuck API, Hardest Part of Security, Complicated vs Complex, GRC Engineering). Heaviest weight on the most recent post. This is a living document — refine it as patterns become clearer or shift.
+A working description of Matt's voice, derived from recent 2026 posts (BlackDuck API, Hardest Part of Security, Complicated vs Complex, GRC Engineering, 1Password Service Account for Claude, AI Governance Calibrated, Agents Don't Travel Well). Heaviest weight on the most recent posts. This is a living document — refine it as patterns become clearer or shift.
 
 ---
 
@@ -114,6 +114,7 @@ What to avoid:
 - Short sentences carry the punch ("Spoiler: what happens is a `406 Not Acceptable`...")
 - Longer sentences carry the nuance ("The complete picture is fragmented across systems, tools, and people — which makes evaluating all of the work in the system hard, and continuously re-evaluating all of it practically impossible.")
 - Active voice, present tense for current state, past tense for personal anecdotes
+- **Three short staccato sentences** ("It's small. It's solvable. It's not existential.") are a permitted and effective rhythm — distinct from the marketing "three-part rhythm in titles/claims" tell flagged in the words-to-avoid table. Stand-alone sentences with periods are crisp; comma-joined three-item lists inside a title or claim are not.
 
 ### Em-dashes
 - Used, but not constantly. Reserve them for setting off a clarification or twist
@@ -172,6 +173,13 @@ When introducing a named concept:
 - Bold or italicize on first use
 - Define it in one sentence
 - Reuse the name consistently — don't drift into synonyms
+
+### Structural framings and multi-bucket sorts
+
+Beyond two-term dichotomies, Matt uses two related structural devices:
+
+- **Structural framings** — short metaphors that name the argument's spine. Examples: *"the floor, not the ceiling"* (1Password vs. workload identity), *"find vs. fix"* as a *gap* rather than a binary. These show up most often near the closing, where they're doing the work of distilling the post's thesis.
+- **Named multi-bucket sorts** — when a two-term dichotomy is too coarse, Matt sometimes uses three (or more) named buckets. The "AI Governance, Calibrated" three-bucket sort — *already mitigated / genuinely new / old problem, new actor* — is the cleanest example. The buckets are *named*; the items in each are concrete; and the post explicitly returns to each bucket in subsequent paragraphs ("The first bucket is..." / "The second bucket is..."). Don't introduce a multi-bucket sort if it's a forced fit — but when the territory genuinely has more than two clean partitions, name them.
 
 ---
 
@@ -250,6 +258,27 @@ When a post is part of a multi-post arc, the connection is signaled through pros
 The exception is when the post references an *external* series or appearance (e.g., the "CISO Series" podcast). In those cases, the brand reference goes in the description ("From my appearance on the CISO Series.") and may appear as a slug suffix (`-ciso-series`). That's a brand tag, not a series of your own posts.
 
 If a more visible series UI is ever desired (a series tag rendered by the theme, a "Series:" frontmatter field), that's a separate template-level change — not a writing convention.
+
+### Self-callback and revisit posts
+
+When a post explicitly revisits a position from a previous post — especially when the new post extends or partially reverses the older argument — there's a specific pattern that works:
+
+1. **Anchor the callback in the closing section**, not the opening. The new post should stand on its own first.
+2. **Lean on a title or section-header echo** if there's a natural one. "AI Governance, Calibrated" closes with a section titled *Same Problems, New Actor* — a deliberate echo of an older post titled *AI Governance: Same Problems, Same Solutions*. The echo earns the callback.
+3. **Affirm the through-line before owning the shift.** "I'd still defend the X half of that title without hesitation. But I'd put Y differently now."
+4. **Give the technical *why* the position changed.** Not "I've evolved" or "I've grown" (performative reflection — see words-to-avoid). Instead: *"SQL injection has a fixed grammar. Prompt injection doesn't."* The specific reason is the credibility.
+5. **Inline-link the older post** the first time you reference it. One link, in prose, not a separate "Previous posts in this series" block.
+
+### Post-publish reader-response addendums
+
+When substantive reader questions come in after publication, an in-post addendum is a viable response shape (used in "Agents Don't Travel Well"):
+
+- Section header is a claim, not a label: *"The Questions That Came Back"* — not "FAQ" or "Reader Questions"
+- Brief framing line acknowledges the context ("A coworker read this and came back with three questions. They're the ones I'd ask too, so here they are with answers.")
+- Questions appear in **bold inline** rather than as nested H3 headers — keeps the section visually unified
+- Answers stay in the same voice and density as the post body
+- Cross-link to other posts when an answer is naturally rooted there; don't restate
+- Commit the addendum as a separate commit ("Add reader Q&A section to <Post Title>") rather than amending the original — the publish history reflects the conversation
 
 ---
 

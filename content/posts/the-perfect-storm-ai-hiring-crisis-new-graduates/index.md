@@ -15,7 +15,7 @@ image = 'header.png'
 
 I left the Seattle Security Meetup this past week feeling genuinely troubled. Over the course of the evening, I had conversations with several recent graduates who shared remarkably similar stories of rejection, months-long job searches, and a market that seemed to have no place for them.
 
-These conversations got me thinking about the broader forces at play. What I realized is that these new grads aren't just facing normal market fluctuations or typical entry-level competition. They're caught in a perfect storm that has fundamentally altered the employment landscape—particularly for new graduates who find themselves caught in an unprecedented squeeze.
+These conversations got me thinking about the broader forces at play. What I realized is that these new grads aren't just facing normal market fluctuations or typical entry-level competition. They're caught in a perfect storm that has fundamentally altered the employment landscape, particularly for new graduates who find themselves caught in an unprecedented squeeze.
 
 The timing couldn't have been worse. Just as companies were still reeling from the end of the era of free money, grappling with layoffs and belt-tightening measures, artificial intelligence burst onto the corporate scene with a promise that was impossible to ignore: 20% productivity gains from existing resources.
 
@@ -25,23 +25,23 @@ The sequence of events reads like a corporate strategy playbook gone wrong. The 
 
 Then came the correction. As interest rates climbed and economic uncertainty grew, the belt-tightening began. Layoffs swept through the tech sector and beyond. Companies that had been hiring at breakneck speed suddenly found themselves with bloated workforces and pressure to demonstrate efficiency.
 
-Enter AI—not as a tool for expansion, but as a solution for doing more with less.
+Enter AI, deployed as a solution for doing more with less rather than as a tool for expansion.
 
 ## The C-Suite Calculation
 
 The pitch to executives was irresistible: artificial intelligence could deliver significant productivity improvements without the overhead of new hires. Why bring on fresh talent when your existing workforce could theoretically handle 20% more work with AI assistance?
 
-This wasn't necessarily wrong in principle. AI tools have indeed shown the ability to augment human capabilities across various roles—from software development to content creation to data analysis. The problem lies not in the technology itself, but in how organizations have chosen to deploy it.
+This wasn't necessarily wrong in principle. AI tools have indeed shown the ability to augment human capabilities across roles like software development, content creation, and data analysis. The problem lies not in the technology itself, but in how organizations have chosen to deploy it.
 
 Rather than using AI to enable growth and create new opportunities, many companies have used it as a justification to maintain smaller headcounts while demanding higher output from existing employees.
 
 ## The New Graduate Dilemma
 
-For recent graduates, this shift has created a uniquely challenging environment. They're not just competing against other new grads anymore—they're competing against the enhanced productivity of experienced workers armed with AI tools.
+For recent graduates, this shift has created a uniquely challenging environment. They're not just competing against other new grads anymore. They're competing against the higher productivity of experienced workers armed with AI tools.
 
 The traditional entry-level positions that once served as stepping stones into careers are disappearing. Why hire a junior analyst when your senior analyst can now handle the additional workload with AI assistance? Why bring on an entry-level developer when your existing team can code more efficiently with AI pair programming?
 
-This creates a vicious cycle: new graduates can't gain the experience needed to be competitive, while companies become increasingly reluctant to invest in training when their current workforce is already delivering enhanced results.
+This creates a vicious cycle: new graduates can't gain the experience needed to be competitive, while companies become increasingly reluctant to invest in training when their current workforce is already delivering higher results.
 
 ![AI vs Entry Level](perfect-strom-ai-vs-entry-level.png)
 
@@ -51,7 +51,7 @@ Here's where the short-term thinking becomes problematic. While companies are ce
 
 Every year, experienced professionals retire. Those who remain get promoted, leaving gaps in the organizational knowledge base. Historically, these gaps were filled by a steady pipeline of junior talent who had been developing their skills and institutional knowledge over several years.
 
-But that pipeline is now severely constricted. The cohort of 2022-2025 graduates—potentially hundreds of thousands of professionals—are finding it exceptionally difficult to gain meaningful work experience. This isn't just an individual tragedy; it's an organizational time bomb.
+But that pipeline is now severely constricted. The cohort of 2022-2025 graduates (potentially hundreds of thousands of professionals) are finding it exceptionally difficult to gain meaningful work experience. This isn't just an individual tragedy; it's an organizational time bomb.
 
 ![Workforce Demographics](perfect-storm-workforce-demographics.png)
 
@@ -65,7 +65,7 @@ In 5-10 years, organizations will likely find themselves with a workforce heavy 
 
 The companies celebrating today's efficiency gains may find themselves scrambling tomorrow to fill critical skill gaps. The cost of emergency hiring, extensive training programs, and consultant fees could far exceed the savings from today's leaner headcounts.
 
-For new graduates, this period represents both a crisis and an opportunity. Those who can find ways to gain experience—through internships, project-based work, or by developing AI-augmented skills independently—may find themselves in high demand as the gap becomes apparent.
+For new graduates, this period represents both a crisis and an opportunity. Those who can find ways to gain experience (through internships, project-based work, or by developing AI-augmented skills independently) may find themselves in high demand as the gap becomes apparent.
 
 The irony is that AI, properly implemented, should be creating new opportunities and roles rather than simply eliminating them. Organizations that recognize this and invest in developing AI-literate junior talent today will likely have a significant competitive advantage in the coming decade.
 
@@ -81,7 +81,7 @@ The perfect storm that created this situation won't last forever. But its effect
 ### 2. **The AI Adoption Rush**
 
 - 65% of orgs using GenAI (doubled in 10 months)
-- 72% of US CEOs see it as crucial investment
+- 72% of US CEOs see it as an important investment
 - Productivity studies showing 8%-66% gains
 - The "20%" figure being conservative
 

@@ -13,7 +13,7 @@ image = 'header.png'
 
 I never expected to write about vendor relationships, but here we are.
 
-For most of my career, I actively avoided vendor conversations. Even after spending time on the vendor side myself—working in consulting and professional services—I found the dynamic uncomfortable. I'd sit through pitches knowing I had no budget authority. I'd feel guilty saying no. Worst of all, sometimes I'd just... ghost them, because I didn't know how to gracefully end conversations that weren't going anywhere.
+For most of my career, I actively avoided vendor conversations. Even after spending time on the vendor side myself (working in consulting and professional services) I found the dynamic uncomfortable. I'd sit through pitches knowing I had no budget authority. I'd feel guilty saying no. Worst of all, sometimes I'd just... ghost them, because I didn't know how to gracefully end conversations that weren't going anywhere.
 
 Looking back, my discomfort came from a fundamental misunderstanding of what these conversations could be.
 
@@ -21,7 +21,7 @@ Looking back, my discomfort came from a fundamental misunderstanding of what the
 
 A few years ago, we were re-evaluating our SAST/DAST/SCA stack. This was one of those rare moments where we had real budget, clear requirements, and actual decision-making authority. We ran several proof-of-concepts with different vendors, put in the work to evaluate them properly, and made our choice.
 
-Here's where I did something that apparently isn't standard practice: I reached out to every vendor we'd worked with to explain our decision. Not just "we went another direction," but the actual reasoning—what we valued, where their solution fell short, what sealed the deal for the vendor we chose.
+Here's where I did something that apparently isn't standard practice: I reached out to every vendor we'd worked with to explain our decision. Not just "we went another direction," but the actual reasoning: what we valued, where their solution fell short, what sealed the deal for the vendor we chose.
 
 I expected pushback. The sales objections. The "but our tool can actually do that too if you just..." attempts to keep the deal alive.
 
@@ -44,7 +44,7 @@ This industry is smaller than it appears. The vendor account executive you're ta
 
 Maintaining relationships costs you nothing. Burning bridges, even unintentionally through ghosting, can limit your options in ways you won't see until much later.
 
-I'm not suggesting you should buy tools you don't need or waste time on conversations that aren't valuable. I'm suggesting that professional courtesy and direct communication serve your interests better than avoiding what you think may be a hard conversation (this is true in so many additional contexts as well).
+I'm not suggesting you should buy tools you don't need or waste time on conversations that aren't valuable. I'm suggesting that professional courtesy and direct communication help you more than avoiding what you think may be a hard conversation (this is true in so many additional contexts as well).
 
 ## What I've Learned From Weekly Vendor Conversations
 
@@ -52,7 +52,7 @@ Fast forward to today: I talk to vendors almost every week. Sometimes multiple i
 
 ### Early-Stage Vendors Will Often Build With You
 
-This one surprised me most. If your use case is compelling and aligns with their vision, many early-stage vendors are willing to evolve their product based on your feedback. You're not just evaluating a static tool—you're potentially shaping it.
+This one surprised me most. If your use case is compelling and aligns with their vision, many early-stage vendors are willing to evolve their product based on your feedback. You're not just evaluating a static tool. You're potentially shaping it.
 
 I've had conversations where vendors have said, "We don't do that today, but if you'd be willing to partner with us on development, we could build it in the next quarter." Sometimes that makes sense. Sometimes it doesn't. But having that option changes the dynamic entirely.
 
@@ -78,11 +78,11 @@ What is disrespectful: scheduling calls you know won't go anywhere, asking for P
 
 I've started being radically direct in early conversations. If a vendor reaches out about a space where we have no current pain or planned spend, I tell them that in the first exchange. Often, they appreciate knowing immediately rather than investing hours into discovery calls that won't lead anywhere.
 
-Some vendors still want to talk anyway—maybe to understand our environment for future reference, or because they think they can uncover latent pain points we haven't recognized. That's fine. But everyone enters the conversation with clear expectations.
+Some vendors still want to talk anyway, maybe to understand our environment for future reference, or because they think they can uncover latent pain points we haven't recognized. That's fine. But everyone enters the conversation with clear expectations.
 
 ### Multiple Vendor Conversations Reveal the Landscape
 
-This is where these conversations became unexpectedly valuable for strategic thinking.
+This is where these conversations became unexpectedly useful for strategic thinking.
 
 When you talk to five vendors in the same space, you start to see patterns:
 
@@ -95,7 +95,7 @@ Early-stage companies are especially revealing here. Many founders started their
 
 That context is gold for strategic thinking.
 
-When you're evaluating your security program, understanding the range of possible approaches—not just the one or two tools you're actively considering—helps you make better decisions. You understand what you're trading off, what might be possible in the future, and where the market is heading.
+When you're evaluating your security program, understanding the range of possible approaches (not just the one or two tools you're actively considering) helps you make better decisions. You understand what you're trading off, what might be possible in the future, and where the market is heading.
 
 This is market intelligence you can't get from Gartner reports or product documentation. It comes from conversations with people actively building in the space.
 
@@ -103,7 +103,7 @@ This is market intelligence you can't get from Gartner reports or product docume
 
 Here's what I didn't anticipate: these conversations have made me better at strategic thinking about security architecture.
 
-Understanding how different vendors approach the same problem—what they prioritize, what they're willing to compromise on, how they think about integration with existing tools—gives you insight into the actual trade-offs in security tooling.
+Understanding how different vendors approach the same problem (what they prioritize, what they're willing to compromise on, how they think about integration with existing tools) gives you insight into the actual trade-offs in security tooling.
 
 You start to develop opinions about what matters and what doesn't. You can articulate why you'd choose approach A over approach B. You can spot bullshit faster because you've heard enough pitches to know when someone's overselling capabilities or underselling complexity.
 

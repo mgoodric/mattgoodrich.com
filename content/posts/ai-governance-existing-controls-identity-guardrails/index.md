@@ -13,9 +13,9 @@ image = 'header.png'
 
 Open any LinkedIn feed in 2026 and you'll find someone insisting that AI agents will `rm -rf` production any minute now. The panic case sells. The calibrated case doesn't.
 
-But after twenty-plus years of running and advising on security programs, the destructive-action problem isn't new. We've been protecting production from junior engineers, broken CI pipelines, and admin-token misuse for decades. AI agents inherit all of that protection by default — they're operating inside the same control stack as everything else.
+But after twenty-plus years of running and advising on security programs, the destructive-action problem isn't new. We've been protecting production from junior engineers, broken CI pipelines, and admin-token misuse for decades. AI agents inherit all of that protection by default. They're operating inside the same control stack as everything else.
 
-The interesting question isn't whether AI agents can destroy production. It's *what they expose that the existing layer wasn't designed for*. And when you look at the gap honestly, it's much narrower than the discourse suggests — and concentrated in a place most organizations can fix without a brand-new framework.
+The interesting question isn't whether AI agents can destroy production. It's *what they expose that the existing layer wasn't designed for*. And when you look at the gap honestly, it's much narrower than the discourse suggests, and concentrated in a place most organizations can fix without a brand-new framework.
 
 ## What's Already Protected (and Why That Matters)
 
@@ -29,9 +29,9 @@ Now look at what an AI agent actually hits when it tries any of those things in 
 
 **Data layer.** Database role separation keeps application accounts distinct from DBA accounts. Backup and point-in-time recovery make `DROP TABLE` recoverable. Schema migration frameworks force DDL through a pipeline rather than ad-hoc connections.
 
-**Change management.** Deployment gates require approvals — even for humans. Staging environments exist specifically so that broken code breaks there first. Audit logs make every action attributable.
+**Change management.** Deployment gates require approvals, even for humans. Staging environments exist specifically so that broken code breaks there first. Audit logs make every action attributable.
 
-An AI agent operating inside this stack hits the same controls a misconfigured Jenkins pipeline does. The agent doesn't get a special pass. The control wasn't designed for AI specifically, but it wasn't designed for AI-shaped risks specifically either — it was designed for "non-human or under-supervised actor with too much access trying to do something destructive," and that description fits a poorly-scoped CI pipeline as well as it fits an AI agent.
+An AI agent operating inside this stack hits the same controls a misconfigured Jenkins pipeline does. The agent doesn't get a special pass. The control wasn't designed for AI specifically, but it wasn't designed for AI-shaped risks specifically either. It was designed for "non-human or under-supervised actor with too much access trying to do something destructive," and that description fits a poorly-scoped CI pipeline as well as it fits an AI agent.
 
 The implication: if your existing security stack is in reasonable shape, most of what you need to mitigate AI risk is already in place. You're not starting from zero.
 
@@ -41,11 +41,11 @@ That doesn't mean there's nothing new. There are three places the existing contr
 
 ### Prompt Injection Is a Genuinely New Failure Mode
 
-We don't have a 20-year-old control library for "untrusted text in a code comment hijacking the agent's intent." Indirect injection via documents, web content, repo data — these are real attack patterns and they bypass the controls that protect against everything else.
+We don't have a 20-year-old control library for "untrusted text in a code comment hijacking the agent's intent." Indirect injection via documents, web content, repo data: these are real attack patterns and they bypass the controls that protect against everything else.
 
 The reason they bypass those controls is subtle: the agent's outbound action looks legitimate. It's authenticated. It's scoped. It's authorized. The *intent* is what's been hijacked, not the credential. A WAF doesn't help. RBAC doesn't help. Branch protection doesn't help. The action is technically allowed; it just isn't the action you wanted.
 
-This is the one category where the security industry needs to build new things. Input sanitization on content the agent processes. Agent isolation that prevents cross-context data access. Monitoring for anomalous agent behavior — unexpected network calls, unusual data access patterns, output that doesn't match the apparent task. Regular adversarial testing of deployed agents.
+This is the one category where the security industry needs to build new things. Input sanitization on content the agent processes. Agent isolation that prevents cross-context data access. Monitoring for anomalous agent behavior: unexpected network calls, unusual data access patterns, output that doesn't match the apparent task. Regular adversarial testing of deployed agents.
 
 Some of that exists in early form. None of it is solved.
 
@@ -61,7 +61,7 @@ When write access genuinely is needed, the question shifts from "can the agent w
 
 The classic anti-pattern: one "AI Agent" service account with broad scope, used by 12 different agents, owned by a team that doesn't remember granting half the permissions on it.
 
-You can't audit what did what. A single compromise rotates 12 sets of credentials. Access reviews are meaningless because the account isn't tied to a single function. The identity sprawl is the real attack surface — not the LLM itself.
+You can't audit what did what. A single compromise rotates 12 sets of credentials. Access reviews are meaningless because the account isn't tied to a single function. The identity sprawl is the real attack surface, not the LLM itself.
 
 This is a textbook non-human-identity problem. The pattern that fixes it is also textbook. We just keep forgetting to apply it the moment a new tool shows up.
 
@@ -73,15 +73,15 @@ The guardrails that close most of the gap aren't AI-specific. They're the boring
 
 ### Per-Agent Service Accounts
 
-One agent, one identity, one scope. The identity is the audit unit. If you can't say "agent X did Y," your audit log isn't useful — and you'd be amazed how many "AI governance" programs can't say that today.
+One agent, one identity, one scope. The identity is the audit unit. If you can't say "agent X did Y," your audit log isn't useful, and you'd be amazed how many "AI governance" programs can't say that today.
 
-Scoped permissions matched to the actual task — not "what we think the agent might need." If the scope expands later, that's a deliberate decision with a paper trail.
+Scoped permissions matched to the actual task, not "what we think the agent might need." If the scope expands later, that's a deliberate decision with a paper trail.
 
 ### Read-Only by Default in Production
 
 The default permission for a production-touching agent is `SELECT`, `GET`, list, describe. Write access is a separate, deliberate decision per agent, per resource.
 
-"But the agent needs to apply the fix" — does it, or does it propose the fix and a human applies it? Most of the time, propose-and-approve is fine. The cases where end-to-end autonomous write access is genuinely needed are rare enough to justify a slower decision-making process for each one.
+"But the agent needs to apply the fix." Does it, or does it propose the fix and a human applies it? Most of the time, propose-and-approve is fine. The cases where end-to-end autonomous write access is genuinely needed are rare enough to justify a slower decision-making process for each one.
 
 ### Short-Lived, Auto-Rotating Credentials
 
@@ -99,7 +99,7 @@ Hard caps on operations-per-session, commits-per-hour, resource-creation-per-min
 
 Every agent session traces back to a human owner. Access reviews on the same cadence as human access. This is the boring governance hygiene that nobody wants to do but that makes the entire program defensible to audit.
 
-When the auditor asks "who is responsible for this agent's actions," the answer needs to be a name — not "the AI tooling team."
+When the auditor asks "who is responsible for this agent's actions," the answer needs to be a name, not "the AI tooling team."
 
 ## A Calibrated Risk Picture
 
@@ -138,9 +138,9 @@ A few things I'd argue for if you're sitting in the room when this comes up.
 
 Stop pretending AI is a brand-new threat surface that requires a brand-new framework. Most of what you need, you already have. Audit it. Confirm it's applied to non-human identities. Tighten where it isn't.
 
-The genuinely new risk — prompt injection — is a specific, addressable problem. Treat it as a research-and-engineering investment, not as an existential one. The fact that we don't have it solved yet doesn't mean we're paralyzed; it means there's work to do, and the work is bounded.
+The genuinely new risk, prompt injection, is a specific, addressable problem. Treat it as a research-and-engineering investment, not as an existential one. The fact that we don't have it solved yet doesn't mean we're paralyzed; it means there's work to do, and the work is bounded.
 
-The biggest preventable risk is over-permissioning. Identity guardrails — least privilege, scoped service accounts, read-only defaults, ephemeral credentials, rate limits — close most of the gap. None of those are exotic. All of them require organizational discipline more than technical sophistication.
+The biggest preventable risk is over-permissioning. Identity guardrails (least privilege, scoped service accounts, read-only defaults, ephemeral credentials, rate limits) close most of the gap. None of those are exotic. All of them require organizational discipline more than technical sophistication.
 
 The hardest part of any of this is saying "no, this agent doesn't need write access in prod." Saying that is a governance muscle, not a code change. And it's the muscle most organizations haven't built.
 

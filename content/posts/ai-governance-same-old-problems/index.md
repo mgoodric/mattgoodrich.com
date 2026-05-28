@@ -47,6 +47,6 @@ But even these challenges can largely be addressed through existing security pro
 
 **The bottom line**
 
-Organizations with strong foundational security controls can extend those controls to cover AI use cases. Those without these fundamentals will find AI amplifies their existing vulnerabilities rather than creating entirely new categories of risk.
+Organizations with strong foundational security controls can extend those controls to cover AI use cases. Those without these fundamentals will find AI makes their existing vulnerabilities worse rather than creating entirely new categories of risk.
 
 Don't let AI governance become an excuse to skip the security basics your organization should have implemented years ago.

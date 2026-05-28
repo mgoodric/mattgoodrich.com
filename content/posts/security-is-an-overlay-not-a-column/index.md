@@ -33,7 +33,7 @@ So security does not get a column on the org chart that scales with the company,
 
 Here is the reframe. Security, looked at against the value streams, is not a column and was never going to be one. It is an **overlay**: a layer that sits across all of the streams at once. The column model fails because a column is vertical and the streams are horizontal, the same mismatch the last post described. The overlay model works because a layer does not need a person per stream. It needs to be designed.
 
-An overlay is not one uniform thing, though. It is woven from three different kinds of attachment, and the discipline is knowing which kind each piece of security work actually is.
+An overlay is not one uniform thing, though. It is built from three different kinds of attachment, and the discipline is knowing which kind each piece of security work actually is.
 
 ![The Three Modes of Security Attachment](diagram-three-modes.png)
 

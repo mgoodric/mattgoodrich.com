@@ -1,0 +1,13 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TD
+  START(["For each system the agent talks to"])
+  Q1{"Do you own and operate<br/>this system end-to-end?"}
+  YES_PATH["<b>Skip MCP</b><br/>Direct API call with workload identity<br/>(SPIFFE, AWS IAM role,<br/>Azure managed identity,<br/>GCP workload identity federation)<br/>Cloud-native audit; policy in IAM;<br/>credential lifecycle is ephemeral"]
+  NO_PATH["<b>Keep MCP</b><br/>The only place security policy, audit,<br/>identity translation, and blast-radius<br/>control land consistently across vendors<br/>you cannot reimplement<br/>(GitHub MCP, Slack MCP, Notion MCP,<br/>payroll, CRM)"]
+  HYBRID(["Most enterprises run both<br/>Triple Gate pattern:<br/>API gateway + AI gateway + MCP gateway"])
+
+  START --> Q1
+  Q1 -->|"Yes (your APIs, services,<br/>databases, internal tools)"| YES_PATH
+  Q1 -->|"No (third-party SaaS,<br/>vendor, partner integration)"| NO_PATH
+  YES_PATH --> HYBRID
+  NO_PATH --> HYBRID

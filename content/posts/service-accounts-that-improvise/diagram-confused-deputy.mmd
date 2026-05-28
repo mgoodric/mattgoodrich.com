@@ -1,0 +1,19 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph UNION["Default: Agent inherits the Union (X ∪ Y)"]
+    direction LR
+    UX1["User Authority X<br/>read CRM<br/>approve refunds<br/>read wiki"]
+    UY1["Service Identity Y<br/>read CRM<br/>call internal APIs<br/>restart services<br/>write metrics"]
+    UE1["Agent effective permission<br/>read CRM, approve refunds, read wiki,<br/>call internal APIs, restart services, write metrics"]
+    UX1 --> UE1
+    UY1 --> UE1
+  end
+  subgraph INTER["Target: Agent gets only the Intersection (X ∩ Y)"]
+    direction LR
+    UX2["User Authority X<br/>read CRM<br/>approve refunds<br/>read wiki"]
+    UY2["Service Identity Y<br/>read CRM<br/>call internal APIs<br/>restart services<br/>write metrics"]
+    UE2["Agent effective permission<br/>read CRM"]
+    UX2 --> UE2
+    UY2 --> UE2
+  end
+  UE1 ==>|"flip"| UE2

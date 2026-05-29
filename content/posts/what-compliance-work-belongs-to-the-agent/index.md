@@ -1,6 +1,6 @@
 +++
 date = '2026-05-31T12:00:00-07:00'
-draft = true
+draft = false
 title = 'What Compliance Work Belongs to the Agent'
 aliases = []
 description = "The same shape that makes AI useful for access reviews extends to firewall rule cleanup, certificate rotations, vulnerability triage, and a long list of other recurring compliance work. The criteria are simple: the task happens on a schedule, it produces evidence, and the action it proposes is bounded. Here's how to build the agents and the guardrails that keep them honest."

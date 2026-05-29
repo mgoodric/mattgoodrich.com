@@ -1,6 +1,6 @@
 +++
 date = '2026-05-30T12:00:00-07:00'
-draft = true
+draft = false
 title = "Your Access Review Is Already Stale: Telemetry-Driven Least Privilege"
 aliases = []
 description = "Most organizations still run access reviews as a quarterly attestation ritual. The telemetry to do them continuously has existed for years; the shift is from evidence of process to evidence of outcomes. AI takes the routine volume, and a named human still signs the call."

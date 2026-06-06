@@ -1,6 +1,6 @@
 +++
 date = '2026-06-05T12:00:00-07:00'
-draft = true
+draft = false
 title = 'Every Agent Protocol Earns Its Keep at a Boundary'
 aliases = []
 description = "The agent stack runs in three directions: MCP to tools, A2A to other agents, AG-UI to the user. Two of them cross a trust boundary, and a single boundary test decides which protocols earn their keep there and which are theater inside a system you already own."
@@ -153,10 +153,4 @@ Strip the agent framing away and the architecture underneath is the one that has
 So the order of decisions is fixed. Sort by boundary first. If you own both ends, reach for the runtime and skip the protocol. If you do not, reach for the protocol and accept its cost, because it is the only place your policy can live. Sort by maturity second, and here the news is good: the protocols at the boundaries that matter, MCP and A2A, are now governed in the open by the same foundation, which is about as settled as a two-year-old technology gets. Do not bet your architecture on a single runtime, because you will want to swap it. Do bet on the protocols at your real boundaries, because those boundaries were never yours to design.
 
 The caller is an agent now. The boundary it crosses is the same one it always was.
-
-<!-- ON PUBLISH (preserve until done):
-1. Update the A2A mention in content/posts/mcp-at-the-boundary/index.md — change "I will cover A2A specifically in a future post." to link here (/posts/agent-communication-stack/).
-2. Re-stamp the date below from the 2026-12-31 placeholder to current Pacific time at publish moment, and flip draft = false.
-3. Consider adding a "two directions" diagram (north-south MCP / east-west A2A) to match the diagram density of the prior post.
--->
 

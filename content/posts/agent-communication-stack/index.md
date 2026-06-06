@@ -33,7 +33,7 @@ Two of those three directions cross a trust boundary. The tool call and the agen
 
 MCP and A2A run perpendicular to each other. Both are open standards, most production systems in 2026 run both at once, and Google's own ADK implements both because the reference architecture needs both. The winner-take-all protocol war everyone expected in 2025 did not happen. MCP connects an agent to its tools. A2A connects an agent to other agents. You will use them together, or you will rebuild one of them badly.
 
-So the question is never MCP versus A2A. It is: for this specific call, am I crossing a boundary I own, or one I don't?
+So it comes down to one question on every call: am I crossing a boundary I own, or one I don't?
 
 ## What A2A Does That MCP Cannot
 

@@ -1,0 +1,10 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart LR
+  A1(["App"]) -->|"IAM: write"| DB[("Database")]
+  DB -. "trusted by (not in IAM)" .-> B1["Another system"]
+
+  A2(["CI job"]) -->|"IAM: edit"| P["Its own pipeline"]
+  P -. "next run escalates (not in IAM)" .-> A2
+
+  A3(["Service A"]) -->|"IAM: write"| C[("Config store")]
+  C -. "read and obeyed (not in IAM)" .-> B3["Service B"]

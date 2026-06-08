@@ -46,6 +46,8 @@ In practice, the identity-first work is a short, unglamorous list. Consolidate t
 
 Here is the part the maturity model implies but rarely says out loud. Optimal is not the goal for everyone.
 
+![Zero Trust as a Sequence: Identity Is the Foundation, Then Device, Then Least Privilege, Each a Precondition for the Next. Most Companies Right-Size at Solid Advanced Through Least Privilege, While Continuous Real-Time Scoring at the Top Is for Banks and Governments](diagram-sequence.png)
+
 Continuous risk-based authentication across every pillar is the right target for a bank, a government agency, a company whose compromise would be catastrophic. For a mid-size company with a modest threat model, reaching solid Advanced on identity and access and stopping there is a defensible and often correct decision. Zero trust is a sequence, and you are allowed to stop climbing when the next rung costs more than the risk it removes. The same right-sizing that applies to IAM applies here: the destination is set by your risk, not by the vendor's diagram.
 
 Concretely, a three-hundred-person SaaS company with no mandate beyond SOC 2 lands well at SSO everywhere with phishing-resistant MFA, just-in-time elevation for production through a broker, device posture on managed laptops, and per-application access in place of a flat VPN. That is solid Advanced on the identity and access pillars, and it removes most of the blast radius. The continuous, risk-based scoring at the top of CISA's model, real-time signal correlation adjusting access mid-session, is a large build that for this company catches a marginal slice of risk the earlier rungs already covered. Stopping there is the right call, and the next dollar of security budget buys more spent somewhere else.

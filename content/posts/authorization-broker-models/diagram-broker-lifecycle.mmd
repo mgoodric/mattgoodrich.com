@@ -1,0 +1,18 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','actorBkg':'#ECE4F2','actorBorder':'#5B2A86','actorTextColor':'#2D2D2D','actorLineColor':'#5B2A86','signalColor':'#3A3A3A','signalTextColor':'#2D2D2D','noteBkgColor':'#F6E7D2','noteBorderColor':'#B5A98E','noteTextColor':'#2D2D2D','activationBkgColor':'#ECE4F2','activationBorderColor':'#5B2A86','labelBoxBkgColor':'#F6E7D2','labelBoxBorderColor':'#B5A98E'}}}%%
+sequenceDiagram
+  actor R as Requester
+  participant B as Broker
+  participant A as Approver (Slack / Email)
+  participant S as Resource
+  R->>B: 1. request access (with justification)
+  B->>B: 2. policy check: on-call? incident? in window?
+  opt request needs human approval
+    B->>A: 3. approval request, in Slack or email
+    A-->>B: 4. approve / deny
+  end
+  B-->>R: 5. short-lived, scoped credential
+  Note over B: every grant logged
+  R->>S: 6. access, within the window
+  Note over R,S: session recorded
+  B--xR: 7. credential expires
+  Note over R,S: no standing door remains

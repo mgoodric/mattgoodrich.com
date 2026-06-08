@@ -55,6 +55,18 @@ The principle that makes the second tier work is dependency independence: a brea
 
 What it cannot skip is the discipline. The last-resort credential is still inert until used, still alarmed on a channel that does not depend on what is down, still attributed through the process around it, and still reviewed hard afterward, often with two people required to open the safe so the attribution is built into the act. The compensating controls move from the system to the procedure, but they do not disappear. A sealed root credential with a two-person rule and a mandatory postmortem is break-glass. The same credential in a shared vault is the anti-pattern from earlier with a better story.
 
+## What It Actually Looks Like
+
+On a cloud platform, both tiers are recognizable builds.
+
+Inert-until-used is enforced with a guardrail, not a promise. On AWS, a service control policy denies the most dangerous actions for every principal in the account, and the break-glass role is the single principal the policy exempts. Day to day nobody can take those actions, including an over-privileged account, because the policy blocks them. Breaking the glass means assuming the one role the guardrail lets through, which is a discrete, logged act instead of a quiet escalation. Azure and GCP have the same shape with organization policies and a privileged emergency role.
+
+Tier one, the broker-mediated path, is a just-in-time elevation. The emergency role exists but is assigned to nobody. In an incident the on-call requests it through Azure PIM, an AWS IAM Identity Center permission set, or the broker's emergency policy; an approval fires, or for a genuine page-out emergency a justification plus a mandatory after-the-fact review; the role activates for a bounded window like one hour; the session is recorded; and it expires on its own. This is the right path for almost every incident, because in almost every incident the identity plane is fine.
+
+Tier two, the last resort, is the account that can rebuild the identity plane: the AWS Organizations management account root, the Azure global administrator emergency account, the GCP super admin. It gets a hardware security key, and the password or recovery codes are split so no single person can use it alone, stored offline in two separate safes. Its sign-in alarms to a monitoring path that does not run through your normal SSO or your normal cloud account, because those are the things that may be down. You touch it with two people, you write the postmortem, and most years you never touch it at all.
+
+The alarm is the through-line. Any authentication as any break-glass identity, tier one or tier two, pages the security team immediately, because a break-glass account used without an alarm is just a privileged account nobody is watching.
+
 ## An Exit, Not an Opening
 
 Every system needs a way in when the normal way is down. The question is whether that way is an emergency exit, used rarely, loudly, and briefly, or an opening someone forgot to close. The mechanics are the same either way. The difference is the discipline around them: inert until used, loud when used, gone shortly after, and reviewed every single time. Build the exit. Do not leave an opening.

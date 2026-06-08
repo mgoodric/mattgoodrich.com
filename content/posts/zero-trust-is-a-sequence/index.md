@@ -29,15 +29,26 @@ CISA's [Zero Trust Maturity Model](https://www.cisa.gov/zero-trust-maturity-mode
 
 **Then continuous, risk-based evaluation.** The Optimal end state, where every request is scored in real time against context and access is adjusted dynamically. This is genuinely valuable and genuinely expensive, and it is the last thing you build, not the first.
 
+| Stage | What good looks like | Concrete controls | The common mistake |
+|-------|----------------------|-------------------|--------------------|
+| Identity | You can name who or what made every request | One IdP, phishing-resistant MFA, SSO everywhere, no standing local accounts | Rolling out a product before consolidating identity |
+| Device | Access depends on the health of the endpoint | MDM, posture checks, a managed-device requirement on sensitive apps | Trusting devices you do not manage |
+| Least privilege | Each identity reaches only what it needs, briefly | Per-app access, microsegmentation, just-in-time elevation, no standing prod admin | Segmenting the network with no identity behind it |
+| Continuous | Every request scored in real time against context | Risk-based auth, mid-session re-evaluation, automated response | Buying the risk engine first |
+
 ## Where to Start
 
 The common mistake is starting at the expensive, visible end. Teams buy a microsegmentation product or a fancy risk engine before they have clean identity, and they end up with a sophisticated control evaluating requests it cannot reliably attribute. Start with identity, because every later control depends on it. The order is structural: each stage is the precondition for the next.
+
+In practice, the identity-first work is a short, unglamorous list. Consolidate to one identity provider so there is a single place to reason about who can log in. Turn on phishing-resistant MFA, FIDO2 keys or passkeys rather than SMS, starting with admins and the crown-jewel apps. Retire the standing local accounts and shared logins that bypass all of it. Put conditional access in front of the systems whose compromise would hurt most before you try to cover everything. None of that needs a zero-trust product. All of it is the precondition for one.
 
 ## Not Everything Needs the Optimal End
 
 Here is the part the maturity model implies but rarely says out loud. Optimal is not the goal for everyone.
 
 Continuous risk-based authentication across every pillar is the right target for a bank, a government agency, a company whose compromise would be catastrophic. For a mid-size company with a modest threat model, reaching solid Advanced on identity and access and stopping there is a defensible and often correct decision. Zero trust is a sequence, and you are allowed to stop climbing when the next rung costs more than the risk it removes. The same right-sizing that applies to IAM applies here: the destination is set by your risk, not by the vendor's diagram.
+
+Concretely, a three-hundred-person SaaS company with no mandate beyond SOC 2 lands well at SSO everywhere with phishing-resistant MFA, just-in-time elevation for production through a broker, device posture on managed laptops, and per-application access in place of a flat VPN. That is solid Advanced on the identity and access pillars, and it removes most of the blast radius. The continuous, risk-based scoring at the top of CISA's model, real-time signal correlation adjusting access mid-session, is a large build that for this company catches a marginal slice of risk the earlier rungs already covered. Stopping there is the right call, and the next dollar of security budget buys more spent somewhere else.
 
 ## Verify Identity, Then Earn the Rest
 

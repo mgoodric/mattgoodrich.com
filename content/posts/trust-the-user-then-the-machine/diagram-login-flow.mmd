@@ -1,0 +1,8 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart LR
+  USER(["User signs in<br/>(passkey)"])
+  IDP{{"At the IdP: conditional access<br/>checks the device"}}
+  USER --> IDP
+  IDP -->|"managed, cert valid,<br/>encrypted, patched, EDR live"| OK["Allow"]
+  IDP -->|"healthy but a patch behind"| STEP["Allow, push to remediate"]
+  IDP -->|"unmanaged or non-compliant"| BLOCK["Block, or a constrained path<br/>(VDI / managed browser)"]

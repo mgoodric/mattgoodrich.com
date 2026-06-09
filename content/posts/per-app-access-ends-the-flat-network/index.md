@@ -1,6 +1,6 @@
 +++
 date = '2026-06-25T12:00:00-07:00'
-draft = true
+draft = false
 title = 'Per-App Access Ends the Flat Network'
 aliases = []
 description = "A VPN authenticates you to a network and then trusts you on all of it, which is how one phished laptop reaches the whole subnet. The network pillar of zero trust replaces that with identity-aware, per-application access: you reach the one app you are entitled to and never see the rest. Here's what replaces the VPN, and what the migration actually costs."
@@ -31,6 +31,8 @@ The shift the network pillar of zero trust asks for is a change in what you hand
 
 The difference shows up most in what an attacker gets from a single compromise. On the VPN, one foothold sees the whole interior. With per-application access, one foothold sees one application, the one that identity was entitled to, and the lateral movement that turns a foothold into a breach has nothing to traverse.
 
+![The same five internal resources under two access models. Under a VPN, a phished laptop authenticates to the network and the concentrator hands it a route to every box, App A, App B, the database, an admin panel with no auth, and a legacy server, all reachable from one foothold. Under per-app access, the user and device authenticate to an identity-aware broker that tunnels only to the one app they are entitled to, while App B, the database, the admin panel, and the legacy server stay dark and unreachable](diagram-vpn-vs-perapp.png)
+
 ## What Replaces the VPN
 
 The replacement is a broker that sits between users and applications and grants access one app at a time. The category name is zero trust network access, ZTNA, and the shape is an identity-aware proxy: the user connects to the broker, the broker checks who they are and what device they are on, and only then does it proxy the connection through to the specific application, while every other application stays dark.
@@ -39,7 +41,11 @@ The replacement is a broker that sits between users and applications and grants 
 
 Two pieces complete the picture. **Microsegmentation** handles the traffic the user broker does not see: the east-west, server-to-server connections inside the data center, divided so a workload can talk only to the specific workloads it needs rather than to its whole subnet. And **mutual TLS** between services means each connection proves both ends cryptographically, so a machine that lands on the segment still cannot talk to a service without the right identity. Per-app access for people, microsegmentation and mTLS for machines, and the flat interior is gone from both directions.
 
-## Identity and Device Are the New Boundary
+![Closing the flat interior from both directions. North-south, a user and device reach an application only through an identity-aware broker that tunnels to one app. East-west, Service A reaches Service B over mTLS because they share a segment, but its attempt to reach Service C is blocked, because Service C is in a different segment and Service A has no mTLS identity for it](diagram-both-directions.png)
+
+## The Perimeter Moves to Identity
+
+The perimeter does not disappear when the VPN does. It moves. The old perimeter was a place, the network edge you defended with a firewall and crossed with a VPN, and everything inside it was trusted by default. Per-app access takes that boundary off the network and rebuilds it around the identity and the device, checked at every request instead of once at the edge. The firewall guarded a location that an attacker only had to get inside of once. The new perimeter travels with the person, because it is the person, and the device in their hands, re-proven on every connection.
 
 When the network grants nothing by itself, the access decision moves entirely onto identity and device. Every per-app connection is gated on two questions answered live: is this the user they claim to be, proven with a [phishing-resistant factor](/posts/mfa-that-survives-phishing/), and is this a device I trust right now, proven with a [hardware-bound certificate and current posture](/posts/trust-the-user-then-the-machine/). The network is no longer part of the trust calculation, which is the entire point. Location stops being evidence.
 

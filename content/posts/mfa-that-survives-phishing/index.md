@@ -1,6 +1,6 @@
 +++
 date = '2026-06-22T12:00:00-07:00'
-draft = true
+draft = false
 title = 'The Only MFA That Survives Phishing'
 aliases = []
 description = "Passwords and one-time codes both fall to a convincing fake login page. FIDO2 security keys and passkeys don't, because the browser checks the site's identity before it releases the credential. Here's how the pieces fit, what each one costs to roll out, and why account recovery is the part that decides whether it sticks."
@@ -29,6 +29,8 @@ Authentication is a **challenge-response**, not a replay. The server sends a ran
 
 Strip those three down and the point is simple: every common factor before FIDO2 is a secret you can copy or a code you can relay. A FIDO2 assertion is neither.
 
+![Why FIDO2 Survives Phishing: a Real-Time Phishing Proxy Can Replay a Password and a One-Time Code to the Real Site and Let the Attacker In, but a FIDO2 Assertion Is Signed Over the Proxy's Origin Rather Than the Real Site's, So the Real Site Rejects It](diagram-origin-binding.png)
+
 ## One Standard, Two Form Factors
 
 The vocabulary trips people up, so it is worth being precise. [FIDO2](https://fidoalliance.org/fido2/) is two specifications working together. WebAuthn is the W3C API the browser and the server speak. CTAP is the protocol the browser speaks to the authenticator. You mostly care about where the authenticator lives.
@@ -37,7 +39,7 @@ A **roaming authenticator** is a separate object you carry, a security key you p
 
 A **passkey** is the consumer-facing name for a WebAuthn credential, usually a discoverable one: it can stand in for the username and the password together, so the same tap that proves you also identifies you. That is where passwordless comes from. If the credential identifies you and proves you in one step, there is no password left to phish. The [passkeys.dev](https://passkeys.dev/) guides are the clearest reference if you want the developer-level detail.
 
-The split that actually decides your rollout is not roaming versus platform. It is whether the credential stays on one piece of hardware or follows your account everywhere.
+What decides your rollout is whether the credential stays on one piece of hardware or follows your account everywhere. That matters more than whether the authenticator is roaming or built in.
 
 ## Device-Bound vs Synced
 
@@ -62,6 +64,8 @@ Both are phishing-resistant. The browser does the origin check either way. The d
 
 The order is the same one the zero-trust sequence implies: identity-first, and the highest-value identities first. Do not try to convert everyone at once.
 
+Before the phasing, one prerequisite. This whole approach assumes you can enforce the factor in one place and have it apply everywhere, and that place is [single sign-on](/posts/one-front-door-one-place-to-revoke/). SSO is what lets you require a phishing-resistant factor once, at the identity provider, and cover every application behind it. Without it you are turning MFA on app by app, a rollout that never finishes. Treat SSO as table stakes for this work: the apps behind the IdP are the ones this protects, and the apps still in front of it are a separate problem to solve first.
+
 **Pilot with the people who can debug it.** IT and security enroll first, register two authenticators each, and hit the rough edges before anyone else does. You will find a legacy app that cannot do WebAuthn and a VPN client that swallows the NFC tap. Better you find them than the CFO.
 
 **Admins next, on hardware keys.** The accounts whose compromise is worst get the strongest factor, device-bound, and they get it before the broad rollout, not after. This is also where [break-glass](/posts/break-glass-without-the-backdoor/) meets passwordless: your emergency accounts are exactly the ones that should sit behind a hardware key in a safe, not a synced passkey on someone's personal phone.
@@ -70,11 +74,13 @@ The order is the same one the zero-trust sequence implies: identity-first, and t
 
 **The workforce, on synced passkeys.** This is where reach matters more than maximum assurance, and where buying a thousand hardware keys would stall the program. Let people enroll a platform passkey on the device they already carry, require it for SSO, and you have moved the bulk of your logins off phishable factors without a logistics project.
 
+![The Blast-Radius Rollout in Four Phases: Pilot With IT and Security, Then Admins on Device-Bound Hardware Keys, Then Crown-Jewel Apps Behind a Conditional-Access Rule Requiring Phishing-Resistant Authentication, Then the Workforce on Synced Passkeys for Reach](diagram-rollout.png)
+
 Then turn the password off where you can, not before. Passwordless is the destination, and you reach it once the phishing-resistant factor is enrolled and proven for a population, not on the day you announce the project.
 
 ## Account Recovery Is the Whole Game
 
-Here is the part that decides whether any of this holds, and the part most rollouts underbuild. A phishing-resistant factor with a phishable recovery path is not phishing-resistant. It is a strong front door next to an unlocked window.
+Here is the part that decides whether any of this holds, and the part most rollouts underbuild. A phishing-resistant factor is only as strong as its recovery path. A phishable recovery is an unlocked window beside a strong front door.
 
 The failure looks like this. You deploy security keys, you feel covered, and then the "I lost my key" flow quietly drops to an SMS code or an email magic link, because someone had to make recovery work and that was the easy way. Now an attacker skips the key entirely and phishes the fallback, and you have spent real money to relocate the vulnerability, not remove it.
 
@@ -82,7 +88,16 @@ Two things fix it.
 
 **Make sure nobody has exactly one authenticator.** The single highest-value recovery improvement is enrolling a second factor at registration time: a backup security key in a drawer, or a hardware key plus a platform passkey. Most lockouts never reach the help desk if the user simply has a second way in. Issue keys in pairs and register both on day one.
 
-**Make the human recovery path identity-proof, not convenient.** When someone genuinely loses everything, the reset has to re-establish who they are at the same assurance as the factor it is replacing. A help-desk agent resetting MFA on the strength of a phone call is the new attack surface, and it is not hypothetical: the 2023 Scattered Spider intrusions into large enterprises ran straight through help-desk MFA resets. The reset path for a privileged account should require in-person verification, a manager confirmation, a video check against a government ID, or a pre-issued offline recovery code held in a safe. It should be slow on purpose. The accounts with the most blast radius get the most painful recovery, and that is correct.
+**Make the human recovery path identity-proof, not convenient.** When someone genuinely loses everything, the reset has to re-establish who they are at the same assurance as the factor it is replacing. A help-desk agent resetting MFA on the strength of a phone call is the new attack surface, and it is not hypothetical: the [2023 Scattered Spider intrusions](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a) into large enterprises ran straight through help-desk MFA resets. The reset path for a privileged account should require in-person verification, a manager confirmation, a video check against a government ID, or a pre-issued offline recovery code held in a safe. It should be slow on purpose. The accounts with the most blast radius get the most painful recovery, and that is correct.
+
+Concretely, the recovery path scales with what the account can reach:
+
+| Account tier | How they recover |
+|---|---|
+| Regular user | The second authenticator they enrolled at signup; if both are gone, a manager-attested self-service reset |
+| Sensitive user (production, finance) | A help-desk reset gated on manager confirmation and a live video check against a government ID, never a phone call alone |
+| Admin or privileged | In-person verification, or a pre-issued offline recovery code from a safe, with two people required to use it |
+| Break-glass or root | No help-desk path at all: the documented offline break-glass procedure, sealed codes and a hardware key in a safe |
 
 ## Attestation Lets You Refuse the Wrong Authenticator
 
@@ -94,13 +109,17 @@ The cost is real, so spend it deliberately. Attestation adds enrollment friction
 
 The purist position is that only device-bound hardware keys are real security, and that synced passkeys are a consumer convenience that smuggles your credentials into Apple's or Google's cloud. The concern is not wrong on the facts. A synced passkey is exactly as recoverable as the account it syncs through, and that account's recovery is now part of your attack surface. For an admin or a break-glass identity, that is a good reason to stay device-bound.
 
-For everyone else it is the wrong tradeoff to optimize. The realistic alternative to a synced passkey is not a hardware key for all ten thousand employees. It is the password and the SMS code you have right now, which fall to the phishing kit you are actually being hit with this quarter. A synced passkey closes that hole for the whole workforce at the cost of a logistics project you will never finish if you insist on hardware. The phishing-resistant property holds either way. Reserve the extraction-resistant, attestable hardware for the accounts where the cloud-recovery risk genuinely outweighs the reach, and let synced passkeys carry the masses off passwords. A strong factor everyone uses beats a stronger factor half the company never enrolls.
+For everyone else it is the wrong tradeoff to optimize. The realistic alternative to a synced passkey is the password and the SMS code you have right now, not a hardware key for all ten thousand employees, and those fall to the phishing kit you are being hit with this quarter. A synced passkey closes that hole for the whole workforce at the cost of a logistics project you will never finish if you insist on hardware. The phishing-resistant property holds either way. Reserve the extraction-resistant, attestable hardware for the accounts where the cloud-recovery risk genuinely outweighs the reach, and let synced passkeys carry the masses off passwords. A strong factor everyone uses beats a stronger factor half the company never enrolls.
 
 ## What It Costs
 
 The hardware is the cheap part. A [security key](https://www.yubico.com/products/security-key/) runs roughly $25 to $50, a FIPS model more, and two per admin is the number that matters once you account for the backup. The hardware does not have to be a closed product, either: [SoloKeys](https://solokeys.com/) and [Nitrokey](https://www.nitrokey.com/) are open-source FIDO2 keys, and open-source identity providers like [Keycloak](https://www.keycloak.org/) and [Authentik](https://goauthentik.io/) support passkeys natively, so the IdP side need not be commercial. The expense that surprises people is operational: shipping keys to remote staff, replacing lost ones, and standing up the identity-proofed recovery desk that the whole design depends on. Synced passkeys avoid most of that, which is the other half of why they carry the broad rollout.
 
 The long tail is the legacy app that cannot speak WebAuthn. Anything behind your SSO inherits the phishing-resistant login for free, because the phishing-resistant step happens at the IdP. The problem is the system that cannot federate at all, the old on-prem console, the vendor portal with its own password. Those do not get fixed by this project. They get an inventory, a compensating control, and a place on the list of things to retire, and you should name them out loud rather than let the rollout imply a coverage you did not reach.
+
+## The Frameworks Haven't Caught Up
+
+One friction is not technical. Many compliance frameworks, and the auditor checklists built on them, still assume a password. They mandate length, complexity, and rotation rules that mean nothing once there is no password, and they define multi-factor as a password plus a second thing, which a single passkey gesture does not obviously match, even though a FIDO2 authenticator with a PIN or a biometric is genuinely two factors and a stronger pairing than most. NIST's 800-63B has caught up, recognizing phishing-resistant authenticators and dropping mandatory password rotation, but PCI DSS, a lot of HIPAA control mappings, and plenty of SOC 2 checklists have not. The failure mode is letting that lag talk you into keeping a weaker password fallback alive purely to satisfy a control, which reopens the hole you just closed. Map the passkey to the requirement's intent, document why it meets or exceeds it, and do not weaken the security to fit an outdated checkbox.
 
 ## Start Where the Phishing Lands
 

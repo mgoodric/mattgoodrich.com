@@ -1,0 +1,12 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph PW["Password / one-time code: relayable"]
+    direction LR
+    U1(["User"]) --> PX1{{"Phishing proxy<br/>(look-alike site)"}} -->|"replays the password<br/>and the one-time code"| RS1["Real site:<br/>attacker gets in"]
+  end
+  subgraph F2["FIDO2 / passkey: bound to the origin"]
+    direction LR
+    U2(["User"]) --> PX2{{"Phishing proxy"}} -->|"assertion is signed over<br/>the proxy's origin, not yours"| RS2["Real site:<br/>rejects it"]
+  end
+  PW ~~~ F2
+  style F2 stroke:#5B2A86,stroke-width:2.5px,stroke-dasharray:7 5

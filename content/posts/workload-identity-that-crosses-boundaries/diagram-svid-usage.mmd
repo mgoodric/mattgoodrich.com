@@ -1,0 +1,12 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph CN["Cloud-native workload identity"]
+    direction LR
+    APP1(["App: s3.get_object"]) --> SDK{{"SDK credential chain<br/>(fetch, sign, refresh, all invisible)"}} --> API["That cloud's own APIs"]
+  end
+  subgraph SP["SPIFFE SVID"]
+    direction LR
+    APP2(["App"]) --> MW{{"Mesh sidecar or go-spiffe<br/>(fetch SVID, mutual TLS)"}} --> PEER["Any SPIFFE-aware service<br/>that trusts the domain:<br/>other cloud, on-prem, bare metal"]
+  end
+  CN ~~~ SP
+  style SP stroke:#5B2A86,stroke-width:2.5px,stroke-dasharray:7 5

@@ -1,9 +1,9 @@
 +++
 date = '2026-06-18T12:00:00-07:00'
-draft = true
+draft = false
 title = 'Logging Out Is Harder Than Logging In'
 aliases = []
-description = "Single sign-on made logging in a solved problem. Logging out never got the same treatment: disabling an account leaves live sessions running, and the single-logout standards meant to fix it are fragile or unevenly adopted. What finally works is a different approach, near-real-time session-revocation signals, and it is finally a finished standard. Here's why logout is the hard half, and what actually ends a session now."
+description = "Single sign-on made logging in a solved problem. Logging out never did: disabling an account leaves live sessions running, and the single-logout standards meant to fix it are fragile or unevenly adopted. What works is a newer approach, near-real-time session-revocation signals, and here's why logout is the hard half and what actually ends a session now."
 categories = ['Security', 'Engineering']
 tags = ['Security', 'IAM', 'Identity', 'SSO', 'Single Logout', 'OIDC', 'Session Management', 'CAEP', 'CISO']
 image = 'header.png'
@@ -24,6 +24,8 @@ There is the **IdP session**, your authenticated session at the identity provide
 Under those sit the token lifetimes. An OIDC access token might be good for an hour, while the refresh token behind it is good for weeks, quietly minting new access tokens the whole time. The app session, the access token, and the refresh token are three more clocks, and they do not run together.
 
 Put numbers on it and the problem is plain. A common setup is an eight-hour sliding app session, a one-hour access token, a thirty-day refresh token, and an eight-hour IdP session. Disable the account at noon and the access token keeps working until one o'clock, the refresh token can mint fresh ones for a month, and the sliding app session renews for as long as the tab stays open. The single logout you wanted is four different expiries owned by three different systems, and none of them fired when you clicked disable.
+
+![One SSO Login Creates Several Independent Sessions and Tokens, Each on Its Own Clock: an IdP Session, a Sliding App Session, a Short Access Token, and a Long Refresh Token; Disabling the Account Blocks the Next Login but Leaves the Access Token Valid Until It Expires, the Refresh Token Minting New Ones for Weeks, and the Sliding App Session Alive Until the Tab Closes](diagram-sessions.png)
 
 The load-bearing word is independent. SSO is a one-time handshake, not a standing connection. Once the app has its session it has no reason to phone the IdP on every request, and for performance it deliberately does not. The decision that makes SSO fast is the same decision that makes logout hard. There is no single session to end, and no single place that knows about all of them.
 
@@ -51,11 +53,13 @@ The approach that actually fits the problem is newer, and it gives up on propaga
 
 This is the model that closes the gap short token lifetimes cannot. Microsoft ships it as [Continuous Access Evaluation](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation), where a termination or a risky sign-in can end active sessions in about a minute rather than waiting out the token. Okta and Google are building Shared Signals support. The direction is clear: instead of chaining a logout through every app, broadcast the revocation as a fact and let each app act on it.
 
+![Three Ways to End Sessions: Front-Channel Logout Loads Each App's Logout URL in a Browser Iframe and Is Broken by Third-Party Cookie Blocking; Back-Channel Logout Sends a Server-to-Server Logout Token but Only Reaches Apps That Implement It; Shared Signals and CAEP Have the IdP Push a session-revoked Event to Receiving Apps That Drop the Session in Near-Real-Time](diagram-logout-vs-signal.png)
+
 ## What You Can Actually Ship Today
 
 Shared Signals is the right model, and it is not a switch you flip, because it only works where both ends implement it. Your IdP has to transmit and every app has to receive, and the app long tail that never adopted back-channel logout is the same long tail that will not have a Shared Signals receiver for years. For those apps you are back to waiting out the session.
 
-So the deployable answer is layered, weakest to strongest. Set short absolute lifetimes on the sessions and tokens you control, accepting the extra re-authentication, because a short fixed session is the one mitigation that works without the app's cooperation. Revoke the refresh token at the IdP through [OAuth token revocation](https://www.rfc-editor.org/rfc/rfc7009) the moment the account is disabled, so it stops minting new access tokens even if nothing else fires. Turn on [back-channel logout](https://openid.net/specs/openid-connect-backchannel-1_0-final.html) for the apps that support it. Adopt Shared Signals and CAEP between your IdP and the apps where a terminated session has to die in minutes, not hours. And for everything still on a sliding session you cannot signal, the honest move is to know it is there and shorten it where you can, instead of assuming logout did something it did not.
+So the deployable answer is layered, weakest to strongest. Set short absolute lifetimes on the sessions and tokens you control, accepting the extra re-authentication, because a short fixed session is the one mitigation that works without the app's cooperation. Revoke the refresh token at the IdP through [OAuth token revocation](https://www.rfc-editor.org/rfc/rfc7009) the moment the account is disabled, so it stops minting new access tokens even if nothing else fires. Turn on [back-channel logout](https://openid.net/specs/openid-connect-backchannel-1_0-final.html) for the apps that support it; the open-source identity providers implement it, [Keycloak](https://www.keycloak.org/), [Authentik](https://goauthentik.io/), and [Ory Hydra](https://www.ory.sh/hydra/), if you want to run the mechanism end to end. Adopt Shared Signals and CAEP between your IdP and the apps where a terminated session has to die in minutes, not hours; SGNL's [caep.dev](https://caep.dev/) is a free CAEP transmitter to test against, with an [open-source receiver library](https://github.com/SGNL-ai/caep.dev) to start from. And for everything still on a sliding session you cannot signal, the honest move is to know it is there and shorten it where you can, instead of assuming logout did something it did not.
 
 ## Logging In Is a Handshake; Logging Out Is a Distributed-Systems Problem
 

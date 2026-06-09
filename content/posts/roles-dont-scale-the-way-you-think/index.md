@@ -1,6 +1,6 @@
 +++
 date = '2026-06-19T12:00:00-07:00'
-draft = true
+draft = false
 title = "Roles Don't Scale the Way You Think"
 aliases = []
 description = "Role-based access ends the per-hire negotiation over who gets what, and then it collapses under its own weight: a role for every exception, thousands of roles nobody can audit. The model that survives is a few coarse birthright roles plus requested access for the rest, with attributes doing the work roles can't. Here's how to design for the hybrid you'll actually run."
@@ -31,6 +31,8 @@ Start with one role: `engineer`. Some engineers need production read, so now the
 
 This is **role explosion**, and its signature is an organization with more roles than people. When that happens, the model has stopped doing its job. The point of roles was to make access legible, to let someone look at a role and know what it means. Ten thousand roles are not legible. Nobody audits them, nobody prunes them, and access certifications turn into rubber-stamping lists of role names whose meaning no one remembers. You have recreated the per-person mess you started with, dressed up as governance.
 
+![Role Explosion: One Job, Engineer, Multiplied by Each Independent Dimension, Production Access, Team, On-Call, and Contractor, Becomes Dozens of Roles, and Repeated Across Departments Produces More Roles Than the Company Has People](diagram-role-explosion.png)
+
 The mistake underneath role explosion is treating every distinct combination of access as something that needs its own role. Most of those combinations are not jobs. They are the intersection of a job with an attribute, and attributes are a different tool.
 
 ## Role-Based vs Attribute-Based
@@ -41,25 +43,30 @@ Two models answer the access question in different ways, and the design skill is
 
 **Attribute-based** access derives permissions from attributes evaluated at the moment of the request. [NIST's model for ABAC](https://csrc.nist.gov/pubs/sp/800/162/final) describes it as a policy that considers attributes of the user, the resource, and the context together: grant access when the user's department equals the resource's owning department, when the request comes from a managed device, when the data's region matches the user's. The decision is computed, not pre-assigned.
 
+![Role-Based vs Attribute-Based Access: With RBAC a User's Role Membership Is Decided Ahead of Time and Maps to a Fixed Set of Permissions You Can Look Up; With ABAC the User, Resource, and Context Attributes Are Evaluated by a Policy at the Moment of the Request to Compute an Allow or Deny](diagram-rbac-vs-abac.png)
+
 The power of attributes is that they collapse the combinations that explode roles. Instead of `engineer-team-payments-prod-read` as a named role, you write one policy: an engineer may read production for the team they belong to. The team is an attribute, not a role, so one rule covers every team at once. [AWS calls this tag-based access control](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html): tag the resource with its team, tag the principal with theirs, and a single policy grants access when the tags match, no matter how many teams exist. The roles that would have exploded become attribute values that cost nothing to add. If you are enforcing this in your own services rather than a cloud IAM, [Casbin](https://casbin.org/) is an open-source library that implements both RBAC and ABAC, and [OPA](https://www.openpolicyagent.org/) evaluates attribute policies as a standalone engine.
 
 ## The Model That Survives Is Hybrid
 
-The workable design is not all roles or all attributes. It is a small number of coarse roles carrying the stable, everyone-in-this-job baseline, with attributes handling the dimensions that vary and would otherwise multiply the roles.
+The workable design is a hybrid. A small number of coarse roles carry the stable, everyone-in-this-job baseline, while attributes handle the dimensions that vary and would otherwise multiply the roles.
 
 Keep the roles broad and few. `engineer`, `support`, `finance-analyst`, the dozen or so real jobs your company has. These define [birthright access](/posts/automate-the-leaver-before-the-joiner/), the baseline everyone in the role gets automatically. Resist the urge to encode every variation as a sub-role.
 
 Push the variation into attributes. Team, region, device posture, environment, data sensitivity: these are the things that made roles explode, and they are exactly what attribute policies handle in one rule each. The combinatorial mess becomes a handful of policies that read like sentences.
 
-And leave the genuinely individual, high-sensitivity access to the **requested** path: asked for, approved by an owner, granted for a reason, and reviewed. Not everything should be automatic. The production admin grant should cost a human decision, not fall out of a role or a policy.
+And leave the genuinely individual, high-sensitivity access to the **requested** path: asked for, approved by an owner, granted for a reason, and reviewed. Not everything should be automatic. Access to the finance system should cost a human decision, not fall out of a role or a policy.
+
+The requested path still leaves a standing grant once the request is approved, and for the most dangerous access that is more than you want. Production admin rights and break-glass paths are better with no standing grant at all: [just-in-time elevation through an authorization broker](/posts/authorization-broker-models/) hands out the access only for the window it is needed and revokes it automatically, so there is nothing left standing to steal, certify, or forget to remove. A role you hold is a target; access you have only for the ten minutes of an incident is a much smaller one.
 
 | Dimension | Right tool | Why |
 |---|---|---|
 | The stable job baseline | A coarse role | Same for everyone in the job, easy to read and audit |
 | Team, region, environment, device | An attribute policy | Varies per person; one rule beats one role per value |
 | High-sensitivity, individual access | A request with approval | Deserves a human decision and a reason, not a default |
+| The most dangerous access | Just-in-time via a broker | No standing grant to steal or certify; it expires on its own |
 
-That table is the whole design. Most teams get it wrong by forcing all three rows into the first one, modeling every team and every variation as another role, until the role catalog is the problem it was meant to solve.
+That table is the whole design. Most teams get it wrong by forcing all of it into the first row, modeling every team and every variation as another role, until the role catalog is the problem it was meant to solve.
 
 ## Attributes Move the Complexity, They Do Not Delete It
 

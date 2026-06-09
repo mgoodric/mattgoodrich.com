@@ -1,5 +1,5 @@
 +++
-date = '2026-06-15T12:00:00-07:00'
+date = '2026-06-17T12:00:00-07:00'
 draft = false
 title = 'Zero Trust Is a Sequence, Not a Posture'
 aliases = []
@@ -23,7 +23,7 @@ CISA's [Zero Trust Maturity Model](https://www.cisa.gov/zero-trust-maturity-mode
 
 **Identity first.** Everything else in zero trust assumes you can answer "who or what is this" with confidence. Strong authentication, phishing-resistant MFA, one source of identity. If you cannot trust the identity, segmenting the network or scoring the device buys you nothing, because you do not know whose request you are evaluating. This is also the order the [right-sized IAM ladder](/posts/iam-for-the-company-you-have/) implies: identity is the foundation the other controls stand on.
 
-**Then the device.** Once you trust the identity, you start asking about the thing it is coming from: is it managed, patched, posture-checked. This is where most programs slow down, because device trust touches every endpoint you have.
+**Then the device.** Once you trust the identity, you start asking about the thing it is coming from: [is it managed, patched, posture-checked](/posts/trust-the-user-then-the-machine/). This is where most programs slow down, because device trust touches every endpoint you have.
 
 **Then least privilege and segmentation.** With trusted identity and device, you can shrink what each one reaches: per-application access instead of network access, microsegmentation, just-in-time elevation. This is where the blast-radius reduction actually happens.
 
@@ -40,7 +40,7 @@ CISA's [Zero Trust Maturity Model](https://www.cisa.gov/zero-trust-maturity-mode
 
 The common mistake is starting at the expensive, visible end. Teams buy a microsegmentation product or a fancy risk engine before they have clean identity, and they end up with a sophisticated control evaluating requests it cannot reliably attribute. Start with identity, because every later control depends on it. The order is structural: each stage is the precondition for the next.
 
-In practice, the identity-first work is a short, unglamorous list. Consolidate to one identity provider so there is a single place to reason about who can log in. Turn on phishing-resistant MFA, FIDO2 keys or passkeys rather than SMS, starting with admins and the crown-jewel apps. Retire the standing local accounts and shared logins that bypass all of it. Put conditional access in front of the systems whose compromise would hurt most before you try to cover everything. None of that needs a zero-trust product. All of it is the precondition for one.
+In practice, the identity-first work is a short, unglamorous list. Consolidate to one identity provider so there is a single place to reason about who can log in. Turn on [phishing-resistant MFA, FIDO2 keys or passkeys](/posts/mfa-that-survives-phishing/) rather than SMS, starting with admins and the crown-jewel apps. Retire the standing local accounts and shared logins that bypass all of it. Put conditional access in front of the systems whose compromise would hurt most before you try to cover everything. None of that needs a zero-trust product. All of it is the precondition for one.
 
 ## Not Everything Needs the Optimal End
 

@@ -36,11 +36,37 @@ CISA's [Zero Trust Maturity Model](https://www.cisa.gov/zero-trust-maturity-mode
 | Least privilege | Each identity reaches only what it needs, briefly | Per-app access, microsegmentation, just-in-time elevation, no standing prod admin | Segmenting the network with no identity behind it |
 | Continuous | Every request scored in real time against context | Risk-based auth, mid-session re-evaluation, automated response | Buying the risk engine first |
 
+None of these stages needs a zero-trust product, and open source covers a lot of each. For identity, [Keycloak](https://keycloak.org/), [Authentik](https://goauthentik.io/), or [Zitadel](https://zitadel.com/) give you an IdP with phishing-resistant MFA and SSO. For the device, [osquery](https://www.osquery.io/) with [Fleet](https://fleetdm.com/) collects posture and [Wazuh](https://wazuh.com/) covers EDR-style telemetry, with [step-ca](https://smallstep.com/) issuing the device certificates. For least privilege, [OpenZiti](https://openziti.io/) or [Pomerium](https://pomerium.com/) put per-application access in front of internal apps, [OPA](https://openpolicyagent.org/) carries the policy, and [Teleport](https://goteleport.com/) brokers just-in-time access to production. The continuous layer is the least settled, but the [Shared Signals Framework](https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html) and receivers like [caep.dev](https://caep.dev/) are where the open plumbing is forming.
+
+## Five Pillars, Three Capabilities, One Order
+
+CISA draws the model as five pillars, not four stages, and it helps to hold both pictures at once. The pillars are Identity, Devices, Networks, Applications and Workloads, and Data. Three capabilities cut across all five: Visibility and Analytics, Automation and Orchestration, and Governance. Each pillar matures through its own Traditional to Optimal columns.
+
+Those five pillars are what you mature. The sequence in this post is the order you mature them in. Identity first is the Identity pillar. The device is the Devices pillar. Least privilege and segmentation are the Networks and the Applications-and-Workloads pillars together, because shrinking what an identity reaches happens at the network and at the application at the same time. Continuous, risk-based evaluation is the Optimal column arriving across all of them at once, and it is what the Visibility and Automation capabilities exist to feed. Data is the pillar the other four protect, and knowing what the data is runs alongside the whole climb rather than waiting at the top. Governance is how you decide what least privilege even means for each pillar, so it runs the whole way down too.
+
+## Why the Order Is Not Optional
+
+The order is a dependency chain, not a preference. Each control assumes the one before it, and built out of turn it evaluates something it cannot trust.
+
+Microsegment before you have clean identity and you have drawn careful boundaries around traffic you cannot attribute to a person or a workload. Score device posture before identity and you have graded the laptop without knowing whose hands are on it. Stand up a real-time risk engine first, the most expensive build of the four, and it scores a stream of signals with no trusted identity to anchor them to. In each case the control is real and the money is spent, and it floats free of the thing that would make it mean something.
+
+![Two builds of the same controls. Built in order, identity enables device, which enables least privilege, which enables continuous evaluation, each stage a precondition for the next. Built out of order, each control floats free: microsegmentation before identity segments the network around requests it cannot attribute; device posture before identity grades the machine but not whose hands are on it; a risk engine built first scores signals in real time with no trusted identity to anchor them](diagram-out-of-order.png)
+
+This is why identity comes first. It is the rung the rest of the sequence stands on, and the one that makes every later control mean something.
+
 ## Where to Start
 
 The common mistake is starting at the expensive, visible end. Teams buy a microsegmentation product or a fancy risk engine before they have clean identity, and they end up with a sophisticated control evaluating requests it cannot reliably attribute. Start with identity, because every later control depends on it. The order is structural: each stage is the precondition for the next.
 
 In practice, the identity-first work is a short, unglamorous list. Consolidate to one identity provider so there is a single place to reason about who can log in. Turn on [phishing-resistant MFA, FIDO2 keys or passkeys](/posts/mfa-that-survives-phishing/) rather than SMS, starting with admins and the crown-jewel apps. Retire the standing local accounts and shared logins that bypass all of it. Put conditional access in front of the systems whose compromise would hurt most before you try to cover everything. None of that needs a zero-trust product. All of it is the precondition for one.
+
+## Find the Implicit Trust You're Still Extending
+
+Because the whole model is the removal of implicit trust, the practical first move is to go find where you are still extending it. It hides in specific, boring places.
+
+The flat VPN that drops a connected laptop onto a network where it can reach everything, the way one compromised endpoint becomes lateral movement. The service account with a [standing API key in a config file](/posts/non-human-identities/) that never rotates and never gets challenged. The SaaS app reached over the internet with a password and a push, with [no check on the device behind the login](/posts/trust-the-user-then-the-machine/). The shared admin account three people use because rotating it is annoying. The CI runner holding long-lived production credentials so a merge can deploy. The internal dashboard that trusts any request from inside the corporate IP range. The session that authenticated strongly at 9am and is [never re-evaluated for the next ten hours](/posts/logging-out-is-harder-than-logging-in/) while the laptop's posture quietly changes underneath it.
+
+None of those is exotic. Each is a place where the network, the location, or a one-time check is standing in for a verified identity, and each is a candidate for the next control in the sequence. The work of zero trust is finding them and closing them in priority order, not reaching a label.
 
 ## Not Everything Needs the Optimal End
 

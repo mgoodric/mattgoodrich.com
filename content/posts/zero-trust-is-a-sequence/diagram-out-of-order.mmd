@@ -1,0 +1,15 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph GOOD["Built in order, each stage enables the next"]
+    direction LR
+    ID(["Identity"]) --> DEV(["Device"]) --> LP(["Least privilege"]) --> CONT(["Continuous"])
+  end
+  subgraph BAD["Built out of order, the control floats free"]
+    direction LR
+    B1["Microsegmentation<br/>before identity"] --> R1["Segments the network around<br/>requests it cannot attribute"]
+    B2["Device posture<br/>before identity"] --> R2["Grades the machine,<br/>not whose hands are on it"]
+    B3["Risk engine<br/>first"] --> R3["Scores signals in real time with no<br/>trusted identity to anchor them"]
+  end
+  GOOD ~~~ BAD
+  classDef fail fill:#EAD7D7,stroke:#9A4A4A,color:#2D2D2D;
+  class R1,R2,R3 fail;

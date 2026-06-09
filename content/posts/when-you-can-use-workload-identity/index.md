@@ -21,7 +21,7 @@ I have argued before that for AI tooling, secrets belong in a scoped vault and t
 
 Three things have to be true, all three, before a workload can drop its secret.
 
-**A trusted issuer both sides accept.** The workload gets a token from an identity provider: the cloud's metadata service, a SPIFFE/SPIRE deployment, an OIDC issuer. The resource it is calling has to trust that issuer. Inside one cloud this is a given. Across a boundary, the far side has to be configured to accept your issuer, and many cannot.
+**A trusted issuer both sides accept.** The workload gets a token from an identity provider: the cloud's metadata service, a [SPIFFE/SPIRE](https://spiffe.io/) deployment, an OIDC issuer. The resource it is calling has to trust that issuer. Inside one cloud this is a given. Across a boundary, the far side has to be configured to accept your issuer, and many cannot.
 
 **A platform that can inject identity.** The runtime has to hand the workload its identity automatically: an instance profile, a Kubernetes service account bound to a cloud role (IAM Roles for Service Accounts, or IRSA, on EKS; Workload Identity on GKE), a managed identity on Azure. If the workload runs somewhere that cannot inject identity, there is nothing to present.
 

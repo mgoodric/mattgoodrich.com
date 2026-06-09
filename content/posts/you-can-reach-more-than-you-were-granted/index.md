@@ -41,7 +41,7 @@ A quarterly access review reads memberships and policies. It can tell you a user
 
 ## What Actually Helps
 
-You cannot eyeball a permission graph, and this is a place where tooling genuinely earns its keep.
+You cannot eyeball a permission graph, and this is one of the few places in identity where tooling is genuinely worth running.
 
 The category is cloud infrastructure entitlement management, and the useful capability under the marketing is effective-access analysis: computing the transitive closure and answering "what can this identity actually reach?" AWS IAM Access Analyzer does a slice of this natively, covering external access, unused access, and policy validation. Wiz, Sonrai, and Tenable (through the Ermetic acquisition) build the fuller graph across accounts and clouds. The common thread is that they treat access as a graph and compute reachability, which is the thing humans cannot do by hand.
 

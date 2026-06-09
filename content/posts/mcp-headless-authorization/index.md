@@ -59,7 +59,7 @@ The most complex of the four is Architecture 3. The token-exchange flow it depen
 
 ![Token exchange sequence for Architecture 3: agent fetches SVID, exchanges via RFC 8693 for an MCP-scoped token, calls the MCP server](diagram-token-exchange.png)
 
-Most enterprise production stacks I have seen run a hybrid: Architecture 3 for cross-system tool composition where it earns its keep, Architecture 4 for the cloud-native APIs where MCP adds no value, Architecture 2 for genuinely agent-owned operations, and Architecture 1 still showing up in the corners nobody has audited yet.
+Most enterprise production stacks I have seen run a hybrid: Architecture 3 for cross-system tool composition where it is worth the indirection, Architecture 4 for the cloud-native APIs where MCP adds no value, Architecture 2 for genuinely agent-owned operations, and Architecture 1 still showing up in the corners nobody has audited yet.
 
 ## The Tradeoff Table
 

@@ -1,5 +1,5 @@
 +++
-date = '2026-06-16T12:00:00-07:00'
+date = '2026-06-17T12:00:00-07:00'
 draft = false
 title = 'Automate the Leaver Before the Joiner'
 aliases = []

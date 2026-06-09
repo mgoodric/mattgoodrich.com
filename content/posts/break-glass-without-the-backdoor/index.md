@@ -1,5 +1,5 @@
 +++
-date = '2026-06-12T12:00:00-07:00'
+date = '2026-06-15T12:00:00-07:00'
 draft = false
 title = 'Break-Glass Without the Backdoor'
 aliases = []
@@ -61,7 +61,38 @@ What it cannot skip is the discipline. The last-resort credential is still inert
 
 On a cloud platform, both tiers are recognizable builds.
 
-Inert-until-used is enforced with a guardrail, not a promise. On AWS, a service control policy denies the most dangerous actions for every principal in the account, and the break-glass role is the single principal the policy exempts. Day to day nobody can take those actions, including an over-privileged account, because the policy blocks them. Breaking the glass means assuming the one role the guardrail lets through, which is a discrete, logged act instead of a quiet escalation. Azure and GCP have the same shape with organization policies and a privileged emergency role.
+Inert-until-used is enforced with a guardrail, not a promise. On AWS, a service control policy denies the most dangerous actions for every principal in the account, and the break-glass role is the single principal the policy exempts. Day to day nobody can take those actions, including an over-privileged account, because the policy blocks them. Breaking the glass means assuming the one role the guardrail lets through, which is a discrete, logged act instead of a quiet escalation.
+
+The policy is short. It denies the actions an attacker would use to disable your safety controls, and exempts exactly one role:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyGuardrailTamperingExceptBreakGlass",
+      "Effect": "Deny",
+      "Action": [
+        "cloudtrail:StopLogging",
+        "cloudtrail:DeleteTrail",
+        "config:DeleteConfigurationRecorder",
+        "guardduty:DeleteDetector",
+        "kms:ScheduleKeyDeletion",
+        "iam:DeleteRolePermissionsBoundary",
+        "organizations:LeaveOrganization"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ArnNotLike": {
+          "aws:PrincipalArn": "arn:aws:iam::*:role/BreakGlassEmergency"
+        }
+      }
+    }
+  ]
+}
+```
+
+The `ArnNotLike` condition is the whole mechanism: every principal in the account is denied these actions except the one role whose ARN matches, and that role is assigned to nobody until the glass is broken. An SCP only sets the ceiling, so the break-glass role still needs its own permissions policy granting these actions; the SCP's job is to stop everyone else from having them. Azure and GCP have the same shape with organization policies and a privileged emergency role.
 
 Tier one, the broker-mediated path, is a just-in-time elevation. The emergency role exists but is assigned to nobody. In an incident the on-call requests it through Azure PIM, an AWS IAM Identity Center permission set, or the broker's emergency policy; an approval fires, or for a genuine page-out emergency a justification plus a mandatory after-the-fact review; the role activates for a bounded window like one hour; the session is recorded; and it expires on its own. This is the right path for almost every incident, because in almost every incident the identity plane is fine.
 

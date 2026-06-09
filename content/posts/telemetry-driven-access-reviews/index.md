@@ -41,7 +41,7 @@ The data isn't missing. The data isn't even hard to get. We just don't *use* it 
 
 ## What Telemetry-Driven Least Privilege Looks Like
 
-The shape of the system: continuous evaluation of every (user, permission) pair against actual usage telemetry, with auto-revocation policies for permissions that go stale.
+The shape of the system: continuous evaluation of every (user, permission) pair against actual usage telemetry, with auto-revocation policies for permissions that go stale. The pairs worth evaluating include the access [reached indirectly through role chains](/posts/you-can-reach-more-than-you-were-granted/), not only what was granted on the account directly.
 
 ### The Three Questions a Telemetry-Driven Review Answers
 

@@ -1169,6 +1169,7 @@ These are AI-tells or marketing-speak. They show up in first drafts and need to 
 | Excessive em-dashes ("the work — the actual work — is the running session") | Reads as crafted-essay rather than spoken-thought |
 | Three-part rhythm in titles or claims | "One Place, Anywhere, Always Resumable" — too marketing-y |
 | Long lists of synonyms or near-synonyms | One precise word beats three vague ones |
+| "Earns its keep" / "pays for itself" | Overused AI-essay phrasing; name the specific payoff instead of the cliché. (Exception: the published MCP/agent-protocol posts use "earns its keep at the boundary" as a deliberate, named boundary test — that coined usage stays; avoid the phrase everywhere else.) |
 
 ---
 

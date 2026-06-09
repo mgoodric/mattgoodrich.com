@@ -56,7 +56,7 @@ Now the lifecycle becomes the work. Automated provisioning through SCIM, a real 
 
 The trigger is that access reviews stop being a once-a-year annoyance and become a recurring burden, and least-privilege gaps start showing up as audit findings instead of hypotheticals.
 
-### Enterprise: Where Least Privilege Earns Its Keep (roughly 500+ people)
+### Enterprise: Where Least Privilege Is Worth the Overhead (roughly 500+ people)
 
 This is the stage everyone pictures when they imagine perfect IAM, and it is the only stage where the picture is correct. Least privilege enforced rather than aspired to, just-in-time elevation instead of standing admin, privileged access management, access certifications, and authentication that adapts to risk and context. CISA calls the top of this Optimal. It is expensive and operationally heavy, and at this scale it is worth it, because the blast radius of a single compromised over-privileged account is now large enough that the governance overhead is cheap by comparison.
 

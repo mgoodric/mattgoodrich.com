@@ -1,0 +1,9 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart LR
+  U(["User in tenant A<br/>GET /invoices/4471"]) --> GW{{"API gateway<br/>checks the route"}}
+  GW -->|"valid token ✓<br/>may call /invoices ✓"| SVC["Invoices service"]
+  SVC --> DB[("invoice 4471<br/>belongs to tenant B")]
+  SVC -->|"hands back 4471"| LEAK["User reads another<br/>tenant's invoice"]
+  GW -. "can't see: is 4471 tenant A's?" .-> MISS["The object question,<br/>never asked"]
+  classDef bad fill:#EAD7D7,stroke:#9A4A4A,color:#2D2D2D;
+  class LEAK,MISS bad

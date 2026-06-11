@@ -1,6 +1,6 @@
 +++
 date = '2026-06-26T12:00:00-07:00'
-draft = true
+draft = false
 title = "The Gateway Can't See the Object"
 aliases = []
 description = "An API gateway can check whether you may call an endpoint. It cannot see whether this row, this document, this tenant is yours, because the object lives inside the application. Fine-grained authorization, policy engines like OPA and Cedar and relationship models like Google's Zanzibar, moves the decision next to the data. Here's when you need it and what it costs to run."
@@ -14,6 +14,8 @@ image = 'header.png'
 A user calls `GET /invoices/4471` and gets back an invoice. The gateway in front of the service did its job: it checked that the request carried a valid token, that the user was authenticated, and that this user is allowed to call the invoices endpoint. Every check passed. The only problem is that invoice 4471 belongs to a different customer, and the user just read it by changing a number in the URL.
 
 This is the most common serious flaw in modern applications, and it has a name: broken object-level authorization, the [number one risk on the OWASP API Security list](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/). It happens because the gateway authorizes the route and not the object. It can see that you are allowed to ask for invoices. It cannot see whose invoice 4471 is, because that fact lives inside the application, in the data, where the gateway never looks.
+
+![The broken-object-level-authorization flow. A user in tenant A requests GET /invoices/4471. The API gateway checks the route, sees a valid token and that the user may call the invoices endpoint, and passes the request. The invoices service returns invoice 4471, which belongs to tenant B, and the user reads another tenant's invoice. The object question, whether 4471 is tenant A's, is something the gateway cannot see and nobody asked](diagram-route-vs-object.png)
 
 ## Two Questions, Answered in Two Places
 
@@ -43,7 +45,46 @@ The default is **scattered in-app checks**: an `if user.org_id == invoice.org_id
 
 The first real improvement is to **externalize the policy**. [Open Policy Agent](https://www.openpolicyagent.org/) lets you write authorization rules in a dedicated language and evaluate them as a service or a sidecar, so the rule lives in one place the application calls instead of being retyped in every handler. [AWS's Cedar](https://www.cedarpolicy.com/) is a policy language built for exactly this, expressing per-object permit and forbid rules that an application evaluates at the point of access. The decision still happens next to the data, but the rule is defined and audited centrally.
 
+![The externalized policy-engine pattern. The request passes the gateway's route check and reaches the invoices service, which asks a policy engine, OPA or Cedar, the object-level question with the subject, action, and resource: user, read, invoice 4471. The engine checks whether the invoice's org matches the user's and whether the user is a billing admin. If not, because 4471 belongs to tenant B, it returns 403 Forbidden; if so it returns the invoice](diagram-policy-engine.png)
+
+The rule itself is small. The same object-level check, that the invoice belongs to the caller's org and the caller is a billing admin, looks like this in OPA's Rego:
+
+```rego
+package invoices
+
+default allow := false
+
+# Read an invoice only if it belongs to the caller's org
+# and the caller is a billing admin there.
+allow if {
+    input.action == "read"
+    input.resource.type == "invoice"
+    input.resource.org_id == input.subject.org_id
+    "billing-admin" in input.subject.roles
+}
+```
+
+And the same rule in Cedar, which leans on a typed schema of principals, actions, and resources:
+
+```cedar
+// Permit reading an invoice in the principal's own org,
+// when the principal is a billing admin.
+permit (
+    principal,
+    action == Action::"readInvoice",
+    resource
+)
+when {
+    resource.org_id == principal.org_id &&
+    principal.roles.contains("billing-admin")
+};
+```
+
+Either way the rule lives in one place, the service calls it at the point of access, and the decision is made against the actual object instead of the route. The same call carries invoice 4471 and the caller's identity, so the engine can see what the gateway could not.
+
 For the hardest case, where access depends on relationships, the model is **relationship-based**. Google built [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) to answer questions like "can Alice view this document," where the answer depends on a graph: Alice is in a group, the group has access to a folder, the document is in the folder. Permissions like that are not a role and not a simple attribute. They are a path through a relationship graph, and Zanzibar stores those relationships as tuples and answers the reachability question fast. The open implementations, [OpenFGA](https://openfga.dev/docs/authorization-concepts) and [SpiceDB](https://authzed.com/), put that model within reach without running Google's infrastructure. This is the right tool when your product has sharing, nesting, and inherited access, the document-and-folder shape, where neither roles nor attributes capture who can actually reach what.
+
+![The relationship-based (Zanzibar) pattern. Three stored tuples form a graph: Alice is a member of the engineering group, the group is an editor of the design-docs folder, and the folder is the parent of the document spec.pdf. The check, can Alice view spec.pdf, is answered by walking that graph from member to editor to parent, so Alice is allowed through access inherited from the folder, with no role and no attribute rule, just a path through the relationships](diagram-relationship-graph.png)
 
 | Shape of the decision | Tool | Example |
 |---|---|---|

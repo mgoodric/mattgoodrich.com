@@ -1,5 +1,5 @@
 +++
-date = '2026-06-23T12:00:00-07:00'
+date = '2026-06-23T00:01:00-07:00'
 draft = false
 title = 'Trust the User, Then Trust the Machine'
 aliases = []

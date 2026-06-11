@@ -1,5 +1,5 @@
 +++
-date = '2026-07-01T12:00:00-07:00'
+date = '2026-07-01T00:01:00-07:00'
 draft = true
 title = 'Collapse the Surface, Then Defend It'
 aliases = []

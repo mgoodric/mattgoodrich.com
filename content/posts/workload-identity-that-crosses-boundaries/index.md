@@ -1,5 +1,5 @@
 +++
-date = '2026-06-12T12:00:00-07:00'
+date = '2026-06-12T00:01:00-07:00'
 draft = false
 title = 'SPIFFE Is Workload Identity That Crosses Boundaries'
 aliases = []

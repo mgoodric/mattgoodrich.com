@@ -1,5 +1,5 @@
 +++
-date = '2026-06-18T12:00:00-07:00'
+date = '2026-06-18T00:01:00-07:00'
 draft = false
 title = 'Logging Out Is Harder Than Logging In'
 aliases = []

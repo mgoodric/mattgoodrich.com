@@ -1,5 +1,5 @@
 +++
-date = '2026-06-24T12:00:00-07:00'
+date = '2026-06-24T00:01:00-07:00'
 draft = false
 title = 'Zero Trust Is a Sequence, Not a Posture'
 aliases = []

@@ -1,5 +1,5 @@
 +++
-date = '2026-06-30T12:00:00-07:00'
+date = '2026-06-30T00:01:00-07:00'
 draft = true
 title = 'The Other Half of Identity Security'
 aliases = []

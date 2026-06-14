@@ -38,6 +38,7 @@ The places workload identity is real and boring:
 - **Service to cloud API, same cloud.** IRSA, GKE Workload Identity, Azure managed identity, EC2 instance profiles. There is no excuse for a static cloud key here.
 - **CI to cloud.** GitHub Actions, GitLab, and others issue OIDC tokens that AWS, GCP, and Azure can federate. The long-lived deploy key sitting in your CI secrets is replaceable today.
 - **Service to service inside a mesh.** SPIFFE/SPIRE and most service meshes issue short-lived identity, usually mTLS certificates, to workloads automatically.
+- **Workload outside the cloud, into the cloud.** [AWS IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/) and [GCP Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation) trade an external identity, an X.509 certificate or an OIDC token, for short-lived cloud credentials, so an on-prem or other-cloud workload can reach a cloud API without a stored key.
 
 If you are running any of these on static credentials, that is debt you can pay down now, because the preconditions are already met.
 
@@ -49,7 +50,7 @@ And the places it does not reach yet:
 - **Legacy systems that predate federated identity.** The database that wants a username and password, the appliance with a static token baked in.
 - **Cross-vendor calls with no shared trust.** If neither side will trust the other's issuer, there is no federated identity to present.
 
-For these, workload identity is not this year's answer. The answer is the floor done well: a scoped secret in a real secrets manager, short rotation, tight access to the secret itself, and an audit trail on every read. That is the [1Password service-account pattern](/posts/1password-service-account-claude-secrets/), and being there is not a failure. It is the correct rung for a system whose far side cannot meet you at the ceiling.
+For these, workload identity is not this year's answer. The answer is the floor done well: a scoped secret in a real secrets manager such as [HashiCorp Vault](https://www.hashicorp.com/products/vault) or [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), short rotation, tight access to the secret itself, and an audit trail on every read. That is the [1Password service-account pattern](/posts/1password-service-account-claude-secrets/), and being there is not a failure. It is the correct rung for a system whose far side cannot meet you at the ceiling.
 
 ## When a Secret Is the Right Answer
 

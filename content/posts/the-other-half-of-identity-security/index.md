@@ -39,7 +39,7 @@ A handful of identity detections catch most of what matters, and they share a pr
 
 **The logs going dark.** Audit logging disabled, a trail stopped, a log bucket's retention quietly shortened. An attacker turning off the thing that would catch them is itself the thing to catch, and it is close to the highest-confidence signal on this list, because there is almost no legitimate reason for it to happen without a change ticket attached.
 
-These travel as code, not console clicks. [Sigma](https://github.com/SigmaHQ/sigma) lets you write each rule once in a vendor-neutral format and run it across SIEMs, and if you are not on a commercial platform, an open-source stack like [Wazuh](https://wazuh.com/) for log-based detection and [Falco](https://falco.org/) for runtime behavior can carry the same logic.
+These travel as code, not console clicks. [Sigma](https://github.com/SigmaHQ/sigma) lets you write each rule once in a vendor-neutral format and run it across SIEMs, and if you are not on a commercial platform, an open-source stack like [Wazuh](https://wazuh.com/) for log-based detection and [Falco](https://falco.org/) for runtime behavior can carry the same logic. On a commercial platform the same detections live in your SIEM, whether [Panther](https://panther.com/) or Microsoft Sentinel, while the identity-specific behavioral signals come from a dedicated ITDR tool like [CrowdStrike Falcon Identity Protection](https://www.crowdstrike.com/platform/next-gen-identity-security/itdr/) or [Microsoft Defender for Identity](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-for-identity).
 
 ## Few Alarms, All of Them Real
 

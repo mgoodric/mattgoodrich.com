@@ -119,7 +119,7 @@ The auditor stops asking for evidence of a process and starts asking for evidenc
 
 The next practical question is whether AI agents can do the access review. The honest answer, today, is yes for some of it and no for the part that matters.
 
-What auditors will accept is AI doing the triage, the prioritization, the explanation, and the evidence packaging. A model can read 500 (user, permission) tuples, mark the unused ones, write a plain-language justification for each recommended action, and route the actionable ones to a human. Lumos, Veza, Opal, ConductorOne, SailPoint, and Saviynt all ship versions of this today. It produces faster, more consistent evidence than the human-only equivalent.
+What auditors will accept is AI doing the triage, the prioritization, the explanation, and the evidence packaging. A model can read 500 (user, permission) tuples, mark the unused ones, write a plain-language justification for each recommended action, and route the actionable ones to a human. Lumos, Opal, C1 (formerly ConductorOne), SailPoint, Saviynt, and Veza (now part of ServiceNow) all ship versions of this today. It produces faster, more consistent evidence than the human-only equivalent.
 
 What auditors will not accept, today, is the agent making the decision unsupervised. The IIA's AI Auditing Framework and ISACA's guidance on AI in audit land in the same place: a named human is accountable for an AI-assisted decision, and the agent's reasoning becomes part of the evidence the human attests to, not a substitute for the attestation. The EU AI Act's Annex III classification reinforces it for any workforce-access decisioning.
 

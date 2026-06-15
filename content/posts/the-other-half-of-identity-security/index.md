@@ -1,6 +1,6 @@
 +++
 date = '2026-06-30T00:01:00-07:00'
-draft = true
+draft = false
 title = 'The Other Half of Identity Security'
 aliases = []
 description = "The IAM controls in this series prevent bad access; the SOC's job is to catch what gets through. A handful of identity detections do most of the work, chosen to be rare and meaningful enough not to drown the team, starting with the one every break-glass account needs: an alert the moment it is used."
@@ -39,7 +39,18 @@ A handful of identity detections catch most of what matters, and they share a pr
 
 **The logs going dark.** Audit logging disabled, a trail stopped, a log bucket's retention quietly shortened. An attacker turning off the thing that would catch them is itself the thing to catch, and it is close to the highest-confidence signal on this list, because there is almost no legitimate reason for it to happen without a change ticket attached.
 
-These travel as code, not console clicks. [Sigma](https://github.com/SigmaHQ/sigma) lets you write each rule once in a vendor-neutral format and run it across SIEMs, and if you are not on a commercial platform, an open-source stack like [Wazuh](https://wazuh.com/) for log-based detection and [Falco](https://falco.org/) for runtime behavior can carry the same logic. On a commercial platform the same detections live in your SIEM, whether [Panther](https://panther.com/) or Microsoft Sentinel, while the identity-specific behavioral signals come from a dedicated ITDR tool like [CrowdStrike Falcon Identity Protection](https://www.crowdstrike.com/platform/next-gen-identity-security/itdr/) or [Microsoft Defender for Identity](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-for-identity).
+The pairing in one view, one row per control and the event that means it failed:
+
+| Preventive control | The event that means it failed | Why a single hit is worth a person |
+|---|---|---|
+| Break-glass account | Any authentication with it | Rare by design, meaningful by definition |
+| Least privilege and reachability | New admin-group member, a policy widened to a wildcard, a fresh cross-account trust | A new path to privilege is being built |
+| Identity lifecycle | A dormant account or key authenticating after months idle | The likeliest explanation is that someone other than the owner found it |
+| Workload identity | A service account on a new network, calling a new API, or writing where it only read | Deviation from a tight machine baseline is clean signal |
+| Account ownership | MFA disabled, a new device or IdP added, an OAuth app granted broad consent | This is how stolen access is made durable |
+| Audit logging | A trail stopped, logging disabled, retention shortened | Almost no legitimate reason for it without a change ticket |
+
+These travel as code, not console clicks. [Sigma](https://github.com/SigmaHQ/sigma) lets you write each rule once in a vendor-neutral format and run it across SIEMs, and if you are not on a commercial platform, an open-source stack like [Wazuh](https://wazuh.com/) for log-based detection and [Falco](https://falco.org/) for runtime behavior can carry the same logic. On a commercial platform the same detections live in your SIEM, whether [Panther](https://panther.com/) or Microsoft Sentinel, while the identity-specific behavioral signals come from a dedicated ITDR tool like [CrowdStrike Falcon Identity Protection](https://www.crowdstrike.com/en-us/platform/next-gen-identity-security/itdr/) or [Microsoft Defender for Identity](https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-for-identity).
 
 ## Few Alarms, All of Them Real
 
@@ -48,6 +59,10 @@ The temptation, once you start, is to alert on everything identity-related, and 
 The discipline is restraint. The detections above earn their place because a single occurrence is genuinely worth waking someone up. High-volume, low-meaning events, failed authentications, geo-velocity on a sales team that travels, belong in a dashboard you review, not a page that interrupts a person. Break-glass use is the gold standard not because it is clever but because it is rare and unambiguous, and the closer a detection sits to that bar, the more it is worth building.
 
 There is a real cost here that prevention does not have. A detection only fires after something has already happened, so it is a backstop, not a wall, and a team that leans on detection to excuse weak prevention has the balance wrong. Put an alarm on each control so you find out the day it is bypassed instead of the quarter, and keep building the controls anyway.
+
+## The Same Signal, Two Clocks
+
+A control failing produces one event, and two functions want it. The SOC reads it on the fast clock: is this an attack, and do we respond now. [GRC engineering](/posts/grc-engineering/) reads the same event on a slower one: why did the control fail, what layer do we add so it does not fail the same way twice, and how does this read when the auditor asks whether the control held all year. The dormant-identity alarm that pages the SOC at 2 a.m. is the same fact as the deprovisioning gap your evidence pipeline flags next quarter, one an incident and the other a finding waiting to happen. Wire the detection once and let both consume it. The SOC gets its page; GRC gets a control-effectiveness signal it did not have to collect by hand.
 
 ## You Built the Controls. Now Watch Them.
 

@@ -1,0 +1,11 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart LR
+  A["Scattered, ungoverned surface<br/>secrets in configs · a login per app<br/>static keys on hosts · ad-hoc backdoors"]
+  B{{"Collapse"}}
+  C(["One governed point<br/>vault · IdP · broker · issuer<br/>rotate · audit · revoke"])
+  D["Defend the one point<br/>phishing-resistant MFA · device trust<br/>monitoring you could never afford for a hundred"]
+  E(["Break-glass<br/>one disciplined way in<br/>for when the point fails"])
+  A -->|"collapse the sprawl"| B
+  B --> C
+  C -->|"now affordable"| D
+  C -.->|"and it will fail"| E

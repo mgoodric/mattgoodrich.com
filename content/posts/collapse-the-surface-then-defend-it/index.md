@@ -1,6 +1,6 @@
 +++
 date = '2026-07-01T00:01:00-07:00'
-draft = true
+draft = false
 title = 'Collapse the Surface, Then Defend It'
 aliases = []
 description = "Across secrets, logins, and access, the same move keeps working: collapse a scattered, ungoverned surface into one governed point, because you can rotate, audit, and revoke one thing but not a hundred. The catch is that the one point turns critical, so the discipline is to defend it and keep a way in for when it fails. It's the pattern under most of the rest."
@@ -59,11 +59,25 @@ You cannot put hardware-backed, [phishing-resistant authentication](/posts/mfa-t
 
 And because the one point can fail, you build the exception on purpose. The [break-glass path](/posts/break-glass-without-the-backdoor/) for when the broker or the IdP is down gets designed with the same care as the thing it backs up. Collapse the surface, defend the point you created, and keep one disciplined way in for when it breaks. That is the full move, and most people stop after the first part.
 
+![Collapse the Surface, Then Defend It: a Scattered, Ungoverned Surface of Secrets, Logins, and Keys Collapses to One Governed Point You Can Rotate, Audit, and Revoke, Which You Then Defend With Phishing-Resistant MFA and Device Trust, While a Disciplined Break-Glass Path Stays Ready for When the Point Fails](diagram-collapse-defend.png)
+
+## Treat the One Point Like Tier Zero
+
+The moment a point becomes the thing everything else depends on, it becomes tier zero: the layer that has to be standing and trustworthy before anything else can be. It earns a higher standard than the systems behind it. Their worst day is an outage; its worst day is the whole company at once. So you protect it, keep it up, and rehearse getting it back with more care than anything it fronts.
+
+**Protect it like the target it is.** It is the highest-value thing an attacker can reach, so the controls go past the ones you put on the apps behind it. Administration of the IdP, the vault, or the broker runs through its own hardened path: a separate set of admin identities that nothing else uses, hardware-bound phishing-resistant keys on those identities, no standing admin rights, and management access only from a known device, ideally a dedicated privileged workstation rather than the laptop that also reads email. The audit log of the point itself goes somewhere its own admins cannot edit, because the first thing a compromised admin does is rewrite history. The [break-glass path](/posts/break-glass-without-the-backdoor/) for the admin plane gets the same care as break-glass for everything else.
+
+**Engineer it to stay up, because everything waits on it.** Once every login sits behind one IdP, nothing behind it can be more available than the IdP itself. When the IdP is down, every app behind it is down too, however reliable each one is on its own. So it earns a higher availability target than the services it fronts, redundant and multi-region in ways a single app never needs to be. The trap is the circular dependency. The thing everyone authenticates through cannot itself depend on something that requires authenticating through it, or a partial outage turns into a deadlock nobody can log in to fix. Map what the one point depends on and cut every loop that routes back through itself. Where you can, let the systems behind it ride a cached token or an offline check for a few minutes instead of hard-failing the instant the point blinks.
+
+**Rehearse getting it back, on a clock.** A slow restore is its own blast radius: every minute the point is down, everything behind it is down too. The recovery path cannot depend on the thing being recovered. The vault's unseal keys do not live in the vault. The IdP's recovery admins do not sign in through the IdP. The broker's config restores without the broker already running. Custody of those recovery secrets is split across people and kept offline, and the restore gets rehearsed on a schedule, because a runbook nobody has run is a guess. Put a number on it: know the recovery-time objective for the one point, and test whether you hit it before an incident asks the question for you.
+
 ## What You Don't Collapse
 
 The pattern has a limit, and missing it is its own failure mode. You centralize the control plane. You do not centralize everything.
 
 What collapses well is identity, issuance, and the source of truth: who someone is, where their credential comes from, what the system of record says they own. What stays distributed is enforcement of the specific decision. Whether this user may read this particular record is a question only the application can answer, because [the object lives inside the application and the gateway in front of it cannot see whose it is](/posts/the-gateway-cant-see-the-object/). Push that decision up to a central choke point and you get either a bottleneck that knows too little or a god-object that knows too much.
+
+![What Collapses and What Stays Distributed: Identity, Issuance, and the Source of Truth Collapse to One Governed Point, While the Per-Object Authorization Decision Stays in the App Where the Context Lives, Because a Central Choke Point Would Know Too Little](diagram-control-vs-decision.png)
 
 Every generation re-learns this the hard way. The enterprise service bus that started as one place to route messages and became the one place all the business logic went to die. The API gateway asked to make authorization decisions it has no way to make, because the data the decision turns on lives three services away. Centralizing the plumbing works. Centralizing the judgment produces a single component that the whole system waits on and no team fully understands. Collapse the control plane, and leave the decisions where the context is.
 

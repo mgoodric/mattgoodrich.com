@@ -789,6 +789,65 @@ Better:
 
 "The app has a dashboard."
 
+### 8J. Recap-then-significance pivots
+
+Do not open a paragraph by recapping the previous paragraph and declaring its weight. The previous paragraph already landed the point; the recap performs significance instead of carrying it. It is one of the most reliable AI tells in long-form writing.
+
+The pattern is: take what the previous paragraph just said, name it back with "That [X]" or "This [X]", then declare its significance with "is the whole [Y]" or "turns on the whole [X]". Both halves are tells. The recap is throat-clearing. The significance phrase is puffery.
+
+Banned constructions:
+
+- That [X] is the whole problem
+- That [X] is the whole story
+- That [X] is the whole point
+- That [X] is the whole game
+- That [X] is the whole appeal
+- That [X] is the whole design
+- That's the real issue
+- That's the real story
+- That is what this all comes down to
+- This is the [X] the whole [Y] turns on
+- This is the distinction the whole [Y] turns on
+
+Fix rule:
+
+1. If the next sentence works without the recap, delete the recap. Trust the prior paragraph.
+2. If a transition is genuinely needed, lead with a content-bearing claim that names the takeaway, not a phrase that declares its weight.
+
+Bad:
+
+"Salesforce unit-tests the deterministic tools an agent calls exactly like normal software, and tests the agent's reasoning behaviorally. That split is the whole story of where AI-DLC branches."
+
+Better:
+
+"Salesforce unit-tests the deterministic tools an agent calls exactly like normal software, and tests the agent's reasoning behaviorally."
+
+Bad:
+
+"The HR system marks a termination, the IdP turns it into a session-revoked event, the receiving apps drop the session. That tension is the whole problem, and it gets worse when you notice there is not one lifecycle to write down."
+
+Better:
+
+"The HR system marks a termination, the IdP turns it into a session-revoked event, the receiving apps drop the session. It gets worse when you notice there is not one lifecycle to write down."
+
+Note: "X is the whole Y" is acceptable when X is genuinely the boundary of a complete list (e.g., "That is the whole thing" after presenting four items that are sufficient on their own), not when X is a recap of the previous paragraph. The test is whether deleting the sentence loses real content — boundary-setting loses content; recap-significance does not.
+
+### 8K. Header-level significance inflation
+
+The same pattern applies to section headers. Do not use headers like "X Is the Whole Problem," "X Is the Whole Game," "X Is the Real Issue." These trip both §8A puffery and §5G heading ban. Use direct headers that name the topic.
+
+Banned:
+
+- The Unmanaged Device Is the Whole Problem
+- Account Recovery Is the Whole Game
+- X Is the Whole Story
+
+Use direct headers:
+
+- The Unmanaged Device Problem
+- Account Recovery
+- How the Split Lands
+
 ---
 
 ## 9. Anti-overfitting guide
@@ -834,8 +893,9 @@ Run this pass silently:
 9. Search for unnecessary analogies.
 10. Delete analogies unless they pass the permission test.
 11. Remove metaphor verbs used for abstract work.
-12. Cut the ending if it only repeats the point.
-13. Ask: does this sound useful, or overworked?
+12. Search for "is the whole [problem / story / point / game / appeal]" and "turns on the whole" — apply §8J recap-then-significance fix.
+13. Cut the ending if it only repeats the point.
+14. Ask: does this sound useful, or overworked?
 
 Send the cleaner version.
 

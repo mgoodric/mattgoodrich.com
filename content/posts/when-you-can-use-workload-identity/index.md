@@ -37,7 +37,7 @@ The places workload identity is real and boring:
 
 - **Service to cloud API, same cloud.** IRSA, GKE Workload Identity, Azure managed identity, EC2 instance profiles. There is no excuse for a static cloud key here.
 - **CI to cloud.** GitHub Actions, GitLab, and others issue OIDC tokens that AWS, GCP, and Azure can federate. The long-lived deploy key sitting in your CI secrets is replaceable today.
-- **Service to service inside a mesh.** SPIFFE/SPIRE and most service meshes issue short-lived identity, usually mTLS certificates, to workloads automatically.
+- **Service to service inside a mesh.** [SPIFFE/SPIRE](/posts/workload-identity-that-crosses-boundaries/) and most service meshes issue short-lived identity, usually mTLS certificates, to workloads automatically.
 - **Workload outside the cloud, into the cloud.** [AWS IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/) and [GCP Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation) trade an external identity, an X.509 certificate or an OIDC token, for short-lived cloud credentials, so an on-prem or other-cloud workload can reach a cloud API without a stored key.
 
 If you are running any of these on static credentials, that is debt you can pay down now, because the preconditions are already met.

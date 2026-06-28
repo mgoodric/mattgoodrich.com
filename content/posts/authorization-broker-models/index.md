@@ -41,7 +41,7 @@ Scale is the other limit. At small scale the broker is the expensive rung: a few
 
 The choke point cuts both ways. A broker that every access flows through is a single point of failure and a high-value target.
 
-If it is down, nobody gets in, so it needs its own carefully designed break-glass path. If it is compromised, the attacker is standing at the one place that can mint access to everything, so it has to be the most hardened system you run. The broker does not remove the risk of standing access. It concentrates that risk into one well-watched place, which is a far better posture than risk smeared across every resource. But it is a concentration, and you have to treat it like one: hardened, monitored, and never the thing you forgot to patch.
+If it is down, nobody gets in, so it needs its own carefully designed [break-glass path](/posts/break-glass-without-the-backdoor/). If it is compromised, the attacker is standing at the one place that can mint access to everything, so it has to be the most hardened system you run. The broker does not remove the risk of standing access. It concentrates that risk into one well-watched place, which is a far better posture than risk smeared across every resource. But it is a concentration, and you have to treat it like one: hardened, monitored, and never the thing you forgot to patch.
 
 ## Build the Door, Then Remove the Others
 

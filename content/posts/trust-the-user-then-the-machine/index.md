@@ -25,7 +25,7 @@ The pattern underneath all three is the same. User identity tells you whose requ
 
 ## Device Identity vs Device Posture
 
-This is the distinction the whole topic turns on, and the one most "device trust" pitches blur. A device makes two separate claims, and you need both.
+This is the distinction most "device trust" pitches blur. A device makes two separate claims, and you need both.
 
 **Device identity** is the claim "I am a machine you know." It is answered by a certificate the device holds, issued by you, proving this specific endpoint is one you enrolled. It is binary and durable: the machine either presents a valid, non-revoked certificate or it does not.
 

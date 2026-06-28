@@ -78,7 +78,7 @@ Before the phasing, one prerequisite. This whole approach assumes you can enforc
 
 Then turn the password off where you can, not before. Passwordless is the destination, and you reach it once the phishing-resistant factor is enrolled and proven for a population, not on the day you announce the project.
 
-## Account Recovery Is the Whole Game
+## The Recovery Path Is Where Rollouts Underbuild
 
 Here is the part that decides whether any of this holds, and the part most rollouts underbuild. A phishing-resistant factor is only as strong as its recovery path. A phishable recovery is an unlocked window beside a strong front door.
 

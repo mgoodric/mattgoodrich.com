@@ -27,7 +27,7 @@ An identity provider collapses the multiplication. Instead of managing apps time
 
 ## One Place to Grant, One Place to Revoke
 
-The centralization is the whole point, and it shows up at both ends of the lifecycle.
+Centralization shows up at both ends of the lifecycle.
 
 On the way in, a new hire gets the apps their role calls for because the IdP grants them, not because someone remembered to create forty separate accounts. On the way out, disabling the IdP account pulls the rug from every connected app at once. The departure that used to be a checklist of twelve manual revocations, with a real chance of missing one, becomes a single action with a single audit record.
 
@@ -63,7 +63,7 @@ There is a middle path between full federation and the password manager, and it 
 
 ![The Header-Injection Pattern: a User's Request Hits an Authenticating Reverse Proxy That Does the SAML or OIDC Handshake With the Identity Provider, Then Injects the Authenticated Identity Into a Header the App Simply Reads, While the App Stays Reachable Only Through the Proxy and Direct Access Is Blocked](diagram-proxy-header.png)
 
-That asymmetry is the whole appeal. Reading a header is a few lines in any framework. Implementing SAML or OIDC correctly, with signature validation, metadata, session handling, and every edge case, is a real project no team should take on for an internal tool. The proxy implements it once, in front of everything, and every app behind it gets single sign-on for the price of trusting one header. [oauth2-proxy](https://oauth2-proxy.github.io/oauth2-proxy/) is the common open-source choice; [Authelia](https://www.authelia.com/) and [Pomerium](https://www.pomerium.com/) do the same job, and on Apache or nginx the pattern runs through [mod_auth_openidc](https://github.com/OpenIDC/mod_auth_openidc) or the `auth_request` directive. Point the proxy at your IdP, set the header, and the homegrown app from a moment ago is behind the line without a line of federation code in it.
+Reading a header is a few lines in any framework. Implementing SAML or OIDC correctly, with signature validation, metadata, session handling, and every edge case, is a real project no team should take on for an internal tool. The proxy implements it once, in front of everything, and every app behind it gets single sign-on for the price of trusting one header. [oauth2-proxy](https://oauth2-proxy.github.io/oauth2-proxy/) is the common open-source choice; [Authelia](https://www.authelia.com/) and [Pomerium](https://www.pomerium.com/) do the same job, and on Apache or nginx the pattern runs through [mod_auth_openidc](https://github.com/OpenIDC/mod_auth_openidc) or the `auth_request` directive. Point the proxy at your IdP, set the header, and the homegrown app from a moment ago is behind the line without a line of federation code in it.
 
 The catch is the one that turns this into a vulnerability when it is done carelessly: the app must be reachable only through the proxy, and the proxy must strip any copy of the identity header that arrives from the client. If a user can reach the app directly, or smuggle in their own `X-Auth-Request-Email`, they can claim to be anyone, because the app trusts that header completely. The header is a statement only the proxy is trusted to make, so the network has to guarantee the proxy is the only one who can make it. Terminate all traffic at the proxy, isolate the app behind it, and overwrite those headers on the way through. Get that wrong and you have built an impersonation endpoint with a login page in front of it.
 

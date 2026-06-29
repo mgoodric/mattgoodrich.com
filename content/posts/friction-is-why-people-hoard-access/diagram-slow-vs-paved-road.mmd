@@ -1,0 +1,14 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph SLOW["Ticket queue: friction creates hoarding"]
+    direction LR
+    S1["Request"] ==>|"3-day<br/>human queue"| S2["Grant"] ==>|"no expiry"| S3["Held forever"]
+    S3 -.->|"no audit trail,<br/>no justification"| S4["Audit findings:<br/>orphaned permissions"]
+  end
+  subgraph PAVED["Paved road: easy access enables tight access"]
+    direction LR
+    P1["Self-service<br/>request"] ==>|"auto-approve<br/>by policy"| P2["Instant<br/>provisioning"] ==>|"short-lived,<br/>auto-expiry"| P3["Returned<br/>automatically"]
+    P3 -.->|"every step logged<br/>with reason"| P4["Audit query:<br/>request, policy,<br/>justification, expiry"]
+  end
+  SLOW ~~~ PAVED
+  style PAVED stroke:#5B2A86,stroke-width:2.5px,stroke-dasharray:7 5

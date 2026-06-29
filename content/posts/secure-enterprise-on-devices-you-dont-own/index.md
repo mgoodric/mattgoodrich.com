@@ -11,7 +11,7 @@ image = 'header.png'
   author = 'Matt Goodrich'
 +++
 
-Set the rule: no corporate laptops, and no VPN. Everyone works from the phone and the computer they already own, and there is no network anyone logs onto. Said out loud, that sounds like a security team's resignation letter. It is closer to the opposite. A BYOD enterprise with no VPN is buildable, and it can be more locked down than the company handing out a managed laptop to every hire, because it is forced to stop relying on the two things that were never as trustworthy as they looked: the device and the network.
+Set the rule: no corporate laptops, and no VPN. Everyone works from the phone and the computer they already own, and there is no network anyone logs onto. A BYOD enterprise with no VPN is buildable, and it can be more locked down than the company handing out a managed laptop to every hire, because it is forced to stop relying on the two things that were never as trustworthy as they looked: the device and the network.
 
 This started as a thought exercise. Employees increasingly want to work on devices they already own, and the business is staring at the real money it spends on laptops, refresh cycles, and the IT operation that keeps them imaged. Both want to know if the security the managed laptop was supposed to buy can come from somewhere else.
 
@@ -73,7 +73,7 @@ The accounts that can damage everything, the cloud admins, the people with stand
 
 Developer workstations are the obvious in-between case. Checking out code, running local builds, and using a real IDE all require data on the device by definition, and a virtual desktop is a poor substitute for an SSD and 16GB of RAM the IDE has a direct path to. The two honest answers are a managed laptop for developers, or a cloud development environment — [GitHub Codespaces](https://github.com/features/codespaces), [Gitpod](https://www.gitpod.io/), [Coder](https://coder.com/) — where the code lives in a remote container and the local device is again a window onto it, this time over an editor protocol. Either keeps the data off the personal device; the choice is which trade-off you prefer. The cloud option is becoming more workable as AI writes more of the code, because reviewing what an agent produced does not depend on the millisecond IDE responsiveness that typing every line did.
 
-## The Device Was Never the Point
+## Hardware You Never Bought
 
 A company can hand out no laptops and run no VPN and still be harder to breach than the one with a managed machine on every desk and a concentrator at the edge, because the managed machine and the VPN were protecting the wrong things. What was worth protecting was the data and the identity, and both can live somewhere the personal device only ever borrows a view of.
 

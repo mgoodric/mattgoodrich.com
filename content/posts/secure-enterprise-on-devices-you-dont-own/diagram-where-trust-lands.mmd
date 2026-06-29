@@ -1,0 +1,15 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  subgraph OLD["Old assumption"]
+    direction LR
+    O1["Device is trusted<br/>because IT built it"] ~~~ O2["Network membership =<br/>security boundary"] ~~~ O3["Data is protected by<br/>living on a trusted device"] ~~~ O4["Standing credentials,<br/>checked at login"]
+  end
+  subgraph NEW["New control"]
+    direction LR
+    N1["Live posture check<br/>(continuous)"] ~~~ N2["Per-app proxy<br/>(identity-aware)"] ~~~ N3["Data stays server-side<br/>(device is a window)"] ~~~ N4["Phishing-resistant identity<br/>(FIDO / passkey)"]
+  end
+  N1 -.->|"replaces"| O1
+  N2 -.->|"replaces"| O2
+  N3 -.->|"replaces"| O3
+  N4 -.->|"replaces"| O4
+  style NEW stroke:#5B2A86,stroke-width:2.5px,stroke-dasharray:7 5

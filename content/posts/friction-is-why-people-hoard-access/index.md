@@ -19,7 +19,7 @@ Multiply that across every engineer and every quarter, and you have explained wh
 
 Every slow access process teaches the same lesson: get it while you can and keep it as long as you can. A grant that takes a day to obtain is a grant you do not give up, because giving it up means paying that day again. A review queue measured in weeks turns least privilege into a fantasy, because nobody working under a deadline will voluntarily return access they had to wait two weeks for.
 
-This is the part most access programs have backwards. Friction feels like a control. The approval step, the review, the wait, all of it looks like diligence, like the system being careful. What it produces is the opposite of what it intends: an environment where everyone holds far more than they need, because the process made letting go irrational. The slow gate did not keep access tight. It guaranteed access would sprawl.
+The slow gate is the cause of the hoarding. Every barrier built to make access careful — the approval, the review, the wait — taught the engineers under it to keep everything they grabbed. The sprawl is what a slow gate produces, every quarter.
 
 You can see the residue in any access review: the long-tenured engineer who has accumulated read access to half the company, not because anyone decided they should have it, but because every project they ever touched left a grant behind that was easier to keep than to clean up.
 
@@ -81,6 +81,6 @@ And the road is real work to build. Self-service catalogs, policy-based approval
 
 ## Make It Easy to Lock It Down
 
-Friction is a tax everyone pays and nobody banks. It does not buy you tighter access. It buys you hoarding, sprawl, and an audit full of permissions no one remembers granting. The teams with the most locked-down environments are usually the ones where getting access is the easiest, because easy access is what makes least privilege survivable for the people living under it.
+Easy access is what makes least privilege survivable for the people living under it. The teams with the most locked-down environments are usually the ones where getting access is the easiest, because friction creates the sprawl that lock-down is supposed to prevent.
 
 So if you want to lock it down, make it easy. Build the paved road, put the guardrails in the road itself, and let people get exactly what they need the moment they need it. They will stop hoarding when hoarding stops being the smart move.

@@ -3,7 +3,7 @@ date = '2026-07-09T00:01:00-07:00'
 draft = false
 title = 'Whose Request Is This, Three Hops In?'
 aliases = []
-description = "A service mesh gives you mTLS and proves one service is talking to another. It does nothing to carry the original user's identity through the downstream calls, so authorization deep in the call graph falls back to trusting that the request came from inside. In multi-tenant SaaS, that dropped identity becomes a class of tenant-isolation and broken-authorization bugs. Here's how to carry the caller's identity through the call graph and enforce it on every hop, and where the chain legitimately breaks."
+description = "A service mesh proves one service is talking to another. It does nothing to carry the user's identity through the downstream calls, so deep in the call graph authorization falls back to 'it came from inside.' Here's how to carry the caller through every hop, and where the chain legitimately breaks."
 categories = ['Security', 'Engineering']
 tags = ['Security', 'IAM', 'Identity', 'Authorization', 'Kubernetes', 'Service Mesh', 'mTLS', 'Multi-Tenancy', 'CISO']
 image = 'header.png'
@@ -53,7 +53,7 @@ This stays theoretical until multiple tenants share the same services, which is 
 
 Now combine that with a call graph that does not carry the caller. A downstream service that trusts its caller and acts on the IDs it is handed cannot enforce the tenant boundary, because it does not know whose request this is. If the tenant scoping is derived from a value the caller controls instead of from a verified user identity, then a request originating in tenant A that reaches a service willing to act on `tenant_id = B` has crossed the boundary. The bug might be an [object reference the gateway never saw](/posts/the-gateway-cant-see-the-object/), an internal endpoint that takes an account ID and trusts it, a cache keyed without the tenant, a queue message that lost its tenant context. Each is a tenant-isolation failure, and each lives below the front door where the user check happened, in the part of the system that assumed everything internal was safe.
 
-This is a whole category, not a single finding: every internal call that touches tenant-scoped data and does not re-derive the tenant from a verified caller is a candidate. In a logically-segregated system, that is most of them.
+This is a whole category: every internal call that touches tenant-scoped data and does not re-derive the tenant from a verified caller is a candidate. In a logically-segregated system, that is most of them.
 
 ## Carry the Caller, Then Enforce It
 
@@ -79,7 +79,7 @@ There is a real cost even where it belongs. Token exchange and per-hop validatio
 
 The weak spot in all of this is memory. A control that exists only when a developer remembers to add it will be missing from some fraction of endpoints, and in a multi-tenant system that fraction is your tenant-isolation bug rate. The sorting from the last section, this call has a caller and this one does not, has to live somewhere more durable than convention. There are four places to put it.
 
-**Declare it on the route, and fail closed.** I have seen systems do this with an attribute or decorator per endpoint: `[UserInitiated]` on the routes that must enforce a caller, `[SystemOnly]` on the ones that run on workload identity. The annotation is not the control; the fail-closed default is. The framework refuses to serve a route that declares neither, so forgetting shows up as a failed startup or a failed CI run instead of a silent hole. The default matters too: undeclared must never mean system. If anything gets to be implicit, it is "user-initiated, caller required," because that failure mode is a 401, not a cross-tenant write. The residual risk is the wrong annotation, which is one code review away. Better than the check being absent, but still a per-endpoint human decision.
+**Declare it on the route, and fail closed.** I have seen systems do this with an attribute or decorator per endpoint: `[UserInitiated]` on the routes that must enforce a caller, `[SystemOnly]` on the ones that run on workload identity. The fail-closed default is the control, and the annotation is its record. The framework refuses to serve a route that declares neither, so forgetting shows up as a failed startup or a failed CI run instead of a silent hole. The default matters too: undeclared must never mean system. If anything gets to be implicit, it is "user-initiated, caller required," because that failure mode is a 401, not a cross-tenant write. The residual risk is the wrong annotation, which is one code review away. Better than the check being absent, but still a per-endpoint human decision.
 
 **Let one endpoint serve both, carefully.** Some endpoints genuinely take both kinds of traffic: a user triggers a recalculation from the UI, and the nightly batch triggers the same recalculation for every account. The honest version branches on the credential. A transaction token present means caller authorization runs. Workload identity alone means the system policy runs, and the system policy must be narrower, not wider: an enumerated set of operations, not "everything, since there is no user to check." The failure mode to design against is "no caller" quietly becoming "no check." Make system a first-class principal with its own policy, never an absence. If the branch gets complicated, that is the signal to split the endpoint, which is the network-path option in miniature.
 
@@ -107,6 +107,6 @@ These are layers, not alternatives. The chassis is the floor, because it is the 
 
 ## Whose Request, at Every Hop
 
-The front door is the easy part, and most teams do it well. The work that gets skipped is everything after it, where the request fans out into a dozen internal calls that trust each other because they are inside. A service mesh makes that interior safer, and it is worth running, but it secures the channel, and the channel was never the question. The question is whose request this is, and it needs an answer at every hop that touches someone's data.
+The front door is the easy part, and most teams do it well. The work that gets skipped is everything after it, where the request fans out into a dozen internal calls that trust each other because they are inside. A service mesh makes that interior safer, and it is worth running, but it secures the channel. Whose request this is still needs an answer at every hop that touches someone's data.
 
 Carry the caller. Enforce the caller. Derive the tenant from the caller and never from the call. Do that on the hops that touch tenant-scoped data, and "whose request is this, three hops in" stops being a question your ledger service cannot answer.

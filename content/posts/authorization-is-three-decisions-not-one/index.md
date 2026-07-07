@@ -3,7 +3,7 @@ date = '2026-07-10T00:01:00-07:00'
 draft = false
 title = 'Authorization Is Three Decisions, Not One'
 aliases = []
-description = "Where authorization decisions live, in one central service or distributed into every service that owns its data, is an argument every platform team has and none settles the same way. The real move is to stop treating it as one switch: the policy, the evaluation, and the data a decision needs can each be centralized or not, independently. Here's the decomposition, what OPA, Cedar, and Zanzibar each centralize, and how to choose for your org."
+description = "Where authorization decisions live, in one central service or in every service that owns its data, is an argument every platform team has and never settles. The policy, the evaluation, and the data a decision needs can each be centralized or not, independently. Here's the decomposition, what OPA, Cedar, and Zanzibar each centralize, and how to choose."
 categories = ['Security', 'Engineering']
 tags = ['Security', 'IAM', 'Authorization', 'Product Security', 'OPA', 'Cedar', 'Zanzibar', 'Architecture', 'CISO']
 image = 'header.png'
@@ -51,23 +51,23 @@ There is a real case for central evaluation: when the decision needs data only t
 
 ## The Data Is the Hard Part
 
-Here is where the argument actually lives, even though it usually starts somewhere else. Evaluating a policy needs facts, and the facts are the problem.
+Here is where the argument lives. Evaluating a policy needs facts, and the facts are the problem.
 
 A rule like "a user can read invoices in their own org" needs the user's org and the invoice's org. Those facts live in the services that own users and invoices. If the decision runs locally, it has the data it owns and may be missing the data it does not. If the decision runs centrally, the central service needs that data, which means either the data is replicated to it and can be stale, or it calls back to the owning services at decision time and is chatty and slow. There is no arrangement that makes the data both local and consistent everywhere.
 
-This is the whole reason [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) exists. Google's answer to "can Alice view this document," where the answer is a path through a relationship graph, was to centralize the data: store every relationship as a tuple in one system, and meet the consistency problem head-on with zookies, tokens that let a caller demand a decision no staler than a known point. [OpenFGA](https://openfga.dev/) and [SpiceDB](https://authzed.com/) bring that model within reach. What they centralize is not the policy, and not mainly the evaluation. It is the [relationship data](/posts/your-authorization-model-is-never-done/), because that is the part that is genuinely hard to make both correct and fast once it is spread across services.
+This is the whole reason [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) exists. Google's answer to "can Alice view this document," where the answer is a path through a relationship graph, was to centralize the data: store every relationship as a tuple in one system, and meet the consistency problem head-on with zookies, tokens that let a caller demand a decision no staler than a known point. [OpenFGA](https://openfga.dev/) and [SpiceDB](https://authzed.com/) bring that model within reach. What they centralize is the [relationship data](/posts/your-authorization-model-is-never-done/), more than the policy or the evaluation, because that is the part that is genuinely hard to make both correct and fast once it is spread across services.
 
 ![The Blend That Usually Wins: a Central Policy Repository Authored, Versioned, and Reviewed Like Code Pushes Policy Bundles Down to Each Service, Where an OPA Sidecar or Embedded Cedar Decides in Process in Microseconds, and When Sharing Is a Graph the Services Make Relationship Checks Against a Central Tuple Store on the Zanzibar Model, OpenFGA or SpiceDB, With Consistency on Demand via Zookies](diagram-blend-architecture.png)
 
 ## When Each Choice Is the Wrong One
 
-None of this says one shape is right. It says each part has a cost, and the costs land differently depending on who you are.
+Each part has a cost, and the costs land differently depending on who you are.
 
-Central evaluation is wrong when the dependency is worse than the drift. A service that every request waits on is a single point of failure for the entire product, and the team that owns it becomes the team every other team is blocked on. Plenty of outages are not the database falling over; they are the thing in front of the database that decides who may call it. For a fast-moving product with a few services and a small team, a central decision point is a bottleneck and an availability risk, bought to solve a consistency problem you did not have yet.
+Central evaluation is wrong when the dependency is worse than the drift. A service that every request waits on is a single point of failure for the entire product, and the team that owns it becomes the team every other team is blocked on. Plenty of outages are the thing in front of the database, the layer that decides who may call it, while the database itself is fine. For a fast-moving product with a few services and a small team, a central decision point is a bottleneck and an availability risk, bought to solve a consistency problem you did not have yet.
 
 Distributing everything is wrong when you can no longer answer the questions that matter. When "who can access this kind of data" takes a week and a spreadsheet because the answer is spread across forty services with forty implementations, you have pushed autonomy past the point where anyone can reason about access at all. That is the shape that fails an audit and hides the [attack you cannot see](/posts/the-other-half-of-identity-security/), because no single place knows what is reachable.
 
-So the inputs to the decision are not technical preferences. They are how many services and teams you have, how badly you need one answer to "who can do what," how much latency and shared-failure risk you can tolerate, and how complex your data's ownership and sharing actually are. A three-service startup and a four-hundred-service bank should land in different places, and both can be right.
+So the inputs to the decision are how many services and teams you have, how badly you need one answer to "who can do what," how much latency and shared-failure risk you can tolerate, and how complex your data's ownership and sharing actually are. A three-service startup and a four-hundred-service bank should land in different places, and both can be right.
 
 ## Decide the Three, Not the One
 

@@ -1,0 +1,12 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  A["&quot;Centralized or distributed authorization?&quot;<br/>one question standing in for three"]
+  P["<b>Policy</b><br/>the rules"]
+  E["<b>Evaluation</b><br/>running the rules against a request"]
+  D["<b>Data</b><br/>the facts the rules need"]
+  PA["<b>Centralize, almost always</b><br/>one source of truth, authored,<br/>versioned, and reviewed like code"]
+  EA["<b>Distribute, usually</b><br/>evaluate the central bundle locally,<br/>in process, no shared failure"]
+  DA["<b>Decide deliberately</b><br/>the genuinely hard part; centralize<br/>relationships when sharing is a graph"]
+  A --> P --> PA
+  A --> E --> EA
+  A --> D --> DA

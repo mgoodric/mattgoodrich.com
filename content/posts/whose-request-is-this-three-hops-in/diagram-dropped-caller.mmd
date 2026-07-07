@@ -1,0 +1,18 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','actorBkg':'#ECE4F2','actorBorder':'#5B2A86','actorTextColor':'#2D2D2D','actorLineColor':'#5B2A86','signalColor':'#3A3A3A','signalTextColor':'#2D2D2D','noteBkgColor':'#F6E7D2','noteBorderColor':'#B5A98E','noteTextColor':'#2D2D2D','activationBkgColor':'#ECE4F2','activationBorderColor':'#5B2A86','labelBoxBkgColor':'#F6E7D2','labelBoxBorderColor':'#B5A98E'}}}%%
+sequenceDiagram
+  actor U as User (tenant A)
+  participant G as API Gateway
+  participant O as Orders
+  participant B as Billing
+  participant L as Ledger
+  U->>G: 1. request, with user token
+  G->>G: 2. validate token: user and tenant proven
+  Note over U,G: the caller is known here, and only here
+  G->>O: 3. internal call, as the gateway's service identity
+  Note over G,O: mTLS: channel proven, caller dropped
+  O->>B: 4. charge account, IDs from the request
+  Note over O,B: mTLS: channel proven, caller unknown
+  B->>L: 5. write entry, tenant_id from the request body
+  Note over B,L: mTLS: channel proven, caller unknown
+  L->>L: 6. no user check: the call came from inside
+  Note over L: whose request is this?<br/>the ledger cannot answer

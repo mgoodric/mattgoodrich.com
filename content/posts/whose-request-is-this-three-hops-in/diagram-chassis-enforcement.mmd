@@ -1,0 +1,21 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  R["Incoming internal call<br/>+ transaction token"]
+  subgraph P1["Platform owned: written once, every service inherits it"]
+    M{"Mesh sidecar:<br/>token valid?"}
+    C{"Chassis middleware:<br/>token verified,<br/>caller authorized?"}
+    X["Verified caller context injected:<br/>caller, tenant, request context"]
+  end
+  subgraph DEV["Developer owned"]
+    H["<b>Handler: business logic only</b><br/>caller and tenant are read from the verified<br/>context; no other accessor exists"]
+  end
+  subgraph P2["Platform owned"]
+    D["Data layer: Postgres RLS keyed to a<br/>session tenant only the chassis sets;<br/>cross-tenant reads fail regardless"]
+  end
+  RJ1["Rejected at the sidecar,<br/>the app never sees it"]
+  RJ2["401, no handler runs"]
+  R --> M
+  M -- "invalid" --> RJ1
+  M -- "valid" --> C
+  C -- "missing or unauthorized" --> RJ2
+  C -- "verified" --> X --> H --> D

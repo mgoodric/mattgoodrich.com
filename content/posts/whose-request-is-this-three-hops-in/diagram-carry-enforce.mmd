@@ -1,0 +1,20 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','actorBkg':'#ECE4F2','actorBorder':'#5B2A86','actorTextColor':'#2D2D2D','actorLineColor':'#5B2A86','signalColor':'#3A3A3A','signalTextColor':'#2D2D2D','noteBkgColor':'#F6E7D2','noteBorderColor':'#B5A98E','noteTextColor':'#2D2D2D','activationBkgColor':'#ECE4F2','activationBorderColor':'#5B2A86','labelBoxBkgColor':'#F6E7D2','labelBoxBorderColor':'#B5A98E'}}}%%
+sequenceDiagram
+  actor U as User (tenant A)
+  participant G as API Gateway
+  participant T as Token Service
+  participant O as Orders
+  participant B as Billing
+  participant L as Ledger
+  U->>G: 1. request, with user token
+  G->>G: 2. validate token: user and tenant proven
+  G->>T: 3. token exchange (RFC 8693)
+  T-->>G: 4. transaction token: caller, tenant, context
+  G->>O: 5. internal call + transaction token
+  O->>O: 6. verify token, authorize the caller
+  O->>B: 7. charge account + transaction token
+  B->>B: 8. verify token, derive tenant from token
+  B->>L: 9. write entry + transaction token
+  L->>L: 10. verify token, policy check on the verified caller
+  Note over G,L: mTLS proves the channel, the token proves the caller: both, at every hop
+  Note over B,L: tenant_id comes from the verified token,<br/>never from the request body

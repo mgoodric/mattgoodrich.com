@@ -1,7 +1,7 @@
 +++
 date = '2026-07-13T00:01:00-07:00'
 draft = false
-title = 'One Overlay Instead of a Pile of Tunnels'
+title = 'Collapsing a Pile of Tunnels onto Tailscale'
 aliases = []
 description = "My remote access had grown into three overlapping tools: SSH tunnels from the Mac Studio to Unraid, UniFi's Teleport VPN to get a MacBook onto the network, and Cloudflare tunnels for a quick SSH in or for networks that block the VPN, like a cruise ship. All three worked, and all three needed maintaining. Tailscale collapsed them into one overlay for private device access with zero trust by default, and left Cloudflare only the job it's actually for: public ingress."
 categories = ['Engineering', 'Software', 'Tools']

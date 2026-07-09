@@ -1,0 +1,14 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart LR
+  subgraph LAP["Laptop (in front of me)"]
+    cap["Region capture<br/>screencapture -i"]
+    clip["Clipboard:<br/>the remote path, as text<br/>~/.cc-shots/…png"]
+    cap --> clip
+  end
+  subgraph STU["Mac Studio (mac-studio, on the tailnet)"]
+    dir["~/.cc-shots/…png<br/>the file, on disk"]
+    sess["Claude Code session<br/>reads the file off local disk"]
+    dir --> sess
+  end
+  cap -- "the file ships<br/>scp over the tailnet" --> dir
+  clip -- "the path crosses as text<br/>pasted into the session" --> sess

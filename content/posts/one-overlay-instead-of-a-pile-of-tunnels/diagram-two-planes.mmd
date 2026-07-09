@@ -1,0 +1,15 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#3A3A3A','secondaryColor':'#F6E7D2','tertiaryColor':'#FBF7EE','clusterBkg':'#FBF7EE','clusterBorder':'#B5A98E','edgeLabelBackground':'#F4EEE2'}}}%%
+flowchart TB
+  net["Internet / claude.ai"] --> cf
+  subgraph PUB["Public plane: Cloudflare"]
+    direction LR
+    cf["Cloudflare<br/>public ingress"] --> surf["MCP bridges + public apps<br/>the only outside-facing surface"]
+  end
+  subgraph PRIV["Private plane: Tailscale"]
+    direction LR
+    d1["MacBook"] --- mesh(("private mesh<br/>device to device<br/>never internet-exposed"))
+    d2["Mac Studio"] --- mesh
+    d3["Unraid"] --- mesh
+    d4["iPhone / iPad"] --- mesh
+  end
+  cf -. "personal SSH used to ride here;<br/>moved to the private plane" .-> mesh

@@ -1,0 +1,74 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Georgia, serif','primaryColor':'#ECE4F2','primaryBorderColor':'#5B2A86','primaryTextColor':'#2D2D2D','lineColor':'#9a8fb0','tertiaryColor':'#FBF7EE'}}}%%
+flowchart LR
+  hub["IAM hub"]
+  sso["SSO"]
+  life["Lifecycle"]
+  roles["Roles"]
+  broker["Broker"]
+  bg["Break-glass"]
+  reach["Reachable perms"]
+  zt["Zero trust sequence"]
+  mfa["MFA"]
+  dev["Device trust"]
+  net["Per-app access"]
+  gw["Object-level authz"]
+  data["Data-centric"]
+  wl["Workload identity"]
+  spiffe["SPIFFE / SPIRE"]
+  nhi["Non-human IDs"]
+  svc["Service accounts"]
+  agents["Agent capabilities"]
+  sess["Sessions / logout"]
+  cont["Continuous"]
+  tel["Telemetry reviews"]
+  det["Detection"]
+  authz["Authz that evolves"]
+  authz3["Three decisions"]
+  hops["Caller across hops"]
+  collapse["Collapse"]
+  friction["Friction"]
+  byod["BYOD"]
+
+  hub --> agents & tel & wl & reach
+  sso --> hub
+  life --> hub & nhi & sso & tel
+  roles --> agents & broker & life & tel
+  broker --> tel & wl
+  bg --> broker
+  reach --> agents & tel
+  zt --> broker & hub & mfa & dev
+  mfa --> bg & sso
+  dev --> mfa
+  net --> broker & bg & mfa & dev & zt
+  gw --> roles
+  spiffe --> nhi & svc & wl
+  nhi --> agents & svc & tel & wl
+  svc --> agents & wl
+  sess --> life
+  cont --> sess & dev & spiffe & zt
+  tel --> agents & svc & reach
+  det --> bg & nhi & tel & reach
+  authz --> roles & gw
+  hops --> gw & wl & authz
+  authz3 --> gw & det & hops & authz
+  collapse --> broker & bg & mfa & nhi & sso & tel & gw & dev & spiffe
+  friction --> broker & life & tel
+  byod --> data & cont & mfa & net & dev
+
+  classDef ladderc fill:#ECE4F2,stroke:#5B2A86,color:#2D2D2D;
+  classDef ztc fill:#F6E7D2,stroke:#5B2A86,color:#2D2D2D;
+  classDef wlc fill:#DCE8F0,stroke:#3F6F8F,color:#2D2D2D;
+  classDef runc fill:#E1EEDB,stroke:#3F6F4A,color:#2D2D2D;
+  classDef prodc fill:#F3E1EC,stroke:#8F3F6F,color:#2D2D2D;
+  classDef synthc fill:#EDE6D6,stroke:#8A7B53,color:#2D2D2D;
+  classDef hubc fill:#D6C7E8,stroke:#5B2A86,color:#2D2D2D;
+
+  class hub hubc;
+  class sso,life,roles,broker,bg,reach ladderc;
+  class zt,mfa,dev,net,gw,data ztc;
+  class wl,spiffe,nhi,svc,agents wlc;
+  class sess,cont,tel,det runc;
+  class authz,authz3,hops prodc;
+  class collapse,friction,byod synthc;
+
+  linkStyle default stroke:#9a8fb0,stroke-width:1px;

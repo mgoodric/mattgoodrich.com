@@ -3,7 +3,7 @@
 Tracker for LinkedIn posts. Lives at repo root, outside `content/`, so Hugo never publishes it.
 
 **Cadence:** 1 per week, Tuesday, 5:00 AM. (Was 2/week Tue+Thu. Cut on 2026-07-13, see below.)
-**Last synced:** 2026-07-13
+**Last synced:** 2026-07-20
 **Copy/paste:** each post's copy is in a fenced code block. Use the block's copy button (or select inside it) to paste clean text straight into LinkedIn, no `>` prefixes.
 **Sync rule:** LinkedIn posts run *after* their blog post is live, so a blog post's pre-publish date moves don't usually touch this file. If a slot is ever at or before its blog post's publish date, move the slot later and note it in the Sync Log.
 
@@ -327,8 +327,8 @@ https://mattgoodrich.com/posts/agent-communication-stack/
 | LI slot | Day | Post | Clears | Blog live | Copy |
 |---------|-----|------|--------|-----------|------|
 | Jul 14 | Tue | Collapsing a Pile of Tunnels onto Tailscale | **Recipe** | 7/13 ✓ | drafted below |
-| Jul 21 | Tue | The Identity Ladder (synthesis — replaces 24 posts) | **Recipe** | 6/07 ✓ | drafted below |
-| Jul 28 | Tue | Two Systems for Handing Work to Agents | **Stake + Recipe** | 7/15 | drafted below |
+| Jul 21 | Tue | Two Systems for Handing Work to Agents | **Stake + Recipe** | 7/20 ✓ | drafted below |
+| Jul 28 | Tue | The Identity Ladder (synthesis — replaces 24 posts) | **Recipe** | 6/07 ✓ | drafted below |
 | Aug 4 | Tue | Pasting Screenshots Into a Remote Claude Session | **Recipe** | 7/14 ✓ | not yet drafted |
 | Aug 11+ | — | **OPEN — needs a stake-shaped post that does not exist yet** | — | — | — |
 
@@ -375,7 +375,7 @@ https://mattgoodrich.com/posts/collapsing-a-pile-of-tunnels-onto-tailscale/
 #Tailscale #ZeroTrust #Homelab #Networking #CISO
 ```
 
-### Jul 21 — The Identity Ladder  *(Recipe — synthesis, replaces 24 queued posts)*
+### Jul 28 — The Identity Ladder  *(Recipe — synthesis, replaces 24 queued posts)*
 
 ```
 You will never be greenfield.
@@ -408,27 +408,23 @@ https://mattgoodrich.com/page/identity/
 
 *(Links to the Identity Spine map, not the hub post. The map is the better destination and it is the new Featured #1.)*
 
-### Jul 28 — Two Systems for Handing Work to Agents  *(Recipe + Stake)*
+### Jul 21 — Two Systems for Handing Work to Agents  *(Stake + Recipe)*
+
+*(Reframed 2026-07-20 to Matt's "work while I sleep" arc: the experiment framing as the hook, the concrete overnight failure kept as the stake, the two-bucket "where each wins" as the in-feed payload. Prior confession-first draft preserved in git history.)*
 
 ```
-I let four features run through my autonomous agent loop overnight. Every issue came back "implementation complete." The feature was broken at the first database write.
+I've been building different ways to work while I sleep: agents that pick up real tasks overnight and hand me finished work in the morning.
 
-I had sliced the work one issue per file: a migration, a config module, a collector, a schedule, a health check, a dashboard. Six issues. The migration and the collector disagreed on column names.
+The first version kept everything in git. The backlog, the state, the claim on each task, all of it lived in the repo as files the agents edited. It worked. I woke up to merged PRs. But it taxed every task: because main was protected, one commit of real code cost three pull requests (claim the work, merge it, reconcile the status). The status file was also a lock, and parallel agents kept colliding on it.
 
-No per-issue test caught it. None could have. The contract was split across two issues, and each side was internally consistent with itself.
+So I moved the backlog and the state out of git, into a self-hosted issue tracker the agents poll every 12 minutes. The tax disappeared. A state change went from three pull requests to one API call. Then a different problem showed up. I let four features run overnight, every issue came back "implementation complete," and the feature was broken at the first database write. The loop executed perfectly. My breakdown of the work was what failed.
 
-The loop executed perfectly. The breakdown was what failed.
+I went in expecting to find the "right way" to do this. I came out with something more useful: each model has its place.
 
-That same week produced a 47-commit runaway branch, and a boilerplate "do not push" boundary I'd been pasting into every issue that stranded 17 finished items with their work done and nowhere to go.
+• Queue in the repo: best inside one deep codebase, where the work and the queue live together and git history is the audit trail.
+• Queue in a tracker: best the moment work crosses a boundary (another repo, another machine, a deploy), and when it has to run whether I'm at the keyboard or not.
 
-Five rules came out of it:
-• Vertical slices, never one issue per file or per layer
-• Keep a contract inside one slice. A schema and the code that writes it never split across two issues
-• Right-size for a single ~20 minute run
-• Put dependencies in the parent field, not in prose. The runner gates on the field, not on a sentence
-• Acceptance must verify the real interface. The mocked-database unit test is exactly what let the schema break through
-
-The bottleneck moved. Two runtimes polling a tracker every 12 minutes is a solved problem. How you cut the work is not.
+Two runtimes polling a tracker every 12 minutes is a solved problem. How you cut the work into tasks is not.
 
 https://mattgoodrich.com/posts/two-systems-for-handing-work-to-agents/
 
@@ -955,6 +951,7 @@ https://mattgoodrich.com/posts/standardize-the-gates-not-the-steps/
 
 ## Sync log
 
+- 2026-07-20 — **Two Systems published and promoted up.** Blog post `two-systems-for-handing-work-to-agents` finalized and pushed live (date re-stamped to now per Matt). Swapped it into the Jul 21 LinkedIn slot ahead of The Identity Ladder — it is the one genuine stake/confession in the pipeline (the reason the strategy exists), so it takes the next slot rather than waiting until Jul 28. Clean single swap: Identity Ladder → Jul 28, Aug 4 (Pasting Screenshots) unchanged, no cascade. Copy was already drafted and was re-checked line-by-line against the final post (four features, six Meross issues, 47-commit branch, 17 stranded items, five rules) — accurate, no edits needed. Also this session: published the Open Engine autonomy policy + to-engine/break-to-engine skills to the public plane-client repo (redacted) and linked them from the post; added four themed mermaid diagrams.
 - 2026-07-13 — **Identity Spine published.** Page went live at `/page/identity/`. Fixed it first: it was 2 posts stale (drawn 6/09, missing `whose-request-is-this-three-hops-in` and `authorization-is-three-decisions-not-one`). Added both to the table, updated the Product authorization thread, regenerated both mermaid diagrams (26 → 28 nodes), corrected the alt text. Promoted it to Featured #1 and repointed the Jul 21 LinkedIn copy at the map instead of the hub.
 - 2026-07-13 — **Strategy reset on the data.** Pulled LinkedIn creator analytics + read exact per-post impressions off the activity feed. Trailing 90 days: 14,371 impressions across 26 posts, 18 blog clicks, and every architecture post under 600. Then the decisive datapoint, from Matt: **`I Was Wrong About AI` (~Sept 2025) did 14,000+ impressions on its own — matching the entire last quarter combined.** Conclusion: the winning shape is the public reversal, and the real constraint is *supply*, not selection. The blog is full of architecture and nearly empty of confessions. Actions: cadence cut 2/week → 1/week Tuesday; added the stake/recipe/career filter with Stake named as primary; **named the supply problem explicitly and listed four unwritten reversal seeds**; retired the 24-post identity backlog into one synthesis post (Jul 21, The Identity Ladder); rebuilt the queue to 4 honest slots (Jul 14 → Aug 4) and left Aug 11+ deliberately empty rather than backfilling with architecture; added the "deliver the payload in-feed, the link is a footnote" rule; corrected all impressions to exact figures; caught one untracked post (Org Chart, 305); revised Featured to pin the two proven performers. Dropped as already-run: I Was Wrong About AI, The Perfect Storm, 1Password SSH Agent. Parked drafts excluded from planning per Matt (may never ship). All 24 retired identity drafts preserved in the archive below.
 - 2026-06-09 — Created. Recorded the 8 scheduled posts (Jun 11 – Jul 7) with copy mirrored. Drafted the identity-series backlog: 25 posts, Jul 9 → Oct 1, 2/week Tue/Thu.

@@ -148,6 +148,7 @@ The top two now read as "here is the whole map of identity, and here is the argu
 | Jul 2 | Thu | What Compliance Work Belongs to the Agent | ~240 |
 | Jul 7 | Tue | Every Agent Protocol Earns Its Keep at a Boundary | ~535 |
 | Jul 9 | Thu | IAM for the Company You Have (identity hub) | **354** |
+| Jul 21 | Tue | Two Systems for Handing Work to Agents | *(tbd)* |
 
 Plus one post this file never tracked: **The Org Chart Is Not the Value Stream (305).** The file had drifted from reality; re-check the activity feed when syncing, not just this table.
 
@@ -322,15 +323,16 @@ https://mattgoodrich.com/posts/agent-communication-stack/
 
 ## Queue (rebuilt 2026-07-13 on the filter)
 
-1/week, Tuesday, 5:00 AM. Each slot names which filter criterion it clears. **The 24 remaining identity-series drafts are retired** and collapsed into one synthesis post (Jul 21). Their copy is preserved in the archive at the bottom of this file and is the source material for that synthesis.
+1/week, Tuesday, 5:00 AM. Each slot names which filter criterion it clears. **The 24 remaining identity-series drafts are retired** and collapsed into one synthesis post, The Identity Ladder (queued below, not yet posted). Their 24 individual drafts were archived at the bottom of this file; those were removed 2026-07-21 to slim the doc and are preserved in git history.
 
 | LI slot | Day | Post | Clears | Blog live | Copy |
 |---------|-----|------|--------|-----------|------|
-| Jul 14 | Tue | Collapsing a Pile of Tunnels onto Tailscale | **Recipe** | 7/13 ✓ | drafted below |
-| Jul 21 | Tue | Two Systems for Handing Work to Agents | **Stake + Recipe** | 7/20 ✓ | drafted below |
-| Jul 28 | Tue | The Identity Ladder (synthesis — replaces 24 posts) | **Recipe** | 6/07 ✓ | drafted below |
-| Aug 4 | Tue | Pasting Screenshots Into a Remote Claude Session | **Recipe** | 7/14 ✓ | not yet drafted |
-| Aug 11+ | — | **OPEN — needs a stake-shaped post that does not exist yet** | — | — | — |
+| Jul 28 | Tue | Letting the Loop Merge | **Stake + Recipe** | 7/21 ✓ | drafted below |
+| Aug 4 | Tue | Make Mistakes Cheap Before You Let the Agent Run | **Stake + Recipe** | 7/22 ✓ | drafted below |
+| Aug 11 | Tue | The Identity Ladder (identity-series synthesis) | **Recipe** | 6/07 ✓ | drafted below |
+| Aug 18 | Tue | Collapsing a Pile of Tunnels onto Tailscale | **Recipe** | 7/13 ✓ | drafted below |
+| Aug 25 | Tue | Pasting Screenshots Into a Remote Claude Session | **Recipe** | 7/14 ✓ | not yet drafted |
+| Sep 1+ | — | **OPEN — needs a stake-shaped post that does not exist yet** | — | — | — |
 
 **The queue is four slots deep and then it stops.** That is not an oversight. It is the honest state of the material.
 
@@ -344,38 +346,62 @@ https://mattgoodrich.com/posts/agent-communication-stack/
 
 **Cadence.** Do not backfill empty weeks with weaker material to hit a cadence target. Filler depresses the reach of the posts that matter. **If nothing clears the filter, skip the week.** An empty slot costs nothing; a 250-impression architecture post costs reach on the next real one.
 
-**To extend past Aug 4, something new has to get written.** See the supply problem above. The blog backlog cannot fill these slots, because the blog backlog is architecture.
+**To extend past Aug 18, something new has to get written.** See the supply problem above. The blog backlog cannot fill these slots, because the blog backlog is architecture.
 
 ---
 
 ## Queue copy
 
-### Jul 14 — Collapsing a Pile of Tunnels onto Tailscale  *(Recipe)*
+### Jul 28 — Letting the Loop Merge  *(Stake + Recipe)*
 
 ```
-I had three different tools doing the same job, and every one of them worked.
+I let my AI agents merge their own work to main, no human review. The first thing I learned is that an autonomous queue rots silently.
 
-SSH tunnels from the Mac Studio to my Unraid server. UniFi's Teleport VPN to get a laptop onto the home network. Cloudflare tunnels for a fast SSH in, and for the networks that block a VPN outright (a cruise ship is the honest example).
+Nobody is watching it. That is the whole point. So when a PR falls behind main and can't merge, or an agent marks an issue "done" that never actually landed, or a finished PR sits green and ignored because its review task was never filed, nothing tells you. I found each of these the hard way: a 32-item pile of done-but-unmerged work, a PR that sat ready for a week, a stale test on main that quietly parked every unrelated issue.
 
-Three configs. Three failure modes. Three things to debug when a laptop can't reach home. The pile was the problem. No single tool in it was.
+Every one of those failures became one of two things.
 
-Tailscale collapsed all three into one overlay:
-• Every device authenticates to my identity provider, then reaches the others directly by name, wherever they are
-• MagicDNS, so every machine answers to a short name
-• Device approval and key expiry on, so a new machine can't silently join
-• WireGuard underneath, free plan
+A line in a policy file, when it was recurring bad judgment. "Autonomous by default, escalate only when risky," ten named risky categories, and the rule I keep coming back to: "I wasn't sure" is not a reason to escalate.
 
-And it fixed the thing I actually cared about. A VPN that drops you onto the flat LAN gives you the whole network the moment you're on it. Tailscale scopes access per device and per service: being on the overlay does not mean being trusted for everything on it.
+A small script on a timer, when it was recurring silent rot. Eight of them now: a base-drift reconciler, an orphan-PR review filer, a false-Done backstop, a superseded-issue surfacer, an age escalator, and a digest that pings me when something genuinely needs a human.
 
-Cloudflare kept the one job it's actually for: public ingress.
+The rule that keeps the scripts safe: make rot visible, and leave the irreversible call to a person. A wrong cancel loses real work. A wrong surface costs a glance. So the janitors that could act destructively flag and reopen instead.
 
-Full writeup, including what Tailscale doesn't solve:
-https://mattgoodrich.com/posts/collapsing-a-pile-of-tunnels-onto-tailscale/
+I used to maintain a queue. Then I decided what went in it. Now I decide how the thing that empties it is allowed to fail.
 
-#Tailscale #ZeroTrust #Homelab #Networking #CISO
+Full writeup, and the janitor scripts:
+https://mattgoodrich.com/posts/letting-the-loop-merge/
+
+#AI #AIAgents #ClaudeCode #SoftwareEngineering #CISO
 ```
 
-### Jul 28 — The Identity Ladder  *(Recipe — synthesis, replaces 24 queued posts)*
+### Aug 4 — Make Mistakes Cheap Before You Let the Agent Run  *(Stake + Recipe)*
+
+```
+The first safety change I made for my AI agents was the one that does the least. I aliased rm to trash-put, so a deleted file lands in the trash instead of vanishing. Then I thought about how an agent actually runs a command, and the alias stopped looking like a guardrail.
+
+An alias only lives in an interactive shell. When Claude Code or Codex runs a command it goes through a non-interactive shell that doesn't expand aliases, or calls /bin/rm directly, or writes a script and runs that. The guardrail I set up to feel safer protects me, not the agent.
+
+That is the whole problem: a guardrail the agent can shell around is theater. Real safety on your own machine comes in layers, weakest to strongest.
+
+Make mistakes reversible. A filesystem snapshot before each run (tmutil localsnapshot on macOS, zfs snapshot on Linux) is an undo buffer the agent can't opt out of. Commit to git first; the only work git can't recover is the work you never committed.
+
+Write the rules down, but don't trust them. A rule in CLAUDE.md or AGENTS.md lowers the odds of an honest mistake, because models are good at following clear instructions. But it's cooperation-dependent: the same benchmarks that show 90%+ instruction-following show adherence falling toward a coin flip when instructions conflict, which is exactly what a prompt injection is. I've spent years building hard, verifiable security boundaries, and calling a plain-English sentence a control feels wrong. It should.
+
+Cage the irreversible. This is the layer that holds when the rule doesn't, because the kernel enforces it. Codex sandboxes by default; Claude Code opts in. Run the agent as a non-root user with no reach beyond the repo. Default-deny the network so a poisoned README can't send anything out.
+
+The model is not going to be careful. The plan is to make its worst day a snapshot rollback and a shrug.
+
+Kit (hook, snapshot script, hardened Claude Code + Codex settings):
+https://github.com/mgoodric/safe-yolo
+
+Full writeup:
+https://mattgoodrich.com/posts/make-mistakes-cheap/
+
+#AI #AIAgents #ClaudeCode #Security #CISO
+```
+
+### Aug 11 — The Identity Ladder  *(Recipe — identity-series synthesis)*
 
 ```
 You will never be greenfield.
@@ -406,551 +432,42 @@ https://mattgoodrich.com/page/identity/
 #IAM #IdentitySecurity #ZeroTrust #CISO
 ```
 
-*(Links to the Identity Spine map, not the hub post. The map is the better destination and it is the new Featured #1.)*
+*(Links to the Identity Spine map, not the hub post. The map is the better destination and it is the Featured #1.)*
 
-### Jul 21 — Two Systems for Handing Work to Agents  *(Stake + Recipe)*
-
-*(Reframed 2026-07-20 to Matt's "work while I sleep" arc: the experiment framing as the hook, the concrete overnight failure kept as the stake, the two-bucket "where each wins" as the in-feed payload. Prior confession-first draft preserved in git history.)*
+### Aug 18 — Collapsing a Pile of Tunnels onto Tailscale  *(Recipe)*
 
 ```
-I've been building different ways to work while I sleep: agents that pick up real tasks overnight and hand me finished work in the morning.
+I had three different tools doing the same job, and every one of them worked.
 
-The first version kept everything in git. The backlog, the state, the claim on each task, all of it lived in the repo as files the agents edited. It worked. I woke up to merged PRs. But it taxed every task: because main was protected, one commit of real code cost three pull requests (claim the work, merge it, reconcile the status). The status file was also a lock, and parallel agents kept colliding on it.
+SSH tunnels from the Mac Studio to my Unraid server. UniFi's Teleport VPN to get a laptop onto the home network. Cloudflare tunnels for a fast SSH in, and for the networks that block a VPN outright (a cruise ship is the honest example).
 
-So I moved the backlog and the state out of git, into a self-hosted issue tracker the agents poll every 12 minutes. The tax disappeared. A state change went from three pull requests to one API call. Then a different problem showed up. I let four features run overnight, every issue came back "implementation complete," and the feature was broken at the first database write. The loop executed perfectly. My breakdown of the work was what failed.
+Three configs. Three failure modes. Three things to debug when a laptop can't reach home. The pile was the problem. No single tool in it was.
 
-I went in expecting to find the "right way" to do this. I came out with something more useful: each model has its place.
+Tailscale collapsed all three into one overlay:
+• Every device authenticates to my identity provider, then reaches the others directly by name, wherever they are
+• MagicDNS, so every machine answers to a short name
+• Device approval and key expiry on, so a new machine can't silently join
+• WireGuard underneath, free plan
 
-• Queue in the repo: best inside one deep codebase, where the work and the queue live together and git history is the audit trail.
-• Queue in a tracker: best the moment work crosses a boundary (another repo, another machine, a deploy), and when it has to run whether I'm at the keyboard or not.
+And it fixed the thing I actually cared about. A VPN that drops you onto the flat LAN gives you the whole network the moment you're on it. Tailscale scopes access per device and per service: being on the overlay does not mean being trusted for everything on it.
 
-Two runtimes polling a tracker every 12 minutes is a solved problem. How you cut the work into tasks is not.
+Cloudflare kept the one job it's actually for: public ingress.
 
-https://mattgoodrich.com/posts/two-systems-for-handing-work-to-agents/
+Full writeup, including what Tailscale doesn't solve:
+https://mattgoodrich.com/posts/collapsing-a-pile-of-tunnels-onto-tailscale/
 
-#AI #AIAgents #ClaudeCode #SoftwareEngineering #CISO
+#Tailscale #ZeroTrust #Homelab #Networking #CISO
 ```
 
----
+## Archive — identity series copy
 
-## Archive — identity series copy (RETIRED from the queue 2026-07-13)
-
-**These 24 posts are no longer scheduled.** They were drafted 2026-06-09 as a Jul 9 → Oct 1 run at 2/week. The 90-day data (see top of file) showed the identity/architecture posts averaging ~240 impressions, so the run was retired before it started. Only #1 (Jul 9, the hub) ever ran; it landed under 535 impressions.
-
-**Nothing here is wasted.** This copy is the source material for the Jul 21 synthesis post, and every one of these blog posts is live and findable. If a single rung ever earns its own slot (a news hook, a conference talk, a reader question), the copy is ready. Do not re-queue the run wholesale.
-
-### 1. Jul 9 — IAM for the Company You Have
-
-```
-Security best practices assume a company that doesn't exist.
-
-Clean directory. One identity provider. Every app on SSO. No legacy, no acquisitions, no debt. Start there, the maturity model says.
-
-You will never be greenfield.
-
-You have three IdPs from three acquisitions, a VPN nobody will own, service accounts whose passwords live in a wiki, and more SaaS than finance can list. That is the company you are securing. Not the one on the slide.
-
-So the real question is which rung you climb next, given where you actually stand.
-
-I think about identity as a ladder you cannot skip:
-• Get to one front door before you do anything clever
-• Automate the leaver before the joiner
-• Earn continuous, risk-based access last, not first
-
-Most teams reach for the top rung because it demos well, then wonder why it does not hold. The rung under it was never built.
-
-https://mattgoodrich.com/posts/iam-for-the-company-you-have/
-
-#IAM #IdentitySecurity #ZeroTrust #CISO
-```
-
-### 2. Jul 14 — One Front Door, One Place to Revoke
-
-```
-The fastest way to fail an offboarding is to have more than one front door.
-
-Every app with its own login is a door you have to remember to lock when someone leaves. Miss one, and a former employee, or whoever phished them, still has a way in weeks later.
-
-Single sign-on is the difference between revoking access in one place and revoking it in fifteen, hoping you got them all.
-
-Consolidate the logins and two hard problems collapse into one:
-• One place to prove who someone is (SAML / OIDC)
-• One place to cut them off, instantly, everywhere (SCIM)
-
-The tax is real. Plenty of vendors gate SSO behind their top pricing tier, the industry even has a name for it: the SSO tax. Pay it anyway for anything that touches real data. The alternative is paying it in breaches.
-
-https://mattgoodrich.com/posts/one-front-door-one-place-to-revoke/
-
-#IAM #SSO #IdentitySecurity #CISO
-```
-
-### 3. Jul 16 — Automate the Leaver Before the Joiner
-
-```
-Most companies automate onboarding first. It's the visible pain: a new hire sitting idle, waiting for accounts.
-
-The leaver is the one that gets you breached.
-
-When someone leaves and their access lingers, you have a credential with no human attached, no one watching it, and every reason for an attacker to go looking. Orphaned access is one of the most reliable ways into a company.
-
-So automate the leaver before the joiner. Wire deprovisioning to the same HR event that triggers onboarding, so the moment someone is marked a leaver their access is gone, everywhere, with no ticket and no human remembering.
-
-Joiner-mover-leaver is one loop. Most teams build a third of it (the joiner), do the leaver by hand, and skip the mover entirely. The mover is how people accumulate access they no longer need until they look like a walking audit finding.
-
-https://mattgoodrich.com/posts/automate-the-leaver-before-the-joiner/
-
-#IAM #IdentitySecurity #Offboarding #CISO
-```
-
-### 4. Jul 21 — Roles Don't Scale the Way You Think
-
-```
-Give it a few years and you will have more roles than employees.
-
-RBAC starts clean: a handful of roles, everyone slots into one. Then reality arrives. Someone needs almost-this-role-but-not-quite, so you make a new one. Do that for three years and you have a role for nearly every person, which is just per-user permissions wearing a costume.
-
-Roles don't scale the way the textbook promises. The number of distinct access patterns in a real company grows faster than any tidy set of roles can track.
-
-What actually works is a mix:
-• Roles for the broad, stable stuff (everyone in support sees the support tools)
-• Attributes for the contextual stuff (department, location, data sensitivity)
-• Just-in-time, through a broker, for the access that can hurt you (production, finance)
-
-The mistake is forcing all of it into roles, then drowning in role explosion and quarterly access reviews nobody can actually read.
-
-https://mattgoodrich.com/posts/roles-dont-scale-the-way-you-think/
-
-#IAM #RBAC #ABAC #CISO
-```
-
-### 5. Jul 23 — Authorization Broker Models
-
-```
-The safest standing privilege is the one that isn't standing.
-
-Most "who can touch production" lists are a pile of permanent grants that made sense once and never got revoked. Every one is a credential an attacker can phish or a laptop they can steal, sitting there 24/7 whether or not anyone is using it.
-
-An authorization broker flips that. Nobody holds production access. They request it, a policy engine checks who they are, what device they're on, and why, and they get a short-lived credential that expires on its own.
-
-The access that can hurt you most should exist for the least time:
-• Request, with a reason
-• Policy decides, in real time
-• Short-lived credential, auto-expiring
-• Full audit trail of who reached what, when
-
-Teleport, HashiCorp Boundary, and Vault all do versions of this in the open. The standing admin account is the thing attackers count on. Stop leaving it lying around.
-
-https://mattgoodrich.com/posts/authorization-broker-models/
-
-#IAM #ZeroTrust #PAM #CISO
-```
-
-### 6. Jul 28 — Break-Glass Without the Backdoor
-
-```
-Your break-glass account is a backdoor you wrote a runbook for.
-
-Every company keeps one: the emergency account that bypasses MFA, SSO, and conditional access so you can get back in when identity itself is down. It is also the single most valuable thing in your environment to an attacker, sitting outside every control you built.
-
-The trap is making it a permanent, standing super-credential and calling it "emergency access." That is a backdoor with a procedure attached.
-
-Break-glass done right is a tightly bounded exception, not a parallel admin path:
-• Sealed until used (credentials split, vaulted, alarmed)
-• Scoped by policy (an AWS SCP can fence even root)
-• Loud on use: every break-glass login pages a human in real time
-• Rotated and re-sealed immediately after
-
-The test is simple: if using your break-glass account doesn't wake someone up, you don't have break-glass. You have a backdoor.
-
-https://mattgoodrich.com/posts/break-glass-without-the-backdoor/
-
-#IAM #IdentitySecurity #IncidentResponse #CISO
-```
-
-### 7. Jul 30 — You Can Reach More Than You Were Granted
-
-```
-The permissions you were granted are not the permissions you have.
-
-A cloud identity with "read-only" on one service and "pass role" on another can often chain the two into admin. Nobody granted admin. The policy graph did.
-
-This is the gap between granted access and reachable access. Your IAM console shows what you handed out. It does not show where those grants connect: the role that can assume another role, the function that runs as a stronger principal, the policy that can edit policies.
-
-Attackers map the reachable set. Most defenders only audit the granted set.
-
-Open-source tooling closes the gap. PMapper and Cartography build the actual permission graph; BloodHound and AzureHound do it for AD and Entra. They answer the question your console can't: from here, what can this identity ultimately reach?
-
-Audit the graph, not the grants. The grant is the front door. The reachable set is the whole house.
-
-https://mattgoodrich.com/posts/you-can-reach-more-than-you-were-granted/
-
-#CloudSecurity #IAM #IdentitySecurity #CISO
-```
-
-### 8. Aug 4 — Zero Trust Is a Sequence, Not a Posture
-
-```
-You cannot buy zero trust. No vendor sells it, because it is a property of an architecture, not a feature you deploy.
-
-Zero trust gets sold two wrong ways: as a posture you either have or don't, and as a product that makes you "zero trust" the day it's installed. It is neither. It is a set of controls that pay off in an order.
-
-And the order is not optional:
-• Identity first (you can't evaluate a request you can't attribute)
-• Then device (is the thing it came from healthy)
-• Then least privilege and per-app access (shrink what each reaches)
-• Then continuous, risk-based evaluation, last, not first
-
-Build it out of order and you get a sophisticated control evaluating requests it can't trust. Microsegment with no clean identity behind it, and you've drawn careful walls around traffic you can't attribute.
-
-CISA's maturity model is staged for a reason. Most companies should reach solid Advanced on identity and access and stop there. You're allowed to stop climbing when the next rung costs more than the risk it removes.
-
-https://mattgoodrich.com/posts/zero-trust-is-a-sequence/
-
-#ZeroTrust #IAM #Security #CISO
-```
-
-### 9. Aug 6 — MFA That Survives Phishing
-
-```
-Most MFA does not survive a phishing attack.
-
-The push notification, the 6-digit code, the SMS, all of them can be relayed in real time by a phishing proxy that sits between your user and the real login. The user approves, the attacker is in. Scattered Spider has run this play against help desks and employees repeatedly (CISA AA23-320A).
-
-What survives is MFA bound to the origin. A FIDO2 security key or a passkey signs a challenge tied to the real domain, so a lookalike site gets a signature it cannot use. The phish has nothing to relay.
-
-The dividing line is where the private key lives and whether the factor checks the origin:
-• Phishable: SMS, TOTP codes, push approvals
-• Phishing-resistant: FIDO2 keys, device-bound passkeys, WebAuthn
-
-Roll it out in blast-radius order: admins and crown-jewel apps first. And know that compliance frameworks are still catching up to passwordless, so you may be ahead of your own checklist. Be ahead anyway.
-
-https://mattgoodrich.com/posts/mfa-that-survives-phishing/
-
-#MFA #Phishing #IdentitySecurity #CISO
-```
-
-### 10. Aug 11 — Trust the User, Then the Machine
-
-```
-You can prove exactly who is making a request and have no idea what they are making it from.
-
-A user signs in with a phishing-resistant passkey. The login is genuinely theirs. It tells you nothing about whether the laptop behind it is a hardened company machine or a personal box riddled with malware riding their valid session.
-
-User authentication answers one question. The machine is a second one, and most access decisions never ask it.
-
-Device-based authentication asks it with two separate claims:
-• Device identity: a hardware-bound certificate proving this is a machine you enrolled
-• Device posture: live signals proving it's healthy right now (encrypted, patched, EDR running)
-
-A cert proves identity and says nothing about health. Posture proves health and says nothing about identity. You need both, evaluated live, because a well-maintained attacker laptop has great posture and no business on your network.
-
-Verify the person. Then verify the machine they brought.
-
-https://mattgoodrich.com/posts/trust-the-user-then-the-machine/
-
-#ZeroTrust #DeviceTrust #IdentitySecurity #CISO
-```
-
-### 11. Aug 13 — Per-App Access Ends the Flat Network
-
-```
-A VPN does one thing well and one thing badly. It authenticates you to a network. Then it trusts you on all of it.
-
-Once a phished laptop is on the VPN, it isn't on one machine, it's on the network, with line of sight to every box on the subnet. The login was the only gate, and it was at the edge. That's how one credential becomes a breach.
-
-The fix is changing the unit of access from the network to the application:
-• Network access (VPN): a route to everything, lateral movement by default
-• Application access (ZTNA): a tunnel to the one app you're entitled to, the rest invisible
-
-Google's BeyondCorp is the reference build; OpenZiti and Pomerium do it in the open. The broker checks identity and device, then proxies you to one app while everything else stays dark.
-
-The perimeter doesn't disappear when the VPN does. It moves, off the network and onto identity and device, re-proven on every connection.
-
-https://mattgoodrich.com/posts/per-app-access-ends-the-flat-network/
-
-#ZeroTrust #ZTNA #NetworkSecurity #CISO
-```
-
-### 12. Aug 18 — The Gateway Can't See the Object
-
-```
-Your API gateway can check whether you may call an endpoint. It cannot see whether this row, this document, this account is yours.
-
-That gap has a name on the OWASP API Top 10: Broken Object Level Authorization. It's the number one API risk, and it's number one because the gateway sits in the wrong place to fix it. The object lives inside the application; the gateway only sees the request.
-
-So the authorization decision has to move next to the data. Two patterns do it:
-• Policy engines (OPA, Cedar) evaluate "can this user do this to this object" at the service
-• Relationship models (Google's Zanzibar, and OpenFGA / SpiceDB that implement it) answer it at scale
-
-The tell that you have this bug: an endpoint that takes an ID and trusts it. Change the ID in the request, get someone else's data. No gateway rule catches that, because to the gateway it's a valid call.
-
-Put the authorization where the object is.
-
-https://mattgoodrich.com/posts/the-gateway-cant-see-the-object/
-
-#AppSec #Authorization #APISecurity #CISO
-```
-
-### 13. Aug 20 — Access Should Know What the Data Is
-
-```
-Most access control protects systems: this database, that bucket, this app. It says nothing about what's inside them.
-
-So the same "read" permission guards a marketing list and a table of social security numbers. The control has no idea there's a difference. The data does, but the data isn't part of the decision.
-
-Data-centric access ties the control to the data's classification, so protection follows the data instead of the container. The pieces:
-• Classify (NIST FIPS 199 gives you the impact levels)
-• Label (Microsoft Purview sensitivity labels, plus Presidio / Macie to find what you missed)
-• Decide on the label, so a "confidential" tag carries its own access rules wherever the data lands
-
-This is the hardest zero-trust pillar to finish, because it depends on knowing what you have, and most companies don't. But it's the one that turns a permission into a guarantee.
-
-https://mattgoodrich.com/posts/access-should-know-what-the-data-is/
-
-#DataSecurity #ZeroTrust #DataClassification #CISO
-```
-
-### 14. Aug 25 — When You Can Use Workload Identity
-
-```
-The best API key is the one you never store, because you never had one.
-
-Most service-to-service auth still runs on a long-lived secret sitting in an env var or a config file, waiting to leak. Workload identity removes the secret entirely: the platform vouches for the workload, and the workload exchanges that proof for short-lived credentials at runtime.
-
-AWS does it with IRSA, GKE with Workload Identity, and SPIFFE/SPIRE does it across clouds. The pod proves what it is to the platform; the platform mints a credential that expires in minutes.
-
-But it only works inside a trust boundary the platform controls. The moment a workload runs somewhere the cloud can't vouch for it, you're back to a secret, and the honest move is to manage that secret well, not pretend you eliminated it.
-
-Drop the secret where you can. Where you can't, know exactly why, and rotate it.
-
-https://mattgoodrich.com/posts/when-you-can-use-workload-identity/
-
-#WorkloadIdentity #CloudSecurity #SPIFFE #CISO
-```
-
-### 15. Aug 27 — Workload Identity That Crosses Boundaries
-
-```
-Every workload-identity scheme bottoms out in one thing it cannot prove from the inside: the very first secret. The "bottom turtle."
-
-Cloud workload identity solves this beautifully, as long as you stay on one cloud. IRSA is an AWS answer. GKE Workload Identity is a Google answer. The moment a workload has to authenticate across clouds, or to a partner, the cloud's vouching stops at its own edge.
-
-SPIFFE moves the bottom turtle to the infrastructure. SPIRE attests a workload from properties the platform already knows (its node, its kernel, its kubelet) and issues it an SVID, a short-lived identity document the workload can present anywhere that trusts the SPIFFE root, including across clouds via OIDC federation and IAM Roles Anywhere.
-
-One identity per workload, that travels. The IETF's WIMSE working group is standardizing where this goes next.
-
-https://mattgoodrich.com/posts/workload-identity-that-crosses-boundaries/
-
-#SPIFFE #WorkloadIdentity #CloudSecurity #CISO
-```
-
-### 16. Sep 1 — Non-Human Identities
-
-```
-Machine identities outnumber human ones by more than 80 to 1, and nobody owns most of them.
-
-Service accounts, API keys, tokens, certificates, CI runners, bots. Every one is an identity that can authenticate, and unlike your employees, they don't leave, don't rotate their own credentials, and don't show up in the joiner-mover-leaver process you built for people.
-
-The result is a sprawl of non-human identities with standing access and no human attached. The credential in a config file from 2019 still works. GitGuardian finds millions of secrets leaked in public repos every year.
-
-The discipline is old and unglamorous:
-• Short-lived credentials over standing keys
-• Scoped per-action, not broad
-• An owner and an expiry for every one
-• Detection for the leaked ones (Gitleaks, TruffleHog) and a vault to stop minting more (External Secrets, SPIFFE)
-
-Your agent rollout is about to add thousands more. Fix the discipline before you do.
-
-https://mattgoodrich.com/posts/non-human-identities/
-
-#NHI #IdentitySecurity #Secrets #CISO
-```
-
-### 17. Sep 3 — Logging Out Is Harder Than Logging In
-
-```
-Logging in is instant. Logging out, everywhere, is the genuinely hard part.
-
-A user clicks "sign out" and your IdP ends its session. But the app they were using minted its own session token, and that one is still valid. Revoke the user's access and they can keep working on a cached token for minutes or hours, exactly the window an attacker wants.
-
-There are two clocks: the IdP session and every downstream app session. Logout only really happens when both stop.
-
-The standards exist to close the gap:
-• OIDC back-channel logout tells apps to kill their sessions (Keycloak, Authentik, Ory Hydra implement it)
-• OAuth token revocation invalidates the token itself
-• The Shared Signals Framework and CAEP push a "this session is no longer valid" event in near real time
-
-If your logout only ends the IdP session, you haven't logged anyone out of anything that matters. You've just closed one of the doors.
-
-https://mattgoodrich.com/posts/logging-out-is-harder-than-logging-in/
-
-#IAM #IdentitySecurity #OAuth #CISO
-```
-
-### 18. Sep 8 — Identity Is Becoming Continuous
-
-```
-Authentication used to be a moment: you proved who you were at login, and the session was yours for the next ten hours no matter what happened.
-
-That model is ending. A device falls out of compliance, a risk score jumps, a credential shows up on a breach list, mid-session, and the old model does nothing until the token expires.
-
-Continuous access evaluation closes that window. Instead of trusting a login for hours, the IdP and the apps subscribe to a stream of signals and re-decide access as the facts change.
-
-The plumbing is standardizing fast:
-• The Shared Signals Framework carries the events between systems
-• CAEP (Continuous Access Evaluation Profile) defines the access-change signals
-• Microsoft, Okta, and Google already ship versions of it
-
-The session that authenticated strongly at 9am should not still be trusted at 3pm if the device it's on stopped being trustworthy at noon. Identity is moving from a gate to a feed.
-
-https://mattgoodrich.com/posts/identity-is-becoming-continuous/
-
-#IdentitySecurity #ZeroTrust #CAEP #CISO
-```
-
-### 19. Sep 10 — The Other Half of Identity Security
-
-```
-You can build flawless identity controls and still completely miss the attack against them.
-
-Prevention is half the job: SSO, MFA, least privilege, the works. The other half is detection, noticing when someone abuses identity that's working exactly as designed. A valid login from a new country. A service account that suddenly enumerates every bucket. An admin role assumed at 3am.
-
-None of that trips a prevention control, because nothing is broken. The credentials are real. The permissions are granted. It just isn't the legitimate owner using them.
-
-So instrument the identity plane like the attack surface it is:
-• Behavioral baselines per identity (human and non-human)
-• Detections for impossible travel, privilege escalation, dormant-account wake-ups
-• Open tooling that fits: Falco for runtime, Sigma for portable detection rules, Wazuh for the host signal
-
-The teams that get breached through identity usually had the controls. What they didn't have was anyone watching the controls work.
-
-https://mattgoodrich.com/posts/the-other-half-of-identity-security/
-
-#DetectionEngineering #IdentitySecurity #SOC #CISO
-```
-
-### 20. Sep 15 — Your Authorization Model Is Never Done
-
-```
-Fine-grained authorization starts clean and never stays that way.
-
-You begin with a tidy relationship model: who can touch which object. A Zanzibar-style graph, OpenFGA or SpiceDB under it, and for a while every access question has a crisp answer.
-
-Then the product grows. New object types. New permission verbs. A request for "team admins, but not billing." Roles and groups creep back in. The access graph never stops changing, and now it's load-bearing.
-
-Choosing the model is the easy part. Migrating it while it's live, with real users and real grants and no lockouts and no quietly-opened doors, is the hard one.
-
-So treat authorization like the evolving system it is:
-• Version the model and migrate it deliberately, not by accident
-• Test access changes the way you test schema changes
-• Keep the engine (OpenFGA, SpiceDB, Cedar, Oso) separate from the policy so you can reason about each
-
-The model is never done. Build for the change, not the first clean version.
-
-https://mattgoodrich.com/posts/your-authorization-model-is-never-done/
-
-#Authorization #ProductSecurity #ReBAC #CISO
-```
-
-### 21. Sep 17 — Whose Request Is This, Three Hops In?
-
-```
-A request comes into your product carrying a real, authenticated user. By the third internal service it touches, that user is gone.
-
-A service mesh and mTLS prove one service is talking to another, the channel. They carry nothing about the original caller, the user on whose behalf every downstream call is being made. The ledger service three hops in knows the orders service called it, and has no idea which customer the call is about.
-
-In multi-tenant SaaS, that dropped identity is a whole category of bug. Any internal service that trusts its caller and acts on the IDs it's handed can't enforce the tenant boundary, because it doesn't know whose request this is.
-
-The fix is two moves:
-• Carry the caller (OAuth token exchange, or the IETF's new Transaction Tokens) so the user identity travels the call chain
-• Enforce it at each hop that touches tenant data, and derive the tenant from the verified caller, never from a value the caller passes in
-
-The mesh secures the channel. The caller is the part you still have to carry.
-
-https://mattgoodrich.com/posts/whose-request-is-this-three-hops-in/
-
-#AppSec #Kubernetes #Authorization #CISO
-```
-
-### 22. Sep 22 — Collapse the Surface, Then Defend It
-
-```
-The cheapest attack surface to defend is the one you removed before you started defending.
-
-Most security programs add controls on top of sprawl: more monitoring, more policies, more reviews, all wrapped around an estate that keeps getting bigger. You can do that forever and never catch up, because the surface grows faster than the controls.
-
-The move that changes the math is collapsing the surface first. Every identity provider you consolidate, every standing credential you make just-in-time, every flat network you segment, every app you put behind one front door, is attack surface that no longer needs defending because it no longer exists.
-
-This whole identity series has been one argument made in pieces: SSO, lifecycle, least privilege, per-app access, workload identity, session control. Each one removes a class of exposure before it asks you to monitor for it.
-
-Collapse the surface, then defend what's left. Defending everything is how you defend nothing.
-
-https://mattgoodrich.com/posts/collapse-the-surface-then-defend-it/
-
-#Security #IAM #ZeroTrust #CISO
-```
-
-### 23. Sep 24 — Friction Is Why People Hoard Access
-
-```
-People hoard access for the same reason they hoard anything: getting it the first time was painful, and they never want to do it again.
-
-If requesting access means a ticket, a three-day wait, and a manager who doesn't understand the ask, your users will do the rational thing: grab everything they might ever need, the first time, and hold it forever. Your least-privilege program loses to a Friday deadline every single time.
-
-The fix is less friction on the right path:
-• Self-service requests that resolve in minutes, not days
-• Just-in-time grants that expire on their own, so holding access is the inconvenient option
-• Paved roads where the secure way is also the fast way
-
-When asking again is cheap, people stop hoarding, because there's nothing to gain by it. Least privilege is won by making the narrow path the easy one.
-
-https://mattgoodrich.com/posts/friction-is-why-people-hoard-access/
-
-#IAM #LeastPrivilege #SecurityCulture #CISO
-```
-
-### 24. Sep 29 — A Secure Enterprise on Devices You Don't Own
-
-```
-Picture a company that issues no laptops and runs no VPN. Everyone works from the phone and computer they already own. It sounds like a security team's resignation letter.
-
-It can be more locked down than the company handing a managed laptop to every hire, because it's forced to stop trusting the two things that were never as trustworthy as they looked: the device and the network.
-
-Strip both away and the trust has to go somewhere that holds up:
-• The data never lands on the device. The endpoint is a window onto apps that keep their data server-side, not a safe that stores it.
-• Identity does the work. A phishing-resistant key is the one piece of hardware worth issuing, because it holds up on a device and network you don't control.
-• Access goes per-app, not per-network, so a compromised personal laptop reaches one thing, not everything.
-
-You still hand out managed machines for the crown jewels. For everyone else, the device was never the point. The data and the identity were.
-
-https://mattgoodrich.com/posts/secure-enterprise-on-devices-you-dont-own/
-
-#BYOD #ZeroTrust #IdentitySecurity #CISO
-```
-
-### 25. Oct 1 — Standardize the Gates, Not the Steps
-
-```
-Stop trying to standardize how your teams work. Standardize the gates their work has to pass through.
-
-Every team has a different stack, a different pipeline, a different way of shipping. The classic compliance move is to force one process on all of them, and it fails the same way every time: the process doesn't fit, teams route around it, and the control exists only on paper.
-
-The durable version inverts it. Don't dictate the steps. Define the gate, the check the output has to clear, and let each team meet it however their stack allows:
-• The gate is policy as code (OPA / Conftest evaluates the artifact)
-• The evidence is generated, not attested (Sigstore signs what actually shipped)
-• The standard is the outcome (NIST OSCAL expresses the control), not the workflow
-
-Standardize the gate and you get consistency without the fight. Standardize the steps and you get a binder nobody follows.
-
-https://mattgoodrich.com/posts/standardize-the-gates-not-the-steps/
-
-#GRC #Compliance #DevSecOps #CISO
-```
-
----
+_The 24 retired identity-series LinkedIn drafts were removed 2026-07-21 to slim this file. They are preserved in git history, and every one of those posts is live and findable on the blog. None are scheduled; do not re-queue the run wholesale. If a single rung ever earns a slot, recover its copy from git._
 
 ## Sync log
 
+- 2026-07-21 — **Make Mistakes Cheap queued (Aug 4).** Approved the blog post (publishes 7/22) and slotted its LinkedIn post at Aug 4, right after Letting the Loop Merge, to cap the agent-loop trilogy (two-systems 7/21 → LLTM 7/28 → this 8/4) while the theme is fresh. It clears **Stake + Recipe**: the "the rm you alias isn't the rm the agent runs" reversal, the security-veteran discomfort at plain-English controls, plus a public kit (github.com/mgoodric/safe-yolo). Cascaded the Recipe posts back a week: Identity Ladder → Aug 11, Collapsing → Aug 18, Pasting → Aug 25, OPEN → Sep 1+. Copy drafted, payload in-feed.
+
+- 2026-07-21 — **Letting the Loop Merge finalized; archive cleared; queue reconciled.** Blog post approved and re-stamped to today (7/21); added a series backlink to two-systems. Drafted its LinkedIn copy and slotted it **Jul 28** (Stake + Recipe). **Cleared the 24-post retired identity-series archive** (preserved in git history; every one of those posts is live on the blog). Reconciled the badly-drifted queue against what Matt confirmed actually ran: only **Two Systems (7/21)** and the **greenfield-IAM hub (~a week earlier)** posted. **Collapsing Tunnels and The Identity Ladder never ran** — both restored to the queue (Aug 11 and Aug 4), their copy re-added, Pasting Screenshots bumped to Aug 18. The greenfield-IAM hub stays at its recorded 7/9 (Thu) slot — 12 days back, which LinkedIn shows as "1w"; Matt can't pin the exact date from the app (posts T/R only), and 7/9 is consistent. So nothing ran between the hub and Two Systems: Jul 14 was skipped.
 - 2026-07-20 — **Two Systems published and promoted up.** Blog post `two-systems-for-handing-work-to-agents` finalized and pushed live (date re-stamped to now per Matt). Swapped it into the Jul 21 LinkedIn slot ahead of The Identity Ladder — it is the one genuine stake/confession in the pipeline (the reason the strategy exists), so it takes the next slot rather than waiting until Jul 28. Clean single swap: Identity Ladder → Jul 28, Aug 4 (Pasting Screenshots) unchanged, no cascade. Copy was already drafted and was re-checked line-by-line against the final post (four features, six Meross issues, 47-commit branch, 17 stranded items, five rules) — accurate, no edits needed. Also this session: published the Open Engine autonomy policy + to-engine/break-to-engine skills to the public plane-client repo (redacted) and linked them from the post; added four themed mermaid diagrams.
 - 2026-07-13 — **Identity Spine published.** Page went live at `/page/identity/`. Fixed it first: it was 2 posts stale (drawn 6/09, missing `whose-request-is-this-three-hops-in` and `authorization-is-three-decisions-not-one`). Added both to the table, updated the Product authorization thread, regenerated both mermaid diagrams (26 → 28 nodes), corrected the alt text. Promoted it to Featured #1 and repointed the Jul 21 LinkedIn copy at the map instead of the hub.
 - 2026-07-13 — **Strategy reset on the data.** Pulled LinkedIn creator analytics + read exact per-post impressions off the activity feed. Trailing 90 days: 14,371 impressions across 26 posts, 18 blog clicks, and every architecture post under 600. Then the decisive datapoint, from Matt: **`I Was Wrong About AI` (~Sept 2025) did 14,000+ impressions on its own — matching the entire last quarter combined.** Conclusion: the winning shape is the public reversal, and the real constraint is *supply*, not selection. The blog is full of architecture and nearly empty of confessions. Actions: cadence cut 2/week → 1/week Tuesday; added the stake/recipe/career filter with Stake named as primary; **named the supply problem explicitly and listed four unwritten reversal seeds**; retired the 24-post identity backlog into one synthesis post (Jul 21, The Identity Ladder); rebuilt the queue to 4 honest slots (Jul 14 → Aug 4) and left Aug 11+ deliberately empty rather than backfilling with architecture; added the "deliver the payload in-feed, the link is a footnote" rule; corrected all impressions to exact figures; caught one untracked post (Org Chart, 305); revised Featured to pin the two proven performers. Dropped as already-run: I Was Wrong About AI, The Perfect Storm, 1Password SSH Agent. Parked drafts excluded from planning per Matt (may never ship). All 24 retired identity drafts preserved in the archive below.

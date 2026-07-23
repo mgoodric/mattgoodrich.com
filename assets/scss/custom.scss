@@ -1,0 +1,22 @@
+/* Project custom SCSS. Overrides the theme placeholder and is imported last
+   in the theme's style.scss, so rules here win on equal specificity. */
+
+/* WCAG AA contrast fix for category chips.
+   The theme rotates .article-category chip backgrounds by nth-child position
+   using a pastel palette; sage (#8ea885), rose (#df7988), and amber (#ffb900)
+   all fail the 4.5:1 ratio against the white chip text, which Lighthouse flags
+   as "Background and foreground colors do not have a sufficient contrast ratio."
+   Re-emit the same 5-step rotation with darkened, same-hue replacements that all
+   clear 4.9:1 on #fff. Imported after partials/article.scss, so these override. */
+$contrastSafeCategoryBackgrounds: #557a46, #c0405a, #016ba6, #a15c00, #5e50c0;
+
+.article-list {
+    @for $i from 1 through length($contrastSafeCategoryBackgrounds) {
+        article:nth-child(#{length($contrastSafeCategoryBackgrounds)}n + #{$i}) {
+            .article-category a {
+                background: nth($contrastSafeCategoryBackgrounds, $i);
+                color: #fff;
+            }
+        }
+    }
+}

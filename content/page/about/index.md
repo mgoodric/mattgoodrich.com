@@ -18,11 +18,17 @@ Whether I'm at 8,000 feet or knee-deep in router configurations, I'm always look
 
 ## Professional Summary
 
-Experienced, hands-on security, engineering, and product leader with a passion for challenging the status quo while encouraging a culture that prioritizes the needs of the business. Proven track record of building and scaling security programs across multiple industries, with expertise in product security, cloud security, identity and access management, and leading high-performing teams.
+I've spent my career at the intersection of engineering, product, and security, often working all three functions at the same company. That shapes how I approach the work: I know why engineering teams deprioritize security, because I was one of them, and why product teams resist slowing down for reviews, because I ran one.
+
+My conviction is that security is an engineering discipline, not a compliance function. In practice that means writing Python to automate evidence collection, building unified control frameworks that satisfy multiple compliance standards at once, and designing AI governance that extends existing security controls instead of standing up a parallel bureaucracy.
+
+Today I serve as Chief Security Architect at Alteryx, the only individual contributor on the CISO's direct staff: no direct reports, full strategic scope. My job is making sure security moves at the speed of the business, not the other way around. I write about security leadership, product security, GRC engineering, and AI governance here, and I've appeared on the CISO Series podcast.
 
 ## Core Competencies
 
 - **Security Leadership**: Product Security, Application Security, Cloud Security, DevSecOps
+- **GRC Engineering**: Compliance automation, unified control frameworks, evidence collection as code
+- **AI Governance**: Agentic AI security, non-human identity, AI risk frameworks (ISO 42001, NIST AI RMF, OWASP Agentic AI)
 - **Identity & Access Management**: SAML, OAuth, OpenID Connect
 - **Cloud Platforms**: AWS Security Specialty, Multi-cloud Architecture, Container Security
 - **Compliance & Governance**: SOC 2, ISO 27001, PCI DSS, HIPAA, NIST Frameworks
@@ -31,11 +37,13 @@ Experienced, hands-on security, engineering, and product leader with a passion f
 
 ## Professional Experience
 
-### Alteryx - Director, Information Security
+### Alteryx - Chief Security Architect
 **January 2020 - Present**
 
-- **Leadership & Team Building**: Led teams of 15+ across multiple continents, managing Product Security, DevSecOps, Security Architecture & Engineering, and Vulnerability Management programs
+- **Current Role**: Chief Security Architect, the only individual contributor on the CISO's direct staff. No direct reports, full strategic scope, focused on making security move at the speed of the business.
+- **Program Building & Leadership**: Joined as one of the first product security hires embedded in engineering and grew the function to full SSDLC coverage, OWASP ASVS adoption across the product portfolio, a production PSIRT, and threat modeling standards. Previously led teams of 15+ across multiple continents spanning Product Security, DevSecOps, Security Architecture & Engineering, and Vulnerability Management.
 - **Product Security Innovation**:
+  - Built a custom remediation tracking tool that improved security issue closure rates by more than 60%
   - Developed comprehensive security design patterns for eliminating hard-coded encryption keys and secure credential handling
   - Performed extensive threat modeling and security consultation across all Alteryx products
   - Built automated test frameworks for OWASP ASVS L1 requirements

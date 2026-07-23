@@ -1,0 +1,7 @@
+# Project i18n overrides (merged over themes/hugo-theme-stack/i18n/en.yaml).
+# The archives widget's expand link shipped as "More", which Lighthouse's
+# link-text SEO audit flags as non-descriptive. Give it descriptive text.
+widget:
+  archives:
+    more:
+      other: Older posts

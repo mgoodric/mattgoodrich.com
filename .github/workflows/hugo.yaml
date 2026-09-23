@@ -7,6 +7,12 @@ on:
     branches:
       - hugo-main
 
+  # Build-only validation before merge. The deploy job is gated off for these,
+  # so a PR proves the site builds without publishing anything.
+  pull_request:
+    branches:
+      - hugo-main
+
   # Runs daily at 3am Pacific time
   schedule:
     - cron: "0 11 * * *" # 11:00 UTC = 3:00 AM Pacific (during PST)
@@ -71,6 +77,8 @@ jobs:
 
   # Deployment job
   deploy:
+    # Never publish from a pull request - build validation only.
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

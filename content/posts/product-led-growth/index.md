@@ -5,14 +5,14 @@ title = 'Book Review: Product-Led Growth and Escaping the Build Trap'
 aliases = ['/security/product-led-growth/']
 description = "Two product management books sparked an unexpected realization about the intersection between customer behavior analytics, security telemetry, and audit logging. Sometimes the most valuable insights come from applying frameworks outside their intended domain."
 categories = ['Product Management', 'Security']
-tags = ['product-led growth', 'escaping the build trap', 'data privacy impact assessment', 'security', 'audit logs']
+tags = ['product-led growth', 'escaping the build trap', 'data privacy impact assessment', 'Security', 'audit logs']
 [params]
   author = 'Matt Goodrich'
 +++
 
 **Flying home from our Broomfield office, I finished two books that completely shifted how I think about data collection:**
 
-- *Product-Led Growth: How to Build a Product That Sells Itself* by Wes Bush 
+- *Product-Led Growth: How to Build a Product That Sells Itself* by Wes Bush
 - *Escaping the Build Trap: How Effective Product Management Creates Real Value* by Melissa Perri
 
 ![Product Led Growth Book Cover](plg.jpg)

@@ -5,7 +5,7 @@ title = 'Displaying Flickr Photos on a Web Page with C# and ASP.NET'
 aliases = ['/dotnet/flicker-net-api/']
 description = "I was able to display my Flickr photos on a web page using the Flickr.Net API, which involved creating a repeater in an ASP.NET page and writing some backend code in C#. The end result is a simple paginated photo gallery that retrieves photos from Flickr based on user ID and other parameters."
 categories = ['.NET Framework', 'Development']
-tags = ['flickr', 'flickr.net', 'csharp', 'asp.net', 'api']
+tags = ['flickr', 'flickr.net', 'csharp', 'asp.net', 'API']
 [params]
   author = 'Matt Goodrich'
 +++
@@ -57,7 +57,7 @@ My backend code looks something like this:<
   int page = 1;
 
   protected void Page_Load(object sender, EventArgs e)
-  {  
+  {
     if (Request.QueryString["page"] != null)
     {
       try
@@ -71,7 +71,7 @@ My backend code looks something like this:<
     }
 
     PhotoRepeater.DataSource = RecentPhotos(page, count);
-    PhotoRepeater.DataBind(); 
+    PhotoRepeater.DataBind();
 
     Literal1.Text = GetNav(page, count);
     Literal2.Text = Literal1.Text;
@@ -101,11 +101,11 @@ My backend code looks something like this:<
           returnstring += " | <a href="\"/Photos/"">Next " + count.ToString() + " >></a>";
         }
     }
-        
+
     //return the string
     return returnstring;
   }
-    
+
 public static FlickrNet.PhotoCollection RecentPhotos(int page, int count)
 {
   FlickrNet.Flickr flickr = new FlickrNet.Flickr();
@@ -119,7 +119,7 @@ public static FlickrNet.PhotoCollection RecentPhotos(int page, int count)
   options.Extras = PhotoSearchExtras.All;
 
   FlickrNet.Photos photos = flickr.PhotosSearch(options);
-  
+
   if (photos.PhotoCollection == null)
     return new FlickrNet.Photo[0];
   else
@@ -148,7 +148,7 @@ public static long GetNumPages(int count)
   FlickrNet.Photos photos = flickr.PhotosSearch(options);
 
   return photos.TotalPages;
-}  
+}
 ```
 
 Be sure to make sure you have "using FlickrNet;" at the top of the page.

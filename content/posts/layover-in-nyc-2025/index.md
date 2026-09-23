@@ -4,7 +4,7 @@ draft = false
 title = '11-Hour Layover in NYC'
 description = "Who says layovers have to be wasted time? 11 hours in NYC meant sunrise on the Brooklyn Bridge, rooftop views of the Manhattan skyline, and a sprint back to JFK for my Paris connection."
 categories = ['Photography']
-tags = ['nyc', 'new-york-city', 'brooklyn-bridge', 'sunrise', 'travel', 'photography', 'manhattan', 'chrysler-building', 'empire-state-building', 'hudson-yards', 'rooftop', 'urban', 'architecture']
+tags = ['nyc', 'new-york-city', 'brooklyn-bridge', 'sunrise', 'travel', 'photography', 'manhattan', 'chrysler-building', 'empire-state-building', 'hudson-yards', 'rooftop', 'urban', 'Architecture']
 image = 'DSC00625-HDR-optimised.jpg'
 [params]
   author = 'Matt Goodrich'

@@ -5,7 +5,7 @@ title = 'What I Learned From Actually Talking to Vendors'
 aliases = []
 description = "After years of avoiding vendor conversations, I learned that professional courtesy and direct communication create more value than ghosting. Weekly vendor conversations now provide strategic insights about the security landscape, early-stage partnership opportunities, and market intelligence that can't be found in analyst reports."
 categories = ['Career Development', 'Professional Growth', 'Security']
-tags = ['vendor management', 'professional relationships', 'security vendors', 'business relationships', 'communication', 'strategic thinking', 'security market', 'networking', 'procurement', 'vendor selection']
+tags = ['vendor management', 'professional relationships', 'security vendors', 'business relationships', 'communication', 'strategic thinking', 'security market', 'Networking', 'procurement', 'vendor selection']
 image = 'header.png'
 [params]
   author = 'Matt Goodrich'

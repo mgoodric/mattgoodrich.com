@@ -5,7 +5,7 @@ title = 'Cross Platform Encryption using AES-256 (NodeJS, PowerShell, C#)'
 aliases = ['/security/aes-256-encryption-dotnet-node-powershell/']
 description = "Cross-platform encryption is a pain - different languages, same algorithm, different implementations. Here's working AES-256 code for C#, Node.js, and PowerShell that actually interoperates correctly, so you don't have to debug crypto edge cases."
 categories = ['Security', 'Development']
-tags = ['cryptography', 'encryption', 'security', 'AES-256', 'Advanced Encryption Standard', 'symmetric-key block cipher', 'data security', 'c-sharp', 'nodejs', 'powershell']
+tags = ['cryptography', 'encryption', 'Security', 'AES-256', 'Advanced Encryption Standard', 'symmetric-key block cipher', 'Data Security', 'c-sharp', 'nodejs', 'powershell']
 image = 'header.png'
 [params]
   author = 'Matt Goodrich'
@@ -23,7 +23,7 @@ image = 'header.png'
 
 **Why AES-256?**
 - **Security**: That massive key space makes brute force impractical
-- **Performance**: Fast enough for real-time use  
+- **Performance**: Fast enough for real-time use
 - **Compatibility**: Supported everywhere
 - **Compliance**: Required/recommended for regulated industries
 
@@ -44,13 +44,13 @@ image = 'header.png'
 
 #### Example Output
 ```
-Unencrypted String: 
+Unencrypted String:
 This is the secret data to be encrypted
 
-Encrypted String: 
+Encrypted String:
 57nxW6FY5zgbipmx6KXH0EosFQDDp/4hIYhbGhVzCqxyI/B6Z4qWhvo3gzrznhlr0ML35O++t7il974PQpfWuw==
 
-Decrypted String: 
+Decrypted String:
 This is the secret data to be encrypted
 ```
 #### Code
@@ -67,15 +67,15 @@ namespace dotnet_core
         static void Main(string[] args)
         {
             var encryptionKey = "ff18ae35effbbd253a159abc32f11777863b7dc58004ae5994f5ded7518aadb2";
-            
+
             var clearText = "This is the secret data to be encrypted";
             Console.WriteLine($"Unencrypted String: \r\n{clearText}\r\n");
 
             var aesManaged = new AesManaged
             {
-                Mode = CipherMode.CBC, 
-                Padding = PaddingMode.PKCS7, 
-                BlockSize = 128, 
+                Mode = CipherMode.CBC,
+                Padding = PaddingMode.PKCS7,
+                BlockSize = 128,
                 KeySize = 256,
                 Key = StringToByteArray(encryptionKey)
             };
@@ -94,7 +94,7 @@ namespace dotnet_core
             var decryptedString = Encoding.UTF8.GetString(unencryptedData);
             Console.WriteLine($"Decrypted String: \r\n{decryptedString}");
         }
-        
+
         static byte[] StringToByteArray(String hex)
         {
             var numberChars = hex.Length;
@@ -115,13 +115,13 @@ namespace dotnet_core
 
 #### Example Output
 ```
-Unencrypted String: 
+Unencrypted String:
 This is the secret data to be encrypted
 
-Encrypted String: 
+Encrypted String:
 NLaMxjVNIjavBHQuDPqykcKoYxmLZMr/lzmMc0ncFM3APaziKkJ0U6OlzYRJ5YTe6zVcVOdTqTGhQIb/VioxnQ==
 
-Decrypted String: 
+Decrypted String:
 This is the secret data to be encrypted
 ```
 #### Code
@@ -172,13 +172,13 @@ console.log(`Unencrypted String: \r\n${clearText}\r\n`);
 
 #### Example Output
 ```
-Unencrypted String: 
+Unencrypted String:
 This is the secret data to be encrypted
 
-Encrypted String: 
+Encrypted String:
 57nxW6FY5zgbipmx6KXH0EosFQDDp/4hIYhbGhVzCqxyI/B6Z4qWhvo3gzrznhlr0ML35O++t7il974PQpfWuw==
 
-Decrypted String: 
+Decrypted String:
 This is the secret data to be encrypted
 ```
 #### Code
@@ -214,7 +214,7 @@ function Encrypt-String($key, $unencryptedString) {
     $encryptor = $aesManaged.CreateEncryptor()
     $encryptedData = $encryptor.TransformFinalBlock($bytes, 0, $bytes.Length);
     [byte[]] $fullData = $aesManaged.IV + $encryptedData
-    if($PSVersion -gt 2) { 
+    if($PSVersion -gt 2) {
         $aesManaged.Dispose()
     }
     [System.Convert]::ToBase64String($fullData)

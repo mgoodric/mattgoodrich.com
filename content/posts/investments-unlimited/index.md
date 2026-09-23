@@ -5,7 +5,7 @@ title = 'Lessons from Investments Unlimited: The Importance of Automation and Tr
 aliases = ['/security/investments-unlimited/']
 description = "Investments Unlimited hit close to home - a financial firm forced to fix their security posture discovers the same issues I face daily: outdated asset inventories, useless CABs, inconsistent pipelines. The message is clear: automate everything, don't block velocity, and dig beneath surface assumptions."
 categories = ['Book Review', 'Security']
-tags = ['security', 'devsecops', 'investments unlimited', 'automation', 'transparency']
+tags = ['Security', 'DevSecOps', 'investments unlimited', 'Automation', 'transparency']
 [params]
   author = 'Matt Goodrich'
 +++

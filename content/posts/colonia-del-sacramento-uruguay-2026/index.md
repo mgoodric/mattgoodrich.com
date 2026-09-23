@@ -4,7 +4,7 @@ draft = false
 title = 'Colonia del Sacramento'
 description = "A day trip from Montevideo to one of Uruguay's oldest towns. Cobblestone streets, colonial architecture, and Rio de la Plata views during a Patagonia cruise stop."
 categories = ['Photography']
-tags = ['uruguay', 'colonia-del-sacramento', 'montevideo', 'south-america', 'travel', 'photography', 'cruise', 'patagonia', 'colonial', 'architecture']
+tags = ['uruguay', 'colonia-del-sacramento', 'montevideo', 'south-america', 'travel', 'photography', 'cruise', 'patagonia', 'colonial', 'Architecture']
 image = 'DSC01981-optimised.jpg'
 [params]
   author = 'Matt Goodrich'

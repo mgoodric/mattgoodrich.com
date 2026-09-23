@@ -5,7 +5,7 @@ title = 'BlueHat 2024: Security Challenges Are Universal (Just Ask Microsoft)'
 aliases = ['/security/blue-hat-2024-day-1/']
 description = "After attending multiple security conferences this year, BlueHat 2024 stood out for all the right reasons: no vendors, no sales pitches, just pure technical content. The dual perspectives from security researchers and Microsoft's Security Response Center revealed that every security team faces the same fundamental challenges, just at different scales."
 categories = ['Security', 'Conferences and Events' ]
-tags = ['security conferences', 'BlueHat', 'CloudNativeSecurityCon', 'BSides Las Vegas', 'Black Hat', 'DEFCON', 'Microsoft Security Response Center', 'vulnerability disclosure', 'sdlc', 'authorization']
+tags = ['security conferences', 'BlueHat', 'CloudNativeSecurityCon', 'BSides Las Vegas', 'Black Hat', 'DEFCON', 'Microsoft Security Response Center', 'vulnerability disclosure', 'SDLC', 'Authorization']
 image = 'header.png'
 [params]
   author = 'Matt Goodrich'
@@ -33,4 +33,3 @@ image = 'header.png'
 **3. Security challenges are universal.** Whether it's Microsoft or a startup launching their first product, the issues are the same: developers pushing secrets to source control, overly privileged tokens ending up in logged URLs, authorization complexity nightmares. **The response process is also universal: finding the right team, assessing architectural changes, identifying compensating controls, balancing risk and urgency.**
 
 **BlueHat exceeded expectations.** Already planning to return next year.
-

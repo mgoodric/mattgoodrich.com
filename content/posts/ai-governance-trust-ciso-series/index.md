@@ -4,7 +4,7 @@ draft = false
 title = 'Building Trust in AI Through Governance'
 description = "How confidence scoring, audit trails, and governance mechanisms help organizations ensure reliable AI output — even when dealing with imperfect data. From my appearance on the CISO Series."
 categories = ['Security']
-tags = ['AI', 'Artificial Intelligence', 'security', 'IT governance', 'leadership']
+tags = ['AI', 'Artificial Intelligence', 'Security', 'IT governance', 'Leadership']
 image = 'header.png'
 [params]
   author = 'Matt Goodrich'

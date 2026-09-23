@@ -5,7 +5,7 @@ title = 'Creating a Simple Function to Get a Short URL with Bit.ly API'
 aliases = ['/dotnet/short-urls-bitly-csharp/']
 description = "I wanted a quick and easy way to get a short URL for my blog posts, so I used the bit.ly API and created a simple function in C# to handle it. With this function, you can easily shorten any URL by passing it as an argument."
 categories = ['Development']
-tags = ['bitly', 'api', 'c-sharp', 'url-shortener']
+tags = ['bitly', 'API', 'c-sharp', 'url-shortener']
 [params]
   author = 'Matt Goodrich'
 +++

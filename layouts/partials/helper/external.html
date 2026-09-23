@@ -1,0 +1,36 @@
+{{- /*
+  OVERRIDE of themes/hugo-theme-stack/layouts/partials/helper/external.html (v3.32.0).
+  Only line 1 differs: .Context.Site.Data -> hugo.Data (deprecated in
+  Hugo v0.156.0).
+  Upstream still used the deprecated names as of v3.34.2, so re-check this
+  file on every theme bump and re-sync it if upstream changes the rest.
+*/ -}}
+{{- $List := index hugo.Data.external .Namespace -}}
+{{- with $List -}}
+    {{- range . -}}
+        {{- if eq .type "script" -}}
+            <script
+                src="{{ .src }}"
+                {{- with .integrity -}}
+                integrity="{{ . }}"
+                {{- end -}}
+                crossorigin="anonymous"
+                {{ if .defer }}defer{{ end }}
+                >
+            </script>
+        {{- else if eq .type "style" -}}
+            <link
+                rel="stylesheet"
+                href="{{ .src }}"
+                {{- with .integrity -}}
+                integrity="{{ . }}"
+                {{- end -}}
+                crossorigin="anonymous"
+            >
+        {{- else -}}
+            {{- errorf "Error: unknown external resource type: %s" .type -}}
+        {{- end -}}
+    {{- end -}}
+{{- else -}}
+    {{- errorf "Error: external resource '%s' is not found" .Namespace -}}
+{{- end -}}

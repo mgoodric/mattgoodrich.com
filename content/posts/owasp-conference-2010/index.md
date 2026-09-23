@@ -5,7 +5,7 @@ title = 'Gaining Valuable Insights at OWASP Conference 2010'
 aliases = ['/security/owasp-conference-2010/']
 description = "SNOWFROC 2010 was well worth it again."
 categories = ['Security', 'Conferences and Events']
-tags = ['owasp', 'conference', 'security', 'hacking', 'vulnerabilities', 'snowfroc']
+tags = ['owasp', 'Conference', 'Security', 'hacking', 'vulnerabilities', 'snowfroc']
 [params]
   author = 'Matt Goodrich'
 +++

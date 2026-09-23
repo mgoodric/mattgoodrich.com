@@ -5,7 +5,7 @@ title = 'Streamlining SSH Key Management with 1Password'
 aliases = ['/security/1password-ssh-agent/']
 description = "Fed up with losing SSH keys during my annual machine rebuilds, I discovered 1Password's SSH Agent functionality. With some configuration tweaks, I now manage keys securely across devices and projects while adding MFA protection to every SSH operation."
 categories = ['Security', 'Productivity', 'Development', 'Tools']
-tags = ['1password', 'ssh keys', 'password manager', 'security', 'productivity', 'development']
+tags = ['1Password', 'ssh keys', 'password manager', 'Security', 'Productivity', 'development']
 image = 'header.png'
 [params]
   author = 'Matt Goodrich'
@@ -19,13 +19,13 @@ image = 'header.png'
 
 **1Password has functionality I'm probably not even aware of,** but recently I've been using its SSH Agent feature to both secure my keys and sync them across devices. **It adds MFA protection to every SSH operation while eliminating the machine rebuild headache.**
 
-**Managing multiple projects creates key management complexity.** Between personal projects and helping friends with their systems, I often need separate accounts and SSH keys for different ecosystems. **Now I create all keys directly in 1Password and store them in separate vaults to maintain clear boundaries between projects.** 
+**Managing multiple projects creates key management complexity.** Between personal projects and helping friends with their systems, I often need separate accounts and SSH keys for different ecosystems. **Now I create all keys directly in 1Password and store them in separate vaults to maintain clear boundaries between projects.**
 
 By default, the 1Password SSH agent will make every eligible key (SSH Key item type, that is not archived) in the built-in **Personal**, **Private**, or **Employee** vault of your 1Password accounts available to offer to SSH servers. This configuration is automatically set up when you [turn on the SSH agent](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent). This means right out of the box, if all of your SSH keys are in one of those bolded vaults above, you will be prompted for the key you would like to use when performing an action that requires an SSH key.
 
-I am not always the best at reading the documentation, unless I get into trouble - and because I stored some SSH keys in a separate vault, I did run into trouble. 
+I am not always the best at reading the documentation, unless I get into trouble - and because I stored some SSH keys in a separate vault, I did run into trouble.
 
-By default, when you enable the SSH Agent, your `~/.ssh/config` file will get created/updated with the following line: 
+By default, when you enable the SSH Agent, your `~/.ssh/config` file will get created/updated with the following line:
 ```
 Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
@@ -73,7 +73,7 @@ Host projectgit
 	IdentitiesOnly yes
 ```
 
-The change above allows me to specify the host to use when I run commands, and when using that host, the SSH Key referenced on the `IdentityFile` line will be selected automatically. For example: 
+The change above allows me to specify the host to use when I run commands, and when using that host, the SSH Key referenced on the `IdentityFile` line will be selected automatically. For example:
 
 `git clone git@projectgit:project/repo.git`
 

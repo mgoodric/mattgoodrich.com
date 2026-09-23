@@ -4,7 +4,7 @@ draft = false
 title = 'Application Security and Product Security are NOT the same'
 description = "The security field is constantly evolving. While Application Security has been around since the early 2000s, Product Security has only gained popularity in the last 5-8 years. Is Product Security just a rebrand of AppSec? There's no universal agreement on what it actually is."
 categories = ['Security']
-tags = ['application-security', 'product-security', 'appsec', 'career']
+tags = ['application-security', 'Product Security', 'appsec', 'Career']
 [params]
   author = 'Matt Goodrich'
 +++

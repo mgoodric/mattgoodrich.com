@@ -4,7 +4,7 @@ draft = false
 title = 'Prague Nights'
 description = "When your only free time is after dark, you learn to see a city differently. Night photography in Prague's Old Town."
 categories = ['Photography']
-tags = ['prague', 'czech-republic', 'night-photography', 'travel', 'photography', 'architecture', 'europe', 'cobblestone', 'old-town', 'urban']
+tags = ['prague', 'czech-republic', 'night-photography', 'travel', 'photography', 'Architecture', 'europe', 'cobblestone', 'old-town', 'urban']
 image = 'DSC00894-optimised.jpg'
 [params]
   author = 'Matt Goodrich'

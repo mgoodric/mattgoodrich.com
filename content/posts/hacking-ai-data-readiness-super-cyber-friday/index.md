@@ -4,7 +4,7 @@ draft = false
 title = 'Hacking AI Data Readiness on Super Cyber Friday'
 description = "I joined Super Cyber Friday to discuss AI data readiness, security considerations, and preparing organizations for AI adoption."
 categories = ['Security', 'Artificial Intelligence']
-tags = ['AI', 'Artificial Intelligence', 'data readiness', 'security', 'podcast', 'live stream', 'Super Cyber Friday']
+tags = ['AI', 'Artificial Intelligence', 'data readiness', 'Security', 'podcast', 'live stream', 'Super Cyber Friday']
 image = 'thumbnail.jpg'
 [params]
   author = 'Matt Goodrich'

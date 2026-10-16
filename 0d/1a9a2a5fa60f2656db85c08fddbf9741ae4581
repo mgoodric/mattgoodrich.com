@@ -1,0 +1,19 @@
+CLAUDE.md
+  s_f2b584c54a2788::t_f44de2bea3b780 1-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0d1a9a2a5fa60f2656db85c08fddbf9741ae4581",
+  "prompts": {},
+  "sessions": {
+    "s_f2b584c54a2788": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c15c9d5a-0e8e-4d2d-b1f0-b83adc65bf04",
+        "model": "unknown"
+      },
+      "human_author": "Matt Goodrich <matt@mattgoodrich.com>"
+    }
+  }
+}

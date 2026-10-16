@@ -1,0 +1,48 @@
+content/posts/where-review-comments-go-to-die/index.md
+  s_4000a19c952f06::t_6d7f1b6451a5a5 58
+  s_4000a19c952f06::t_160095a60abe45 1-55,57,59-104,112-118
+  s_4000a19c952f06::t_9eed0c9b7b7136 105-111
+  s_4000a19c952f06::t_1df99949075ebb 56
+content/posts/nobody-declares-done/index.md
+  s_4000a19c952f06::t_547e1cc1906f56 1-115
+content/posts/saying-no-to-something-you-want/index.md
+  s_d4626a20498754::t_9a76c27fdc52fb 1-88
+content/posts/saying-no-to-something-you-want/sorting-matrix.svg
+  s_d4626a20498754::t_bbf922419c16e1 1-59
+content/posts/securing-code-you-didnt-write/index.md
+  s_3f8f6ef61666cc::t_61ebe46691bb0a 1-157
+content/posts/personal-ai-agent-system/index.md
+  s_4000a19c952f06::t_0b6c6bfb886431 1-155
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "18515c174ad390fdbe015e8f0bc16cd87fa10a34",
+  "prompts": {},
+  "sessions": {
+    "s_3f8f6ef61666cc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9edd7c26-c96d-4858-8a9c-4e2a33ef867b",
+        "model": "unknown"
+      },
+      "human_author": "Matt Goodrich <matt@mattgoodrich.com>"
+    },
+    "s_4000a19c952f06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a670961c-3b6d-496e-ad94-218cf927d500",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Matt Goodrich <matt@mattgoodrich.com>"
+    },
+    "s_d4626a20498754": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7aa9fbc-0264-445c-aff2-44ffd273e398",
+        "model": "unknown"
+      },
+      "human_author": "Matt Goodrich <matt@mattgoodrich.com>"
+    }
+  }
+}

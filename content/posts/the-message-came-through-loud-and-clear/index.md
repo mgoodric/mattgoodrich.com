@@ -1,5 +1,5 @@
 +++
-date = '2026-11-16T00:01:00-07:00'
+date = '2026-10-26T00:01:00-07:00'
 draft = false
 title = 'The Message Came Through Loud and Clear'
 aliases = []

@@ -15,4 +15,21 @@ Is Product Security just a fresh brand on Application Security? Some certainly t
 
 <!--more-->
 
+Every Product Security team looks different, and requires different domain knowledge. If you are on a team that has to support on-premises software and cloud based software you need to know a heck of a lot. In the cloud, you get a lot for free, and it's easy to take that for granted when you have to then think about the same patterns on-premises where you have very few guarantees of capabilities existing, or following the same patterns they do in cloud.
+
+The mind map below represents my quick take on the domains and subdomains that have been most common with the products and teams I have worked on.
+
+![Product Security Mind Map](Product-Security-Mind-Map.png)
+
+Among the items listed above, the high level categories are:
+
+* Infrastructure Security and Design
+* Software Security and Design
+* Vulnerability Management
+* Security Testing and Analysis
+* Sales Enablement
+* Product Management
+
+The video below covers all of this at a high level, but we will be diving deep into each of these areas in future posts and videos.
+
 {{< youtube y5h-JudEnIg >}}
